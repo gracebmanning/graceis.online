@@ -1,38 +1,51 @@
 .App {
+  margin: 0;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes fishFloat {
   from {
-    transform: rotate(0deg);
+    left: 110%;
   }
   to {
-    transform: rotate(360deg);
+    left: -35%;
   }
+}
+
+.fish{
+  width: 150px;
+  position: absolute;
+  top: 50px;
+  animation-name: fishFloat;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ladybugCrawl{
+  from {
+    right: 0%;
+    bottom: 0%;
+  }
+  to {
+    right: 100%;
+    bottom: 100%;
+  }
+}
+
+@keyframes ladybugRotate{
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(-20deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+.ladybug{
+  height: 100px;
+  rotate: -15deg;
+  position: absolute;
+  /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+  animation:
+    15s linear 0s infinite normal none running ladybugCrawl,
+    1s linear 0s infinite normal none running ladybugRotate;
 }
