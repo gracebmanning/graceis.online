@@ -3,49 +3,7 @@
   text-align: center;
   width: 100vw;
   height: 100vh;
-}
-
-@keyframes fishFloat {
-  from {
-    left: 110%;
-  }
-  to {
-    left: -35%;
-  }
-}
-
-.fish{
-  width: 150px;
-  position: absolute;
-  top: 50px;
-  animation-name: fishFloat;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes ladybugCrawl{
-  from {
-    right: 0%;
-    bottom: 0%;
-  }
-  to {
-    right: 100%;
-    bottom: 100%;
-  }
-}
-
-@keyframes ladybugRotate{
-  0% { transform: rotate(-10deg); }
-  50% { transform: rotate(-20deg); }
-  100% { transform: rotate(-10deg); }
-}
-
-.ladybug{
-  height: 100px;
-  rotate: -15deg;
-  position: absolute;
-  /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
-  animation:
-    15s linear 0s infinite normal none running ladybugCrawl,
-    1s linear 0s infinite normal none running ladybugRotate;
+  background-image: url('./assets/daisies.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
