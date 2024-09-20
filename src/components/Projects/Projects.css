@@ -1,0 +1,45 @@
+.projectsContainer{
+    font-family: "Lacquer", system-ui;
+    text-align: left;
+    width: 70vw;
+}
+
+.projectsText{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.projectsHeader{
+    display: flex;
+    flex-direction: column;
+}
+
+.backLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none;
+    color: black;
+    transform: scale(1.0);
+    transition: 0.1s ease-in;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.backLink:hover{
+    transform: scale(1.1);
+    transition: 0.1s ease-out;
+}
+
+#projectsDaisies{
+    width: 50%;
+}
+
+#projectsDaisiesBottom{
+    width: 45%;
+    height: auto;
+}

@@ -22,7 +22,7 @@ export default function Home(){
                     <img className='navImage' src={embroideredstar} alt='' />
                     <p className='navText'>explore</p>
                 </a>
-                <a className='navButton' id='youtubeButton' href='/' target='_blank' rel='noreferrer'>
+                <a className='navButton' id='youtubeButton' href='/'>
                     <img className='navImage' src={strawberry} alt='' />
                     <p className='navText'>youtube</p>
                 </a>
