@@ -6,8 +6,8 @@
 
 .headerText{
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 10%;
+    left: 10%;
     text-align: left;
 }
 
@@ -28,6 +28,13 @@
     position: absolute;
     text-decoration: none;
     color: black;
+    transform: scale(1.0);
+    transition: 0.2s ease-in;
+}
+
+.navButton:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-out;
 }
 
 .navImage{
@@ -46,7 +53,7 @@
 
 #aboutButton{
     top: 5%;
-    right: 5%;
+    right: 15%;
 }
 
 #projectsButton{
@@ -86,7 +93,6 @@
     bottom: 40px;
     font-size: 30px;
 }
-
 
 .backgroundImages{
     z-index: 0;
