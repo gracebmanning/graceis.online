@@ -1,9 +1,3 @@
-.homeContainer{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
 .headerText{
     position: absolute;
     top: 10%;
@@ -49,6 +43,10 @@
 
 #ladybugImage{
     transform: rotate(30deg);
+}
+
+#lunamothImage{
+    transform: rotate(-10deg);
 }
 
 #aboutButton{
@@ -107,5 +105,5 @@
 }
 
 #whiteRabbit{
-    width: 375px;
+    width: 25%;
 }

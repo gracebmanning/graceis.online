@@ -1,9 +1,9 @@
 import './Home.css';
-import { fish, ladybug, embroideredstar, strawberry, lunamoth, whiteRabbit, daisiesBottom } from '../assets/assets.js';
+import { fish, ladybug, embroideredstar, strawberry, lunamoth, whiteRabbit, daisiesBottom } from '../../assets/assets.js';
 
 export default function Home(){
     return(
-        <div className='homeContainer'>
+        <div className='container'>
             <div className='headerText'>
                 <h1 id='title'>grace manning</h1>
                 <h2 id='tagline'>[tagline]</h2>
@@ -25,10 +25,10 @@ export default function Home(){
                 <p className='navText'>youtube</p>
             </a>
             <a className='navButton' id='instagramButton' href='/'>
-                <img className='navImage' src={lunamoth} alt='' />
+                <img className='navImage' id='lunamothImage' src={lunamoth} alt='' />
                 <p className='navText'>instagram</p>
             </a>
-            <h2 id='contactText'>contact [at] graceis.online [dot] com</h2>
+            <h2 id='contactText'>contact [at] graceis [dot] online</h2>
             <img className='backgroundImages' id='daisiesBottom' src={daisiesBottom} alt='' />
             <img className='backgroundImages' id='whiteRabbit' src={whiteRabbit} alt='' />
         </div>
