@@ -48,7 +48,7 @@ export default function About(){
                     </p>
                 </div>
                 <div className='aboutText emailBox'>
-                    <img id='envelope' src={envelope} />
+                    <img id='envelope' src={envelope} alt='white envelope with pink heart seal' />
                     <p id='aboutEmail'>
                         <b>contact [at] graceis [dot] online</b>
                     </p>

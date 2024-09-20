@@ -9,7 +9,7 @@ import daisiesFlipped from './daisiesFlipped.jpg';
 import daisiesBottom from './daisiesBottom.jpg';
 import daisiesBottomFlipped from './daisiesBottomFlipped.jpg';
 import whiteRabbit from './white-rabbit.png';
-import envelope from './envelope.png';
+import envelope from './envelope.svg';
 
 export{
     // BACKGROUND IMAGE
