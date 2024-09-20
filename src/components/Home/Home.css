@@ -1,5 +1,7 @@
 .homeContainer{
     overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
 .headerText{
@@ -107,4 +109,114 @@
     z-index: 0;
     width: 25%;
     height: auto;
+}
+
+
+@media (max-width: 1024px){
+    .navText{
+        font-size: 35px;
+    }
+
+    .navImage{
+        height: 90px;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    #fishImage{
+        height: 70px;
+    }
+
+    #aboutButton{
+        top: 15%;
+        right: 10%;
+    }
+    
+    #projectsButton{
+        top: 22%;
+        left: 45%;
+    }
+    
+    #exploreButton{
+        top: 40%;
+        left: 15%;
+    }
+    
+    #youtubeButton{
+        top: 40%;
+        right: 25%;
+    }
+    
+    #instagramButton{
+        top: 55%;
+        right: 45%;
+    }
+
+    #contactText{
+        bottom: 20px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 768px){
+    .navImage{
+        height: 80px;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    #fishImage{
+        height: 60px;
+    }
+
+    #aboutButton{
+        top: 25%;
+        right: 10%;
+    }
+    
+    #projectsButton{
+        top: 30%;
+        left: 35%;
+    }
+    
+    #exploreButton{
+        top: 50%;
+        left: 12%;
+    }
+    
+    #youtubeButton{
+        top: 43%;
+        right: 20%;
+    }
+    
+    #instagramButton{
+        top: 60%;
+        right: 40%;
+    }
+
+    .navText{
+        font-size: 30px;
+    }
+
+    #contactText{
+        bottom: 10px;
+        left: 10%;
+        font-size: 20px;
+        text-wrap: wrap;
+        width: 50%;
+        text-align: left;
+    }
+
+    #homeDaisies{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #homeDaisiesBottom{
+        display:none;
+    }
+
+    #whiteRabbit{
+        width: 30%;
+    }
 }

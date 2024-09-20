@@ -3,8 +3,8 @@ import { fish, ladybug, embroideredstar, strawberry, lunamoth, whiteRabbit, dais
 
 export default function Home(){
     return(
-        <div>
-            <img className='backgroundImg topLeft' src={daisies} alt='two daisies with smaller purple blooms and surrounding greenery' />
+        <div style={{width: '100vw', height: '100vh', overflow: 'hidden'}}>
+            <img className='backgroundImg topLeft' id='homeDaisies' src={daisies} alt='two daisies with smaller purple blooms and surrounding greenery' />
             <div className='container homeContainer'>
                 <div className='headerText'>
                     <h1 id='title'>grace manning</h1>
