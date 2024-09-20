@@ -31,7 +31,7 @@ export default function Home(){
                     <p className='navText'>instagram</p>
                 </a>
                 <h2 id='contactText'>contact [at] graceis [dot] online</h2>
-                <img className='bottomBackgroundImages' id='daisiesBottom' src={daisiesBottomFlipped} alt='' />
+                <img className='bottomBackgroundImages' id='daisiesBottomRight' src={daisiesBottomFlipped} alt='' />
                 <img className='bottomBackgroundImages' id='whiteRabbit' src={whiteRabbit} alt='' />
             </div>
         </div>
