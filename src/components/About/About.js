@@ -17,7 +17,7 @@ let skills = [
     },
     {
         title: 'also',
-        list: ['i have a b.s. in computer science!', <a href={resume} target='_blank' rel='noreferrer'>view resume</a>]
+        list: ['i have a b.s. in computer science!', <a style={{color: 'black'}} href={resume} target='_blank' rel='noreferrer'>view resume</a>]
     },
 ]
 

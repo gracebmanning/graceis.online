@@ -16,6 +16,10 @@
     flex-direction: column;
 }
 
+.aboutHeader h2{
+    font-family: "Mountains of Christmas", serif;
+}
+
 .backLink{
     display: flex;
     flex-direction: column;
