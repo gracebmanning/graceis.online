@@ -46,13 +46,13 @@
 }
 
 #envelope{
-    width: 70px;
+    width: 60px;
     transform: rotate(-10deg);
     margin-right: 5px;
 }
 
 #aboutEmail{
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .aboutText h1{
@@ -88,10 +88,9 @@
 .aboutText li{
     font-size: 22px;
     width: fit-content;
-    
+    margin: 0px 5px 5px 0px;
     border-radius: 10px;
     padding: 5px;
-    margin: 0px 5px 5px 0px;
 }
 
 .skills{
@@ -100,13 +99,13 @@
     align-items: center;
 }
 
-.skills p{
+.skillsListTitle{
     margin-right: 10px;
-}
-
-.skillsList li{
+    border-radius: 10px;
+    padding: 5px;
     border: 1px solid black;
 }
+
 
 #likes li{
     background-color: #DCE7B2;
@@ -119,4 +118,19 @@
 #aboutDaisiesBottom{
     width: 45%;
     height: auto;
+}
+
+@media (max-width: 768px){
+    .emailBox{
+        padding: 5px;
+        width: 70%;
+    }
+
+    #envelope{
+        width: 50px;
+    }
+    
+    #aboutEmail{
+        font-size: 22px;
+    }
 }

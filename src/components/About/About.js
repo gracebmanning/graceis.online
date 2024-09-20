@@ -1,4 +1,5 @@
 import './About.css';
+import resume from '../../documents/Manning_Grace_resume_public.pdf';
 import { daisiesFlipped, daisiesBottom, envelope, backarrow } from '../../assets/assets';
 
 let skills = [
@@ -8,31 +9,19 @@ let skills = [
     },
     {
         title: 'design',
-        list: ['figma', 'photoshop']
+        list: ['figma,', 'photoshop,']
     },
     {
         title: 'web dev',
-        list: ['html', 'css', 'javascript', 'typescript', 'react', 'angular']
+        list: ['html,', 'css,', 'javascript,', 'typescript,', 'react,', 'angular']
     },
     {
-        title: 'app dev',
-        list: ['flutter/dart', 'android studio', 'xcode']
+        title: 'also',
+        list: ['i have a b.s. in computer science!', <a href={resume} target='_blank' rel='noreferrer'>view resume</a>]
     },
-    {
-        title: 'other',
-        list: ['python', 'c++', 'c', 'java', 'racket']
-    },
-    {
-        title: 'data',
-        list: ['mysql', 'postgresql', 'mongodb', 'redis']
-    },
-    {
-        title: 'tools',
-        list: ['git/github', 'aws', 'squarespace', 'wordpress']
-    }
 ]
 
-let likes = ['web development', 'like1', 'this is another', 'short', 'this is a long one'];
+let likes = ['web development', 'visual development', 'the internet', 'ui design'];
 
 export default function About(){
     return(
@@ -72,7 +61,7 @@ export default function About(){
                     {skills.map((item) =>{
                     return(
                         <div className='skills' key={item.title}>
-                            <p style={{padding: '0px'}}>{item.title}</p>
+                            <p className='skillsListTitle'>{item.title}</p>
                             <ul className='skillsList'>
                                 {item.list.map(skill => <li key={skill}>{skill}</li>)}
                             </ul>
