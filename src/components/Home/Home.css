@@ -1,3 +1,7 @@
+.homeContainer{
+    overflow: hidden;
+}
+
 .headerText{
     position: absolute;
     top: 10%;
@@ -90,13 +94,6 @@
     position: absolute;
     bottom: 40px;
     font-size: 30px;
-}
-
-.backgroundImages{
-    z-index: 0;
-    position: absolute;
-    right: 0;
-    bottom: 0;
 }
 
 #daisiesBottom{

@@ -13,12 +13,33 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .container{
   position: absolute;
   z-index: 1;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.backgroundImg{
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.flipped{
+  left: auto;
+  right: 0;
+}
+
+.bottomBackgroundImages{
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }

@@ -1,14 +1,4 @@
-.backgroundImg{
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  opacity: 0.6;
-}
-
 .App {
-  position: relative;
   margin: 0;
   text-align: center;
   width: 100vw;

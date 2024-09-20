@@ -5,14 +5,19 @@ import strawberry from './strawberry.png';
 import lunamoth from './lunamoth.png';
 import newspaper from './newspaper.jpg';
 import daisies from './daisies.jpg';
+import daisiesFlipped from './daisiesFlipped.jpg';
 import daisiesBottom from './daisiesBottom.jpg';
+import daisiesBottomFlipped from './daisiesBottomFlipped.jpg';
 import whiteRabbit from './white-rabbit.png';
+import envelope from './envelope.png';
 
 export{
     // BACKGROUND IMAGE
     newspaper,
     daisies,
+    daisiesFlipped,
     daisiesBottom,
+    daisiesBottomFlipped,
     whiteRabbit,
 
     // HOME PAGE ICONS
@@ -21,5 +26,8 @@ export{
     embroideredstar,
     strawberry,
     lunamoth,
+
+    // ABOUT PAGE
+    envelope
     
 }

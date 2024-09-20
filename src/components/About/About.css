@@ -1,0 +1,99 @@
+.aboutContainer{
+    font-family: "Lacquer", system-ui;
+    text-align: left;
+    width: 70vw;
+}
+
+.aboutText{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.emailBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ECD5E5;
+    width: fit-content;
+}
+
+#envelope{
+    width: 70px;
+    transform: rotate(-10deg);
+    margin-right: 5px;
+}
+
+#aboutEmail{
+    font-size: 28px;
+}
+
+.aboutText h1{
+    font-size: 50px;
+    margin: 0px;
+}
+
+.aboutText h2{
+    font-size: 30px;
+    margin: 0px;
+}
+
+.aboutText h3{
+    font-size: 28px;
+    margin: 0px;
+}
+
+.aboutText p{
+    font-size: 22px;
+    margin: 0px;
+}
+
+.aboutText ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 5px 0px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.aboutText li{
+    font-size: 22px;
+    width: fit-content;
+    
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0px 5px 5px 0px;
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.skills p{
+    margin-right: 10px;
+}
+
+.skillsList li{
+    border: 1px solid black;
+}
+
+#likes li{
+    background-color: #DCE7B2;
+}
+
+#daisies{
+    width: 50%;
+}
+
+#daisiesBottom{
+    width: 45%;
+    right: auto;
+    left: 0;
+}
