@@ -4,7 +4,7 @@ import { fish, ladybug, embroideredstar, strawberry, lunamoth, whiteRabbit, dais
 export default function Home(){
     return(
         <div>
-            <img className='backgroundImg' src={daisies} alt='two daisies with smaller purple blooms and surrounding greenery' />
+            <img className='backgroundImg topLeft' src={daisies} alt='two daisies with smaller purple blooms and surrounding greenery' />
             <div className='container homeContainer'>
                 <div className='headerText'>
                     <h1 id='title'>grace manning</h1>
@@ -31,8 +31,8 @@ export default function Home(){
                     <p className='navText'>instagram</p>
                 </a>
                 <h2 id='contactText'>contact [at] graceis [dot] online</h2>
-                <img className='bottomBackgroundImages' id='daisiesBottomRight' src={daisiesBottomFlipped} alt='' />
-                <img className='bottomBackgroundImages' id='whiteRabbit' src={whiteRabbit} alt='' />
+                <img className='backgroundImg bottomRight' id='homeDaisiesBottom' src={daisiesBottomFlipped} alt='' />
+                <img className='bottomRight' id='whiteRabbit' src={whiteRabbit} alt='' />
             </div>
         </div>
     )

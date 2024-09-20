@@ -9,6 +9,29 @@ font-family: "Mountains of Christmas", serif;
   --color-three: #afc45f;
 }
 
+/* width */
+::-webkit-scrollbar{
+  width: 1em;
+}
+
+/* Track */
+::-webkit-scrollbar-track{
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb{
+  background: #DCE7B2;
+  border-radius: 20px;
+  border: 3px solid #DCE7B2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+  background: #b9d562;
+  border: 3px solid #b9d562;
+}
+
 body {
   margin: 0;
   width: 100vw;
@@ -26,20 +49,26 @@ body {
 .backgroundImg{
   position: absolute;
   z-index: 0;
-  top: 0;
-  left: 0;
   height: 100%;
   opacity: 0.6;
 }
 
-.flipped{
-  left: auto;
+.topLeft{
+  top: 0;
+  left: 0;
+}
+
+.topRight{
+  top: 0;
   right: 0;
 }
 
-.bottomBackgroundImages{
-  z-index: 0;
-  position: absolute;
-  right: 0;
+.bottomLeft{
   bottom: 0;
+  left: 0;
+}
+
+.bottomRight{
+  bottom: 0;
+  right: 0;
 }

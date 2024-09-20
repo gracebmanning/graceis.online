@@ -1,5 +1,5 @@
 import './About.css';
-import { daisiesFlipped, daisiesBottom, envelope } from '../../assets/assets';
+import { daisiesFlipped, daisiesBottom, envelope, backarrow } from '../../assets/assets';
 
 let skills = [
     {
@@ -37,12 +37,20 @@ let likes = ['web development', 'like1', 'this is another', 'short', 'this is a 
 export default function About(){
     return(
         <div>
-            <img className='backgroundImg flipped' id='daisies' src={daisiesFlipped} alt='two daisies with smaller purple blooms and surrounding greenery' />
-            <img className='bottomBackgroundImages' id='daisiesBottom' src={daisiesBottom} alt='' />
+            <img className='backgroundImg topRight' id='aboutDaisies' src={daisiesFlipped} alt='two daisies with smaller purple blooms and surrounding greenery' />
+            <img className='backgroundImg bottomLeft' id='aboutDaisiesBottom' src={daisiesBottom} alt='' />
             <div className='container aboutContainer'>
                 <div className='aboutText'>
-                    <h2>about me</h2>
-                    <h1>grace manning</h1>
+                    <div className='aboutHeader'>
+                        <a className='backLink' href='/'>
+                            <img src={backarrow} alt='sketch outline of arrow pointing left' />
+                            go home
+                        </a>
+                        <div>
+                            <h2>about me</h2>
+                            <h1>grace manning</h1>
+                        </div>
+                    </div>
                     <p style={{marginTop: '10px'}}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet pulvinar nibh. Curabitur scelerisque orci et scelerisque sollicitudin.
                     </p>

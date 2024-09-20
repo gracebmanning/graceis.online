@@ -1,3 +1,4 @@
+import backarrow from './backarrow.svg';
 import fish from './fish.png';
 import ladybug from './ladybug.png';
 import embroideredstar from './embroidered-star.png';
@@ -12,6 +13,9 @@ import whiteRabbit from './white-rabbit.png';
 import envelope from './envelope.svg';
 
 export{
+    // NAVIGATION
+    backarrow,
+
     // BACKGROUND IMAGE
     newspaper,
     daisies,
@@ -29,5 +33,4 @@ export{
 
     // ABOUT PAGE
     envelope
-    
 }

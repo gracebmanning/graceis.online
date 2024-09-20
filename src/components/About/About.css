@@ -11,6 +11,30 @@
     width: 80%;
 }
 
+.aboutHeader{
+    display: flex;
+    flex-direction: column;
+}
+
+.backLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none;
+    color: black;
+    transform: scale(1.0);
+    transition: 0.1s ease-in;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.backLink:hover{
+    transform: scale(1.1);
+    transition: 0.1s ease-out;
+}
+
 .emailBox{
     display: flex;
     flex-direction: row;
@@ -88,12 +112,11 @@
     background-color: #DCE7B2;
 }
 
-#daisies{
+#aboutDaisies{
     width: 50%;
 }
 
-#daisiesBottom{
+#aboutDaisiesBottom{
     width: 45%;
-    right: auto;
-    left: 0;
+    height: auto;
 }
