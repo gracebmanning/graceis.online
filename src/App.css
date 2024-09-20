@@ -1,4 +1,5 @@
 .backgroundImg{
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -7,14 +8,9 @@
 }
 
 .App {
+  position: relative;
   margin: 0;
   text-align: center;
   width: 100vw;
   height: 100vh;
-}
-
-.container{
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
 }

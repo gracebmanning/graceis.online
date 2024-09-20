@@ -1,3 +1,8 @@
+/*
+font-family: "Lacquer", system-ui;
+font-family: "Mountains of Christmas", serif;
+*/
+
 :root {
   --color-one: #6c8220;
   --color-two: #3b4216;
@@ -10,7 +15,10 @@ body {
   height: 100vh;
 }
 
-/*
-font-family: "Lacquer", system-ui;
-font-family: "Mountains of Christmas", serif;
-*/
+.container{
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
