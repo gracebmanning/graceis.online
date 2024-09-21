@@ -4,7 +4,7 @@
     width: 100vw;
 }
 
-.headerText2{
+.headerText{
     text-align: left;
     margin-top: 40px;
     margin-left: 40px;
@@ -23,8 +23,9 @@
 }
 
 .navContainer{
-   margin-top: 40px;
+   margin-top: 30px;
    margin-right: 60px;
+   transform: rotate(-10deg);
 }
 
 .navRow{
@@ -36,15 +37,15 @@
     margin-bottom: 5px;
 }
 
-.navButton2{
+.navButton{
     text-decoration: none;
     color: black;
-    transform: scale(1.0);
+    transform: scale(1.0) rotate(10deg);
     transition: 0.2s ease-in;
 }
 
-.navButton2:hover{
-    transform: scale(1.1);
+.navButton:hover{
+    transform: scale(1.1) rotate(10deg);
     transition: 0.2s ease-out;
 }
 
@@ -92,7 +93,7 @@
 }
 
 #youtubeButton{
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 #instagramButton{
