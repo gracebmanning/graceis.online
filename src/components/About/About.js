@@ -64,7 +64,8 @@ export default function About(){
                         </div>
                     </div>
                     <p id='aboutTagline'>
-                        hello! I am a creative technologist with a b.s. in computer science. <a style={{color: 'black'}} href={resume} target='_blank' rel='noreferrer'>view resume</a>
+                        hello! I am a creative technologist obsessed with internet history & culture.<br/>
+                        I have a b.s. in computer science <a style={{color: 'black'}} href={resume} target='_blank' rel='noreferrer'>view resume</a>
                     </p>
                 </div>
                 
