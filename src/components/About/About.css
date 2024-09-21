@@ -4,22 +4,6 @@
     width: 70vw;
 }
 
-.aboutText{
-    margin-left: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 80%;
-}
-
-.aboutHeader{
-    display: flex;
-    flex-direction: column;
-}
-
-.aboutHeader h2{
-    font-family: "Mountains of Christmas", serif;
-}
-
 .backLink{
     display: flex;
     flex-direction: column;
@@ -39,24 +23,44 @@
     transition: 0.1s ease-out;
 }
 
+.aboutText{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.aboutHeader{
+    display: flex;
+    flex-direction: column;
+}
+
+#aboutTagline{
+    font-family: "Playpen Sans", cursive;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
 .emailBox{
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: 10px;
     padding: 10px;
-    background-color: #ECD5E5;
+    border: 1px solid black;
     width: fit-content;
 }
 
 #envelope{
-    width: 60px;
+    width: 50px;
     transform: rotate(-10deg);
     margin-right: 5px;
 }
 
 #aboutEmail{
-    font-size: 24px;
+    font-size: 22px;
+    font-family: "Playpen Sans", cursive;
+    margin: 0px;
 }
 
 .aboutText h1{
@@ -74,45 +78,42 @@
     margin: 0px;
 }
 
-.aboutText p{
-    font-size: 22px;
-    margin: 0px;
+.listTitle{
+    border-radius: 10px;
+    padding: 5px;
+    width: fit-content;
 }
 
 .aboutText ul{
-    list-style-type: none;
-    padding: 0px;
     margin: 5px 0px;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    font-family: "Playpen Sans", cursive;
+    font-size: 18px;
+    width: 50%;
+    columns: 2;
 }
 
-.aboutText li{
-    font-size: 22px;
-    width: fit-content;
-    margin: 0px 5px 5px 0px;
-    border-radius: 10px;
-    padding: 5px;
+.skillLink{
+    color: black;
+    font-size: 18px;
+    transition: 0.1s ease-in;
 }
 
-.skills{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.skillQuestionIcon{
+    font-size: 18px;
+    transition: 0.1s ease-in;
 }
 
-.skillsListTitle{
-    margin-right: 10px;
-    border-radius: 10px;
-    padding: 5px;
-    border: 1px solid black;
+.skillQuestionIcon:hover{
+    font-size: 20px;
+    transition: 0.1s ease-out;
 }
 
-
-#likes li{
+#likes{
     background-color: #DCE7B2;
+}
+
+#skills{
+    background-color: #ECD5E5;
 }
 
 #aboutDaisies{

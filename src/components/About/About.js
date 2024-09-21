@@ -1,27 +1,50 @@
 import './About.css';
-import resume from '../../documents/Manning_Grace_resume_public.pdf';
+import resume from '../../documents/resume.pdf';
 import { daisiesFlipped, daisiesBottom, envelope, backarrow } from '../../assets/assets';
+import { LiaQuestionCircle } from "react-icons/lia";
+// <LiaQuestionCircle />
 
 let skills = [
     {
-        title: 'visual',
-        list: ['touchdesigner']
+        skill: 'touchdesigner',
+        link: 'https://derivative.ca/'
+    }, 
+    {
+        skill: 'figma',
+        link: 'https://www.figma.com/'
     },
     {
-        title: 'design',
-        list: ['figma,', 'photoshop,']
+        skill: 'ui design'
     },
     {
-        title: 'web dev',
-        list: ['html,', 'css,', 'javascript,', 'typescript,', 'react,', 'angular']
+        skill: 'photoshop'
     },
     {
-        title: 'also',
-        list: ['i have a b.s. in computer science!', <a style={{color: 'black'}} href={resume} target='_blank' rel='noreferrer'>view resume</a>]
+        skill: 'html',
     },
+    {
+        skill: 'css',
+    },
+    {
+        skill: 'javascript',
+    },
+    {
+        skill: 'typescript'
+    },
+    {
+        skill: 'react',
+        link: 'https://react.dev/'
+    },
+    {
+        skill: 'angular',
+        link: 'https://angular.dev/'
+    },
+    {
+        skill: 'sewing & other fiber arts'
+    }
 ]
 
-let likes = ['web development', 'visual development', 'the internet', 'ui design'];
+let likes = ['web development', 'visual design/development', 'the internet', 'marketing/branding', 'fonts (and graphic design in general)'];
 
 export default function About(){
     return(
@@ -40,34 +63,43 @@ export default function About(){
                             <h1>grace manning</h1>
                         </div>
                     </div>
-                    <p style={{marginTop: '10px'}}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet pulvinar nibh. Curabitur scelerisque orci et scelerisque sollicitudin.
+                    <p id='aboutTagline'>
+                        hello! I am a creative technologist with a b.s. in computer science. <a style={{color: 'black'}} href={resume} target='_blank' rel='noreferrer'>view resume</a>
                     </p>
                 </div>
-                <div className='aboutText emailBox'>
-                    <img id='envelope' src={envelope} alt='white envelope with pink heart seal' />
-                    <p id='aboutEmail'>
-                        <b>contact [at] graceis [dot] online</b>
-                    </p>
-                </div>
+                
                 <div className='aboutText'>
-                    <h3>my favorite things include:</h3>
-                    <ul id='likes'>
+                    <h3 className='listTitle' id='likes'>my favorite things include:</h3>
+                    <ul>
                         {likes.map(like => <li key={like}>{like}</li>)}
                     </ul>
                 </div>
                 <div className='aboutText'>
-                    <h3>what i can do:</h3>
-                    {skills.map((item) =>{
-                    return(
-                        <div className='skills' key={item.title}>
-                            <p className='skillsListTitle'>{item.title}</p>
-                            <ul className='skillsList'>
-                                {item.list.map(skill => <li key={skill}>{skill}</li>)}
-                            </ul>
-                        </div>
-                    )
+                    <h3 className='listTitle' id='skills'>what i can do:</h3>
+                    <ul>
+                    {skills.map(elem => {
+                        if(elem.link){
+                            return(
+                                <li>
+                                    {elem.skill}
+                                    <a className='skillLink' href={elem.link} target='_blank' rel='noreferrer'>
+                                        <LiaQuestionCircle className='skillQuestionIcon' />
+                                    </a>
+                                </li>
+                            )
+                        } else{
+                            return(
+                                <li>{elem.skill}</li>
+                            )
+                        }
                     })}
+                    </ul>
+                </div>
+                <div className='aboutText emailBox'>
+                    <img id='envelope' src={envelope} alt='white envelope with pink heart seal' />
+                    <p id='aboutEmail'>
+                        contact [@] graceis [.] online
+                    </p>
                 </div>
             </div>
         </div>

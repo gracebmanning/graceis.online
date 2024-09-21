@@ -1,6 +1,7 @@
 /*
 font-family: "Lacquer", system-ui;
 font-family: "Mountains of Christmas", serif;
+font-family: "Playpen Sans", cursive;
 */
 
 :root {
@@ -51,7 +52,7 @@ body {
   position: absolute;
   z-index: 0;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .topLeft{

@@ -4,11 +4,10 @@
     width: 100vw;
 }
 
-.headerText{
-    position: absolute;
-    top: 10%;
-    left: 10%;
+.headerText2{
     text-align: left;
+    margin-top: 40px;
+    margin-left: 40px;
 }
 
 #title{
@@ -23,16 +22,28 @@
     margin: 0px;
 }
 
-.navButton{
-    z-index: 1;
-    position: absolute;
+.navContainer{
+   margin-top: 40px;
+   margin-right: 60px;
+}
+
+.navRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.navButton2{
     text-decoration: none;
     color: black;
     transform: scale(1.0);
     transition: 0.2s ease-in;
 }
 
-.navButton:hover{
+.navButton2:hover{
     transform: scale(1.1);
     transition: 0.2s ease-out;
 }
@@ -55,33 +66,6 @@
     transform: rotate(-10deg);
 }
 
-#aboutButton{
-    top: 5%;
-    right: 15%;
-}
-
-#projectsButton{
-    top: 15%;
-    left: 50%;
-}
-
-#exploreButton{
-    display: flex;
-    flex-direction: row;
-    top: 40%;
-    left: 30%;
-}
-
-#youtubeButton{
-    top: 30%;
-    right: 25%;
-}
-
-#instagramButton{
-    top: 50%;
-    right: 40%;
-}
-
 .navText{
     font-family: "Mountains of Christmas", serif;
     font-size: 40px;
@@ -96,6 +80,23 @@
     position: absolute;
     bottom: 40px;
     font-size: 30px;
+}
+
+#aboutButton{
+    margin-right: 70px;
+    margin-bottom: 25px;
+}
+
+#projectsButton{
+    margin-left: 10px;
+}
+
+#youtubeButton{
+    margin-top: 40px;
+}
+
+#instagramButton{
+    margin-right: 15px;
 }
 
 #homeDaisiesBottom{
