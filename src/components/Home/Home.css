@@ -115,6 +115,10 @@
 
 
 @media (max-width: 1024px){
+    .navContainer{
+        margin-top: 40px;
+    }
+    
     .navText{
         font-size: 35px;
     }
@@ -129,31 +133,6 @@
         height: 70px;
     }
 
-    #aboutButton{
-        top: 15%;
-        right: 10%;
-    }
-    
-    #projectsButton{
-        top: 22%;
-        left: 45%;
-    }
-    
-    #exploreButton{
-        top: 40%;
-        left: 15%;
-    }
-    
-    #youtubeButton{
-        top: 40%;
-        right: 25%;
-    }
-    
-    #instagramButton{
-        top: 55%;
-        right: 45%;
-    }
-
     #contactText{
         bottom: 20px;
         font-size: 25px;
@@ -161,6 +140,10 @@
 }
 
 @media (max-width: 768px){
+    .navContainer{
+        margin-right: 0px;
+    }
+    
     .navImage{
         height: 80px;
         padding: 0px;
@@ -169,31 +152,6 @@
     
     #fishImage{
         height: 60px;
-    }
-
-    #aboutButton{
-        top: 25%;
-        right: 10%;
-    }
-    
-    #projectsButton{
-        top: 30%;
-        left: 35%;
-    }
-    
-    #exploreButton{
-        top: 50%;
-        left: 12%;
-    }
-    
-    #youtubeButton{
-        top: 43%;
-        right: 20%;
-    }
-    
-    #instagramButton{
-        top: 60%;
-        right: 40%;
     }
 
     .navText{
