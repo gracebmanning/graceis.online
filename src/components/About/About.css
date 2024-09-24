@@ -35,31 +35,29 @@
     flex-direction: column;
 }
 
-#aboutTagline{
+.aboutTextCharacters{
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    margin: 0px;
+}
+
+.aboutTextCursive{
+    font-family: 'Miama';
+    font-size: 50px;
+    margin: 0px;
+    line-height: 1.05;
+}
+
+.aboutTextPlaypen{
     font-family: "Playpen Sans", cursive;
-    margin-top: 10px;
     font-size: 20px;
+    margin: 0px;
 }
 
-.emailBox{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid black;
-    width: fit-content;
-}
-
-#envelope{
-    width: 50px;
-    transform: rotate(-10deg);
-    margin-right: 5px;
-}
-
-#aboutEmail{
+.aboutTextLacquer{
+    font-family: "Lacquer", system-ui;
     font-size: 22px;
-    font-family: "Playpen Sans", cursive;
+    width: 170px;
     margin: 0px;
 }
 
@@ -92,28 +90,15 @@
     columns: 2;
 }
 
-.skillLink{
-    color: black;
-    font-size: 18px;
-    transition: 0.1s ease-in;
+#aboutContact{
+    font-size: 22px;
+    font-family: "Lacquer", system-ui;
+    position: absolute;
+    bottom: 0;
 }
 
-.skillQuestionIcon{
-    font-size: 18px;
-    transition: 0.1s ease-in;
-}
-
-.skillQuestionIcon:hover{
-    font-size: 20px;
-    transition: 0.1s ease-out;
-}
-
-#likes{
-    background-color: #DCE7B2;
-}
-
-#skills{
-    background-color: #ECD5E5;
+#aboutContact p{
+    margin: 0px;
 }
 
 #aboutDaisies{
@@ -125,17 +110,45 @@
     height: auto;
 }
 
-@media (max-width: 768px){
-    .emailBox{
-        padding: 5px;
-        width: 70%;
-    }
+#char2{
+    margin-left: 90px;
+}
 
-    #envelope{
-        width: 50px;
-    }
-    
-    #aboutEmail{
-        font-size: 22px;
+#char3{
+    margin-left: 290px;
+}
+
+#char5{
+    margin-left: 40px;
+    height: 100px;
+}
+
+#char6{
+    margin-left: 60px;
+}
+
+#char7{
+    font-size: 16px;
+    width: 375px;
+    text-align: center;
+}
+
+#char8{
+    margin-left: 210px;
+}
+
+#char9{
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+#char10{
+    margin-left: 40px;
+}
+
+@media (max-width: 768px){
+    .aboutText ul{
+        width: 90%;
+        padding-left: 20px;
     }
 }

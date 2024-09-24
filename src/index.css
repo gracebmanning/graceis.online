@@ -4,6 +4,14 @@ font-family: "Mountains of Christmas", serif;
 font-family: "Playpen Sans", cursive;
 */
 
+@font-face{
+  font-family: 'Miama';
+  src: url('./assets/miama.regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-one: #6c8220;
   --color-two: #3b4216;

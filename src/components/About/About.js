@@ -1,50 +1,5 @@
 import './About.css';
-import resume from '../../documents/resume.pdf';
-import { daisiesFlipped, daisiesBottom, envelope, backarrow } from '../../assets/assets';
-import { LiaQuestionCircle } from "react-icons/lia";
-// <LiaQuestionCircle />
-
-let skills = [
-    {
-        skill: 'touchdesigner',
-        link: 'https://derivative.ca/'
-    }, 
-    {
-        skill: 'figma',
-        link: 'https://www.figma.com/'
-    },
-    {
-        skill: 'ui design'
-    },
-    {
-        skill: 'photoshop'
-    },
-    {
-        skill: 'html',
-    },
-    {
-        skill: 'css',
-    },
-    {
-        skill: 'javascript',
-    },
-    {
-        skill: 'typescript'
-    },
-    {
-        skill: 'react',
-        link: 'https://react.dev/'
-    },
-    {
-        skill: 'angular',
-        link: 'https://angular.dev/'
-    },
-    {
-        skill: 'sewing & other fiber arts'
-    }
-]
-
-let likes = ['web development', 'visual design/development', 'the internet', 'marketing/branding', 'fonts (and graphic design in general)'];
+import { daisiesFlipped, daisiesBottom, backarrow, arrow } from '../../assets/assets';
 
 export default function About(){
     return(
@@ -63,42 +18,22 @@ export default function About(){
                             <h1>grace manning</h1>
                         </div>
                     </div>
-                    <p id='aboutTagline'>
-                        hello! I am a creative technologist obsessed with internet history & culture.<br/>
-                        I have a b.s. in computer science <a style={{color: 'black'}} href={resume} target='_blank' rel='noreferrer'>view resume</a>
-                    </p>
-                </div>
-                
-                <div className='aboutText'>
-                    <h3 className='listTitle' id='likes'>my favorite things include:</h3>
-                    <ul>
-                        {likes.map(like => <li key={like}>{like}</li>)}
-                    </ul>
                 </div>
                 <div className='aboutText'>
-                    <h3 className='listTitle' id='skills'>what i can do:</h3>
-                    <ul>
-                    {skills.map(elem => {
-                        if(elem.link){
-                            return(
-                                <li>
-                                    {elem.skill}
-                                    <a className='skillLink' href={elem.link} target='_blank' rel='noreferrer'>
-                                        <LiaQuestionCircle className='skillQuestionIcon' />
-                                    </a>
-                                </li>
-                            )
-                        } else{
-                            return(
-                                <li>{elem.skill}</li>
-                            )
-                        }
-                    })}
-                    </ul>
+                    <p className='aboutTextCharacters' id='char1'>. ݁₊ ⊹ . ݁˖ . ݁</p>
+                    <p className='aboutTextCursive' id='char2'>creative technologist</p>
+                    <p className='aboutTextCharacters' id='char3'>⋆ ˚｡⋆୨୧˚౨ৎ</p>
+                    <p className='aboutTextLacquer' id='char4'>what does that even mean?</p>
+                    <img src={arrow} id='char5' alt='thin hand-drawn black arrow pointing down and slightly to the right' />
+                    <p className='aboutTextPlaypen' id='char6'>i like <span className='aboutTextCursive'>computers</span></p>
+                    <p className='aboutTextPlaypen' id='char7'>(i have a b.s. in computer science from uc irvine. go anteaters!!!)</p>
+                    <p className='aboutTextCharacters' id='char8'>. ݁₊ ⊹ . ݁˖ . ݁</p>
+                    <p className='aboutTextPlaypen' id='char9'>&</p>
+                    <p className='aboutTextCursive' id='char10'>creating...anything!</p>
                 </div>
-                <div className='aboutText emailBox'>
-                    <img id='envelope' src={envelope} alt='white envelope with pink heart seal' />
-                    <p id='aboutEmail'>
+                <div className='aboutText' id='aboutContact'>
+                    <p style={{margin:'0px'}}>let's get in touch! email me at</p>
+                    <p style={{fontSize: '24px'}}>
                         contact [@] graceis [.] online
                     </p>
                 </div>
