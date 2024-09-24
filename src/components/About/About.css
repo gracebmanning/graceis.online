@@ -15,7 +15,6 @@
     transform: scale(1.0);
     transition: 0.1s ease-in;
     font-size: 18px;
-    margin-bottom: 15px;
 }
 
 .backLink:hover{
@@ -26,13 +25,35 @@
 .aboutText{
     margin-left: 40px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     width: 80%;
 }
 
 .aboutHeader{
     display: flex;
+    flex-direction: row;
+    align-items: last baseline;
+}
+
+.aboutHeader img{
+    height: 100px;
+    transform: rotate(-10deg);
+    margin-left: 10px;
+}
+
+.aboutHeaderText{
+    display: flex;
     flex-direction: column;
+}
+
+.aboutHeader h1{
+    font-size: 50px;
+    margin: 0px;
+}
+
+.aboutHeader h2{
+    font-size: 30px;
+    margin: 0px;
 }
 
 .aboutTextCharacters{
@@ -59,35 +80,6 @@
     font-size: 22px;
     width: 170px;
     margin: 0px;
-}
-
-.aboutText h1{
-    font-size: 50px;
-    margin: 0px;
-}
-
-.aboutText h2{
-    font-size: 30px;
-    margin: 0px;
-}
-
-.aboutText h3{
-    font-size: 28px;
-    margin: 0px;
-}
-
-.listTitle{
-    border-radius: 10px;
-    padding: 5px;
-    width: fit-content;
-}
-
-.aboutText ul{
-    margin: 5px 0px;
-    font-family: "Playpen Sans", cursive;
-    font-size: 18px;
-    width: 50%;
-    columns: 2;
 }
 
 #aboutContact{

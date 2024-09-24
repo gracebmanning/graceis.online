@@ -1,5 +1,5 @@
 import './About.css';
-import { daisiesFlipped, daisiesBottom, backarrow, arrow } from '../../assets/assets';
+import { daisiesFlipped, daisiesBottom, backarrow, arrow, bear } from '../../assets/assets';
 
 export default function About(){
     return(
@@ -8,16 +8,17 @@ export default function About(){
             <img className='backgroundImg bottomLeft' id='aboutDaisiesBottom' src={daisiesBottom} alt='' />
             <div className='container aboutContainer'>
                 <div className='aboutText'>
-                    <div className='aboutHeader'>
-                        <a className='backLink' href='/'>
-                            <img src={backarrow} alt='sketch outline of arrow pointing left' />
-                            go home
-                        </a>
-                        <div>
-                            <h2>about me</h2>
-                            <h1>grace manning</h1>
-                        </div>
+                    <a className='backLink' href='/'>
+                        <img src={backarrow} alt='sketch outline of arrow pointing left' />
+                        go home
+                    </a>
+                </div>
+                <div className='aboutText aboutHeader'>
+                    <div className='aboutHeaderText'>
+                        <h2>about me</h2>
+                        <h1>grace manning</h1>
                     </div>
+                    <img src={bear} alt='brown teddy bear' />
                 </div>
                 <div className='aboutText'>
                     <p className='aboutTextCharacters' id='char1'>. ݁₊ ⊹ . ݁˖ . ݁</p>

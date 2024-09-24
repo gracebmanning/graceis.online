@@ -12,6 +12,7 @@ import daisiesBottomFlipped from './daisiesBottomFlipped.jpg';
 import whiteRabbit from './white-rabbit.png';
 import envelope from './envelope.svg';
 import arrow from './arrow.svg';
+import bear from './bear.png';
 
 export{
     // NAVIGATION
@@ -34,5 +35,6 @@ export{
 
     // ABOUT PAGE
     envelope,
-    arrow
+    arrow,
+    bear
 }
