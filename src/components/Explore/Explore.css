@@ -13,26 +13,28 @@
 
 .exploreHeader{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: last baseline;
 }
 
-.backLink{
+#dinosaur{
+    width: 100px;
+    margin-left: 10px;
+}
+
+.exploreHeaderText{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    text-decoration: none;
-    color: black;
-    transform: scale(1.0);
-    transition: 0.1s ease-in;
-    font-size: 18px;
-    margin-bottom: 15px;
 }
 
-.backLink:hover{
-    transform: scale(1.1);
-    transition: 0.1s ease-out;
+.exploreHeader h1{
+    font-size: 50px;
+    margin: 0px;
+}
+
+.exploreHeader h2{
+    font-size: 30px;
+    margin: 0px;
 }
 
 #exploreDaisies{

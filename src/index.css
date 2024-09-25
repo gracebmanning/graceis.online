@@ -63,6 +63,15 @@ body {
   opacity: 0.4;
 }
 
+.subpageDaisies{
+  width: 50%;
+}
+
+.subpageDaisiesBottom{
+  width: 45%;
+  height: auto;
+}
+
 .topLeft{
   top: 0;
   left: 0;
@@ -81,4 +90,56 @@ body {
 .bottomRight{
   bottom: 0;
   right: 0;
+}
+
+.backLink{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  text-decoration: none;
+  color: black;
+  transform: scale(1.0);
+  transition: 0.1s ease-in;
+  font-size: 18px;
+}
+
+.backLink:hover{
+  transform: scale(1.1);
+  transition: 0.1s ease-out;
+}
+
+.subpageContainer{
+  font-family: "Lacquer", system-ui;
+  text-align: left;
+  width: 70vw;
+}
+
+.subpageText{
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  width: 80%;
+}
+
+.subpageHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: last baseline;
+}
+
+.subpageHeaderText{
+  display: flex;
+  flex-direction: column;
+}
+
+.subpageHeader h1{
+  font-size: 50px;
+  margin: 0px;
+}
+
+.subpageHeader h2{
+  font-size: 30px;
+  margin: 0px;
 }

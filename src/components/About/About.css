@@ -1,59 +1,7 @@
-.aboutContainer{
-    font-family: "Lacquer", system-ui;
-    text-align: left;
-    width: 70vw;
-}
-
-.backLink{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    text-decoration: none;
-    color: black;
-    transform: scale(1.0);
-    transition: 0.1s ease-in;
-    font-size: 18px;
-}
-
-.backLink:hover{
-    transform: scale(1.1);
-    transition: 0.1s ease-out;
-}
-
-.aboutText{
-    margin-left: 40px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    width: 80%;
-}
-
-.aboutHeader{
-    display: flex;
-    flex-direction: row;
-    align-items: last baseline;
-}
-
-.aboutHeader img{
+#teddybear{
     height: 100px;
     transform: rotate(-10deg);
     margin-left: 10px;
-}
-
-.aboutHeaderText{
-    display: flex;
-    flex-direction: column;
-}
-
-.aboutHeader h1{
-    font-size: 50px;
-    margin: 0px;
-}
-
-.aboutHeader h2{
-    font-size: 30px;
-    margin: 0px;
 }
 
 .aboutTextCharacters{
@@ -90,15 +38,6 @@
 
 #aboutContact p{
     margin: 0px;
-}
-
-#aboutDaisies{
-    width: 50%;
-}
-
-#aboutDaisiesBottom{
-    width: 45%;
-    height: auto;
 }
 
 #char2{

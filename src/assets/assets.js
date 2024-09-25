@@ -13,6 +13,7 @@ import whiteRabbit from './white-rabbit.png';
 import envelope from './envelope.svg';
 import arrow from './arrow.svg';
 import bear from './bear.png';
+import dinosaur from './dinosaur.png';
 
 export{
     // NAVIGATION
@@ -36,5 +37,8 @@ export{
     // ABOUT PAGE
     envelope,
     arrow,
-    bear
+    bear,
+    
+    // EXPLORE PAGE
+    dinosaur
 }
