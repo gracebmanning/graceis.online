@@ -85,8 +85,7 @@
 #aboutContact{
     font-size: 22px;
     font-family: "Lacquer", system-ui;
-    position: absolute;
-    bottom: 0;
+    margin-top: 25px;
 }
 
 #aboutContact p{
