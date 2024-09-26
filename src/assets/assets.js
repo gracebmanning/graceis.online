@@ -14,6 +14,7 @@ import envelope from './envelope.svg';
 import arrow from './arrow.svg';
 import bear from './bear.png';
 import dinosaur from './dinosaur.png';
+import internetarchive from './internet-archive.png';
 
 export{
     // NAVIGATION
@@ -40,5 +41,6 @@ export{
     bear,
     
     // EXPLORE PAGE
-    dinosaur
+    dinosaur,
+    internetarchive
 }

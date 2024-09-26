@@ -13,9 +13,11 @@ font-family: "Playpen Sans", cursive;
 }
 
 :root {
-  --color-one: #6c8220;
-  --color-two: #3b4216;
-  --color-three: #afc45f;
+  --color-light: #afc45f;
+  --color-medium: #6c8220;
+  --color-dark: #3b4216;
+  --color-accent-one: #DCE7B2;
+  --color-accent-two: #ECD5E5;
 }
 
 /* width */
@@ -30,15 +32,19 @@ font-family: "Playpen Sans", cursive;
 
 /* Handle */
 ::-webkit-scrollbar-thumb{
-  background: #DCE7B2;
+  background: var(--color-accent-one);
   border-radius: 20px;
-  border: 3px solid #DCE7B2;
+  border: 3px solid var(--color-accent-one);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover{
   background: #b9d562;
   border: 3px solid #b9d562;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -142,4 +148,35 @@ body {
 .subpageHeader h2{
   font-size: 30px;
   margin: 0px;
+}
+
+.textBasic{
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  margin: 0px;
+}
+
+.textCursive{
+  font-family: 'Miama';
+  font-size: 50px;
+  margin: 0px;
+  line-height: 1.05;
+}
+
+.textWhimsy{
+  font-family: "Playpen Sans", cursive;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.textHandwritten{
+  font-family: "Lacquer", system-ui;
+  font-size: 22px;
+  margin: 0px;
+}
+
+#aboutContact{
+  font-size: 22px;
+  font-family: "Lacquer", system-ui;
+  margin-top: 25px;
 }

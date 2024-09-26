@@ -1,45 +1,23 @@
-.projectsContainer{
-    font-family: "Lacquer", system-ui;
-    text-align: left;
-    width: 70vw;
-}
-
-.projectsText{
-    margin-left: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 80%;
-}
-
-.projectsHeader{
+.projectsNav{
     display: flex;
-    flex-direction: column;
-}
-
-.backLink{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    width: fit-content;
-    text-decoration: none;
-    color: black;
+    justify-content: space-between;
+}
+
+.projectsNav button{
+    font-family: "Lacquer", system-ui;
+    background-color: transparent;
+    border: none;
+    width: 165px;
+    font-size: 22px;
     transform: scale(1.0);
     transition: 0.1s ease-in;
-    font-size: 18px;
-    margin-bottom: 15px;
 }
 
-.backLink:hover{
-    transform: scale(1.1);
+.projectsNav button:hover{
+    cursor: pointer;
+    color: var(--color-medium);
+    transform: scale(1.02);
     transition: 0.1s ease-out;
-}
-
-#projectsDaisies{
-    width: 50%;
-}
-
-#projectsDaisiesBottom{
-    width: 45%;
-    height: auto;
 }

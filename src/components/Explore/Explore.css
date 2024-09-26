@@ -1,47 +1,22 @@
-.exploreContainer{
-    font-family: "Lacquer", system-ui;
-    text-align: left;
-    width: 70vw;
-}
-
-.exploreText{
-    margin-left: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 80%;
-}
-
-.exploreHeader{
-    display: flex;
-    flex-direction: row;
-    align-items: last baseline;
-}
-
 #dinosaur{
     width: 100px;
+}
+
+.exploreLink{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.exploreLink a{
+    color: black;
     margin-left: 10px;
 }
 
-.exploreHeaderText{
-    display: flex;
-    flex-direction: column;
+.exploreLink a:hover{
+    transform: scale(1.01);
 }
 
-.exploreHeader h1{
-    font-size: 50px;
-    margin: 0px;
-}
-
-.exploreHeader h2{
-    font-size: 30px;
-    margin: 0px;
-}
-
-#exploreDaisies{
-    width: 50%;
-}
-
-#exploreDaisiesBottom{
-    width: 45%;
-    height: auto;
+#internetarchive{
+    height: 50px;
 }

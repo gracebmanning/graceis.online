@@ -1,5 +1,5 @@
 import './Explore.css';
-import { daisiesFlipped, daisiesBottom, backarrow, dinosaur } from '../../assets/assets';
+import { daisiesFlipped, daisiesBottom, backarrow, dinosaur, internetarchive } from '../../assets/assets';
 
 export default function Explore(){
     return(
@@ -21,7 +21,13 @@ export default function Explore(){
                     <img id='dinosaur' src={dinosaur} alt='green dinosaur toy' />
                 </div>
                 <div className='subpageText'>
-                    Lorem ipsum...
+                    <div className='exploreLink'>
+                        <img id='internetarchive' src={internetarchive} alt='Internet Archive Logo. black roman architecture style building.' />
+                        <a href='https://archive.org/' target='_blank' rel='noreferrer'>
+                            <p className='textHandwritten'>internet archive</p>
+                        </a>
+                    </div>
+                    
                 </div>
             </div>
         </div>

@@ -4,38 +4,6 @@
     margin-left: 10px;
 }
 
-.aboutTextCharacters{
-    font-family: Arial, sans-serif;
-    font-size: 30px;
-    margin: 0px;
-}
-
-.aboutTextCursive{
-    font-family: 'Miama';
-    font-size: 50px;
-    margin: 0px;
-    line-height: 1.05;
-}
-
-.aboutTextPlaypen{
-    font-family: "Playpen Sans", cursive;
-    font-size: 20px;
-    margin: 0px;
-}
-
-.aboutTextLacquer{
-    font-family: "Lacquer", system-ui;
-    font-size: 22px;
-    width: 170px;
-    margin: 0px;
-}
-
-#aboutContact{
-    font-size: 22px;
-    font-family: "Lacquer", system-ui;
-    margin-top: 25px;
-}
-
 #aboutContact p{
     margin: 0px;
 }
@@ -46,6 +14,10 @@
 
 #char3{
     margin-left: 40%;
+}
+
+#char4{
+    width: 170px;
 }
 
 #char5{
