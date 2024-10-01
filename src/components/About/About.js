@@ -30,7 +30,7 @@ export default function About(){
                     <p className='textWhimsy' id='char7'>(i have a b.s. in computer science from uc irvine. go anteaters!!!)</p>
                     <p className='textBasic' id='char8'>. ݁₊ ⊹ . ݁˖ . ݁</p>
                     <p className='textWhimsy' id='char9'>&</p>
-                    <p className='textCursive' id='char10'>creating...anything!</p>
+                    <p className='textCursive' id='char10'>creating things!</p>
                 </div>
                 <div className='subpageText' id='aboutContact'>
                     <p style={{margin:'0px'}}>let's get in touch! email me at</p>

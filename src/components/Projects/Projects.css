@@ -1,23 +1,54 @@
-.projectsNav{
+.projectsContainer{
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgba(58, 153, 221, 0.4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(58, 153, 221, 0.4) 1px, transparent 1px);
+}
+
+#ladybug{
+    height: 90px;
+    transform: rotate(-12deg);
+    margin-left: 10px;
+}
+
+.projectsListContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectTile{
+    width: 50%;
+    background: white;
+    opacity: 0.9;
+    height: fit-content;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 5px 5px 10px rgba(58, 153, 221, 0.4);
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-.projectsNav button{
-    font-family: "Lacquer", system-ui;
-    background-color: transparent;
-    border: none;
-    width: 165px;
-    font-size: 22px;
-    transform: scale(1.0);
-    transition: 0.1s ease-in;
+.projectTile img{
+    width: 30%;
 }
 
-.projectsNav button:hover{
-    cursor: pointer;
-    color: var(--color-medium);
-    transform: scale(1.02);
-    transition: 0.1s ease-out;
+.projectTileText{
+    width: 70%;
+}
+
+@media (max-width: 1024px){
+    .projectTile{
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px){
+    .projectTile{
+        width: 80%;
+    }
 }
