@@ -1,82 +1,56 @@
 import './Projects.css';
-import { backarrow, ladybug, whiteRabbit } from '../../assets/assets';
+import { MdArrowOutward } from "react-icons/md";
 
-const projects = [
+const websites = [
     {
-        title: 'project 1',
-        subtitle: 'subtitle 1',
-        previewImage: whiteRabbit,
-        body: 
-        <div>
-            <p>this is a project description</p>
-            <img src={whiteRabbit} alt='test' />
-        </div>
+        title: 'a portfolio site for emmy',
+        link: 'emmygardner.online',
+        href: 'https://emmygardner.online/'
     },
     {
-        title: 'project 1',
-        subtitle: 'subtitle 1',
-        previewImage: whiteRabbit,
-        body: 
-        <div>
-            <p>this is a project description</p>
-            <img src={whiteRabbit} alt='test' />
-        </div>
+        title: 'a craigslist knockoff',
+        link: 'classifieds.lol',
+        href: 'https://classifieds.lol/'
     },
     {
-        title: 'project 1',
-        subtitle: 'subtitle 1',
-        previewImage: whiteRabbit,
-        body: 
-        <div>
-            <p>this is a project description</p>
-            <img src={whiteRabbit} alt='test' />
-        </div>
+        title: 'a (professional) portfolio website for myself',
+        link: 'grace-manning.com',
+        href: 'https://grace-manning.com/'
     },
     {
-        title: 'project 1',
-        subtitle: 'subtitle 1',
-        previewImage: whiteRabbit,
-        body: 
-        <div>
-            <p>this is a project description</p>
-            <img src={whiteRabbit} alt='test' />
-        </div>
+        title: 'my personal portal on the internet',
+        link: 'graces-portal.net',
+        href: 'https://graces-portal.net/'
+    },
+    {
+        title: 'the website that was originally going to be the one you are currently looking at, until I decided to completely redesign the entire thing...new use TBD',
+        link: 'itneedsmorecolor.com',
+        href: 'https://itneedsmorecolor.com/'
     },
 ]
 
-function ProjectTile(project, index){
-    return(
-        <div className='projectTile' key={index}>
-            <img src={project.previewImage} alt='' />
-            <div className='projectTileText'>
-                <h3>{project.title}</h3>
-                <h4>{project.subtitle}</h4>
-            </div>
-        </div>
-    )
-}
+/*
+{projects.map((proj, index) => {
+                        return ProjectTile(proj, index);
+                    })}
+*/
 
 export default function Projects(){
     return(
-        
-            <div className='container subpageContainer projectsContainer'>
-                <div className='subpageText'>
-                    <a className='backLink' href='/'>
-                        <img src={backarrow} alt='sketch outline of arrow pointing left' />
-                        go home
-                    </a>
+            <div className='container projectsContainer'>
+                <div>
+                    <h2 className='projectsPreTitle'>you've entered grace's</h2>
+                    <h1 className='projectsTitle'>Project Realm</h1>
                 </div>
-                <div className='subpageText subpageHeader'>
-                    <div className='subpageHeaderText'>
-                        <h2>this is the</h2>
-                        <h1>projects page</h1>
-                    </div>
-                    <img id='ladybug' src={ladybug} alt='brown teddy bear' />
-                </div>
-                <div className='projectsListContainer'>
-                    {projects.map((proj, index) => {
-                        return ProjectTile(proj, index);
-                    })}
+                <div className='projectsContentBox'>
+                    <p>
+                        I create websites for fun, including but not limited to:
+                    </p>
+                    <ul className='projectsWebsiteList'>
+                        {websites.map((proj, index) => {
+                            return <li key={index}>{proj.title}, <a href={proj.href} target='_blank' rel='noreferrer'>{proj.link}</a><MdArrowOutward/></li>
+                        })}
+                    </ul>
                 </div>
             </div>
         

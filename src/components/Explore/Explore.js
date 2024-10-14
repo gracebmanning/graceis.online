@@ -6,7 +6,7 @@ export default function Explore(){
         <div>
             <img className='backgroundImg topRight subpageDaisies' src={daisiesFlipped} alt='two daisies with smaller purple blooms and surrounding greenery' />
             <img className='backgroundImg bottomLeft subpageDaisiesBottom' src={daisiesBottom} alt='' />
-            <div className='container subpageContainer'>
+            <div className='container subpageContainer exploreContainer'>
                 <div className='subpageText'>
                     <a className='backLink' href='/'>
                         <img src={backarrow} alt='sketch outline of arrow pointing left' />
