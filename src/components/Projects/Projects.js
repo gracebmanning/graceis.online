@@ -51,6 +51,49 @@ export default function Projects(){
                             return <li key={index}>{proj.title}, <a href={proj.href} target='_blank' rel='noreferrer'>{proj.link}</a><MdArrowOutward/></li>
                         })}
                     </ul>
+                    <p>
+                        If you've looked at all those, you would realize by now that I never settle on one aesthetic. I love to design for any vision, any project!
+                    </p>
+                </div>
+                <p>There is something to be said about a line of text. Maybe I can put some here and see what happens!</p>
+                <div className='projectsContentBox'>
+                    <h3 className='projectsContentBoxTitle'>Project Case Study</h3>
+                    <p>
+                        This is where I may break down a project that I did.
+                    </p>
+                    <div className='projectsFillerImage'>
+                    </div>
+                    <p>
+                        ...and then describe it some more.
+                    </p>
+                </div>
+                <div className='projectsContentBox'>
+                    <h3 className='projectsContentBoxTitle'>Music Videos &amp; Generative Art</h3>
+                    <p>
+                        This is where I may list some projects.
+                    </p>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                        <div className='projectsFillerImage'>
+                        </div>
+                        <div className='projectsFillerImage'>
+                        </div>
+                        <div className='projectsFillerImage'>
+                        </div>
+                    </div>
+                    <p>
+                        ...and then describe it some more.
+                    </p>
+                </div>
+                <div className='projectsContentBox'>
+                    <h3 className='projectsContentBoxTitle'>App Development</h3>
+                    <p>
+                        I also made a mobile app called the "Cowculator" once. It's how I learned that app development is not in my future.
+                    </p>
+                    <div className='projectsFillerImage'>
+                    </div>
+                    <p>
+                        ...and then describe it some more.
+                    </p>
                 </div>
             </div>
         
