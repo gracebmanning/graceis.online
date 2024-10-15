@@ -29,12 +29,6 @@ const websites = [
     },
 ]
 
-/*
-{projects.map((proj, index) => {
-                        return ProjectTile(proj, index);
-                    })}
-*/
-
 export default function Projects(){
     return(
             <div className='container projectsContainer'>

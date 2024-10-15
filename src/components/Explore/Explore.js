@@ -1,5 +1,6 @@
 import './Explore.css';
-import { daisiesFlipped, daisiesBottom, backarrow, dinosaur, internetarchive } from '../../assets/assets';
+import { backarrow, dinosaur, internetarchive } from '../../assets/assets';
+import { daisiesFlipped, daisiesBottom } from '../../assets/backgrounds/backgrounds';
 
 export default function Explore(){
     return(

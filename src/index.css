@@ -7,7 +7,7 @@ font-family: "Inter", sans-serif;
 
 @font-face{
   font-family: 'Miama';
-  src: url('./assets/miama.regular.woff') format('woff');
+  src: url('./assets/fonts/miama.regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

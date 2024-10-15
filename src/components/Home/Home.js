@@ -1,5 +1,6 @@
 import './Home.css';
-import { fish, ladybug, embroideredstar, strawberry, lunamoth, whiteRabbit, daisies, daisiesBottomFlipped } from '../../assets/assets.js';
+import { fish, ladybug, embroideredstar, strawberry, lunamoth } from '../../assets/assets.js';
+import { whiteRabbit, daisies, daisiesBottomFlipped } from '../../assets/backgrounds/backgrounds';
 
 export default function Home2(){
     return(

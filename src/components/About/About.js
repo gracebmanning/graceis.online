@@ -1,5 +1,6 @@
 import './About.css';
-import { daisiesFlipped, daisiesBottom, backarrow, arrow, bear } from '../../assets/assets';
+import { backarrow, arrow, bear } from '../../assets/assets';
+import { daisiesFlipped, daisiesBottom } from '../../assets/backgrounds/backgrounds';
 
 export default function About(){
     return(
