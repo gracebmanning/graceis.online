@@ -30,7 +30,7 @@ export default function Home2(){
                         </a>
                     </div>
                     <div className='navRow'>
-                        <a className='navButton' id='youtubeButton' href='/'>
+                        <a className='navButton' id='youtubeButton' href='https://www.youtube.com/@graceis.online' target='_blank' rel='noreferrer'>
                             <img className='navImage' src={strawberry} alt='' />
                             <p className='navText'>youtube</p>
                         </a>
