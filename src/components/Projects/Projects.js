@@ -1,35 +1,9 @@
 import './Projects.css';
 import { MdArrowOutward } from "react-icons/md";
 import { gracemanningCom, emmygardnerOnline, classifiedsLol, gracesPortal, itneedsmorecolor } from '../../assets/thumbnails/thumbnails.js';
-import { frame } from '../../assets/assets';
-
-const navItems = [
-    {
-        text: 'home',
-        href: '/',
-        target: '_self'
-    },
-    {
-        text: 'about',
-        href: '/about',
-        target: '_self'
-    },
-    {
-        text: 'explore',
-        href: '/explore',
-        target: '_self'
-    },
-    {
-        text: 'instagram',
-        href: 'https://www.instagram.com/graceis0nline/',
-        target: '_blank'
-    },
-    {
-        text: 'youtube',
-        href: '/',
-        target: '_blank'
-    },
-]
+import { pinkBow } from '../../assets/assets';
+import { IoHome, IoDesktopOutline, IoHeadset, IoCutSharp  } from "react-icons/io5";
+import { useRef } from 'react';
 
 const websites = [
     {
@@ -75,25 +49,51 @@ function WebsiteTile(website, index){
 }
 
 export default function Projects(){
+    const webRef = useRef(null);
+    const musicVideosRef = useRef(null);
+    const liveVisualsRef = useRef(null);
+    const fiberArtsRef = useRef(null);
+
     return(
-            <div className='container projectsContainer'>
-                <ul className='projectsNav'>
-                    {navItems.map((item, index) => {
-                        return(
-                            <a key={index} href={item.href} target={item.target}>
-                                <li>
-                                    {item.text}
-                                </li>
-                            </a>
-                        )
-                    })}
-                </ul>
+            <div className='container projectsContainer'>                
                 <div>
                     <h2 className='projectsPreTitle'>you've entered grace's</h2>
                     <h1 className='projectsTitle'>Project Realm</h1>
-                    <img className='projectsFrame' src={frame} alt='gold vintage frame surrounding a portrait of grace, holding a book about the World Wide Web' />
                 </div>
-                <div className='projectsContentBox'>
+                <ul className='projectsNav'>
+                    <li>
+                        <a href='/'>
+                            <IoHome className='projectNavIcon'/>
+                            home
+                        </a>
+                    </li>
+                    <li>
+                        <button onClick={() => webRef.current?.scrollIntoView({behavior: 'smooth'})}>
+                            <IoDesktopOutline className='projectNavIcon'/>
+                            web
+                        </button>
+                    </li>
+                    <li>
+                        <button onClick={() => musicVideosRef.current?.scrollIntoView({behavior: 'smooth'})}>
+                            <IoHeadset className='projectNavIcon'/>
+                            music videos
+                        </button>
+                    </li>
+                    <li>
+                        <button onClick={() => liveVisualsRef.current?.scrollIntoView({behavior: 'smooth'})}>
+                            <IoHeadset className='projectNavIcon'/>
+                            live visuals
+                        </button>
+                    </li>
+                    <li>
+                        <button onClick={() => fiberArtsRef.current?.scrollIntoView({behavior: 'smooth'})}>
+                            <IoCutSharp className='projectNavIcon'/>
+                            fiber arts, etc.
+                        </button>
+                    </li>
+                </ul>
+                <img className='projectsBow' src={pinkBow} alt='baby pink ribbon bow' />
+                <div className='projectsContentBox' ref={webRef}>
                     <h3 className='projectsContentBoxTitle'>web design</h3>
                     <p>
                         I create websites for fun, including but not limited to:
@@ -107,7 +107,7 @@ export default function Projects(){
                 </div>
                 <p>There is something to be said about a line of text. Maybe I can put some here and see what happens!</p>
                 <div className='projectsContentBox'>
-                    <h3 className='projectsContentBoxTitle'>Project Case Study</h3>
+                    <h3 className='projectsContentBoxTitle'>project case study</h3>
                     <p>
                         This is where I may break down a project that I did.
                     </p>
@@ -117,8 +117,8 @@ export default function Projects(){
                         ...and then describe it some more.
                     </p>
                 </div>
-                <div className='projectsContentBox'>
-                    <h3 className='projectsContentBoxTitle'>Music Videos &amp; Generative Art</h3>
+                <div className='projectsContentBox' ref={musicVideosRef}>
+                    <h3 className='projectsContentBoxTitle'>music videos</h3>
                     <p>
                         This is where I may list some projects.
                     </p>
@@ -134,12 +134,35 @@ export default function Projects(){
                         ...and then describe it some more.
                     </p>
                 </div>
-                <div className='projectsContentBox'>
-                    <h3 className='projectsContentBoxTitle'>App Development</h3>
+                <div className='projectsContentBox' ref={liveVisualsRef}>
+                    <h3 className='projectsContentBoxTitle'>music videos</h3>
                     <p>
-                        I also made a mobile app called the "Cowculator" once. It's how I learned that app development is not in my future.
+                        This is where I may list some projects.
                     </p>
-                    <div className='projectsFillerImage'>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                        <div className='projectsFillerImage'>
+                        </div>
+                        <div className='projectsFillerImage'>
+                        </div>
+                        <div className='projectsFillerImage'>
+                        </div>
+                    </div>
+                    <p>
+                        ...and then describe it some more.
+                    </p>
+                </div>
+                <div className='projectsContentBox' ref={fiberArtsRef}>
+                    <h3 className='projectsContentBoxTitle'>music videos</h3>
+                    <p>
+                        This is where I may list some projects.
+                    </p>
+                    <div style={{display: 'flex', flexDirection: 'row'}}>
+                        <div className='projectsFillerImage'>
+                        </div>
+                        <div className='projectsFillerImage'>
+                        </div>
+                        <div className='projectsFillerImage'>
+                        </div>
                     </div>
                     <p>
                         ...and then describe it some more.
