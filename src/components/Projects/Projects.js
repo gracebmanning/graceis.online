@@ -2,7 +2,7 @@ import './Projects.css';
 import { MdArrowOutward } from "react-icons/md";
 import { gracemanningCom, emmygardnerOnline, classifiedsLol, gracesPortal, itneedsmorecolor } from '../../assets/thumbnails/thumbnails.js';
 import { pinkBow } from '../../assets/assets';
-import { IoHome, IoDesktopOutline, IoHeadset, IoCutSharp  } from "react-icons/io5";
+import { IoHome, IoDesktopOutline, IoHeadset, IoCutSharp, IoVideocam } from "react-icons/io5";
 import { useRef } from 'react';
 
 const websites = [
@@ -38,9 +38,34 @@ const websites = [
     },
 ]
 
+const musicVideos = [
+    {
+        title: 'talk talk by charli xcx - lyric video',
+        link: 'view on youtube',
+        href: 'https://youtu.be/QL--AfXtkCo?si=I9uvTpNX4qGZ0VuG',
+        embed: <iframe src="https://www.youtube.com/embed/QL--AfXtkCo?si=bKkyBOGr1yJQF7Tk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+    },
+    {
+        title: 'talk talk by charli xcx - lyric video',
+        link: 'view on youtube',
+        href: 'https://youtu.be/QL--AfXtkCo?si=I9uvTpNX4qGZ0VuG',
+        embed: <iframe src="https://www.youtube.com/embed/QL--AfXtkCo?si=Qg6-7WLleQU-jM4x" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+    },
+]
+
+function MusicVideoTile(video, index){
+    return(
+        <div className='projectTile musicVideoTile' key={index}>
+            {video.embed}
+            <p>{video.title}</p>
+            <a href={video.href} target='_blank' rel='noreferrer'>{video.link}<MdArrowOutward/></a>
+        </div>
+    )
+}
+
 function WebsiteTile(website, index){
     return(
-        <div className='websiteTile' key={index}>
+        <div className='projectTile websiteTile' key={index}>
             <img src={website.thumbnail} alt='website home page' />
             <p>{website.title}</p>
             <a href={website.href} target='_blank' rel='noreferrer'>{website.link}<MdArrowOutward/></a>
@@ -81,7 +106,7 @@ export default function Projects(){
                     </li>
                     <li>
                         <button onClick={() => liveVisualsRef.current?.scrollIntoView({behavior: 'smooth'})}>
-                            <IoHeadset className='projectNavIcon'/>
+                            <IoVideocam className='projectNavIcon'/>
                             live visuals
                         </button>
                     </li>
@@ -94,11 +119,11 @@ export default function Projects(){
                 </ul>
                 <img className='projectsBow' src={pinkBow} alt='baby pink ribbon bow' />
                 <div className='projectsContentBox' ref={webRef}>
-                    <h3 className='projectsContentBoxTitle'>web design</h3>
+                    <h3>web design</h3>
                     <p>
                         I create websites for fun, including but not limited to:
                     </p>
-                    <div className='projectsWebsiteList'>
+                    <div className='projectsList'>
                         {websites.map((proj, index) => {return WebsiteTile(proj, index)})}
                     </div>
                     <p>
@@ -107,7 +132,7 @@ export default function Projects(){
                 </div>
                 <p>There is something to be said about a line of text. Maybe I can put some here and see what happens!</p>
                 <div className='projectsContentBox'>
-                    <h3 className='projectsContentBoxTitle'>project case study</h3>
+                    <h3>project case study</h3>
                     <p>
                         This is where I may break down a project that I did.
                     </p>
@@ -118,24 +143,19 @@ export default function Projects(){
                     </p>
                 </div>
                 <div className='projectsContentBox' ref={musicVideosRef}>
-                    <h3 className='projectsContentBoxTitle'>music videos</h3>
+                    <h3>music videos</h3>
                     <p>
                         This is where I may list some projects.
                     </p>
-                    <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <div className='projectsFillerImage'>
-                        </div>
-                        <div className='projectsFillerImage'>
-                        </div>
-                        <div className='projectsFillerImage'>
-                        </div>
+                    <div className='projectsList'>
+                        {musicVideos.map((proj, index) => {return MusicVideoTile(proj, index)})}
                     </div>
                     <p>
                         ...and then describe it some more.
                     </p>
                 </div>
                 <div className='projectsContentBox' ref={liveVisualsRef}>
-                    <h3 className='projectsContentBoxTitle'>music videos</h3>
+                    <h3>live visuals</h3>
                     <p>
                         This is where I may list some projects.
                     </p>
@@ -152,7 +172,7 @@ export default function Projects(){
                     </p>
                 </div>
                 <div className='projectsContentBox' ref={fiberArtsRef}>
-                    <h3 className='projectsContentBoxTitle'>music videos</h3>
+                    <h3>fiber arts</h3>
                     <p>
                         This is where I may list some projects.
                     </p>

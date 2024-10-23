@@ -14,7 +14,7 @@
 
 .projectsNav{
     margin-bottom: 40px;
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -75,21 +75,21 @@
 }
 
 .projectsContentBox{
-    width: 70%;
+    width: 80%;
     border: solid 2px var(--color-accent-two);
     margin: 20px 0px;
     padding: 10px;
     text-align: left;
+
+    h3{
+        font-family: 'Lacquer', sans-serif;
+        font-weight: 400;
+        font-size: 35px;
+        margin: 5px;
+    }
 }
 
-.projectsContentBoxTitle{
-    font-family: 'Lacquer', sans-serif;
-    font-weight: 400;
-    font-size: 35px;
-    margin: 5px;
-}
-
-.projectsWebsiteList{
+.projectsList{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -97,16 +97,11 @@
     flex-wrap: wrap;
 }
 
-.websiteTile{
-    width: 30%;
+.projectTile{
     margin: 10px;
 
     p{
         margin: 0px 0px 7px 0px;
-    }
-
-    img{
-        width: 100%;
     }
 
     a{
@@ -120,6 +115,24 @@
     a:hover{
         background-color: var(--color-accent-two);
         color: black;
+    }
+}
+
+.websiteTile{
+    width: 30%;
+
+    img{
+        width: 100%;
+    }
+}
+
+.musicVideoTile{
+    width: 47%;
+    
+
+    iframe{
+        width: 100%;
+        height: 360px;
     }
 }
 
