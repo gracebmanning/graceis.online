@@ -37,9 +37,11 @@ export default function About(){
                 <div className='subpageText aboutText'>
                     <div className='aboutBio'>
                         <img src={grace} alt='grace takes a selfie with the camera from a high angle. she has her eyes closed and is smiling contently.' />
-                        <p>I'm Grace :) a web developer, software engineer, visual designer, and creator.</p>
-                        <p>I am passionate about human-centered design and creating technology that impacts people in a meaningful way.</p>
-                        <p style={{fontWeight: 'bold'}}>let's get in touch! email me at contact [@] graceis [.] online</p>
+                        <div className='aboutBioText'>
+                            <p>I'm Grace :) a web developer, software engineer, visual designer, and creator.</p>
+                            <p>I am passionate about human-centered design and creating technology that impacts people in a meaningful way.</p>
+                            <p style={{fontWeight: 'bold'}}>let's get in touch! email me at contact [@] graceis [.] online</p>
+                        </div>
                     </div>
                 </div>
                 
