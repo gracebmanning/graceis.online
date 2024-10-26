@@ -95,7 +95,7 @@ export default function Projects(){
                     <li>
                         <a href='/'>
                             <IoHome className='projectNavIcon'/>
-                            home
+                            take me home!
                         </a>
                     </li>
                     <li>
