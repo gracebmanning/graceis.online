@@ -18,7 +18,7 @@ font-family: "Inter", sans-serif;
   --color-medium: #6c8220;
   --color-dark: #3b4216;
   --color-accent-one: #DCE7B2;
-  --color-accent-two: #ECD5E5;
+  --color-accent-two: #ecd5e5;
 }
 
 /* width */
@@ -149,6 +149,7 @@ body {
 .subpageHeader h2{
   font-size: 30px;
   margin: 0px;
+  text-align: left;
 }
 
 .textBasic{
