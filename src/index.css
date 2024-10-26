@@ -152,31 +152,6 @@ body {
   text-align: left;
 }
 
-.textBasic{
-  font-family: Arial, sans-serif;
-  font-size: 30px;
-  margin: 0px;
-}
-
-.textCursive{
-  font-family: 'Miama';
-  font-size: 50px;
-  margin: 0px;
-  line-height: 1.05;
-}
-
-.textWhimsy{
-  font-family: "Playpen Sans", cursive;
-  font-size: 20px;
-  margin: 0px;
-}
-
-.textHandwritten{
-  font-family: "Lacquer", system-ui;
-  font-size: 22px;
-  margin: 0px;
-}
-
 #aboutContact{
   font-size: 22px;
   font-family: "Lacquer", system-ui;

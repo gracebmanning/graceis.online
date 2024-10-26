@@ -10,6 +10,7 @@ import bear from './bear.png';
 import frame from './frame-me.png';
 import dinosaur from './dinosaur.png';
 import pinkBow from './pink-bow.png';
+import grace from './grace.png';
 
 // EXPLORE PAGE ICONS
 import internetarchive from './explore/internet-archive.png';
@@ -30,6 +31,7 @@ export{
     envelope,
     arrow,
     bear,
+    grace,
 
     // PROJECTS PAGE
     frame,
