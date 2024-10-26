@@ -98,10 +98,10 @@
 }
 
 .projectTile{
-    margin: 10px;
+    margin: 10px 10px 15px 10px;
 
     p{
-        margin: 0px 0px 7px 0px;
+        margin: 5px 0px 15px 0px;
     }
 
     a{
@@ -141,4 +141,25 @@
     height: 200px;
     background-color: var(--color-accent-two);
     margin: 5px;
+}
+
+@media (max-width: 1024px){
+    .websiteTile{
+        width: 45%;
+    }
+
+    .musicVideoTile{
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px){
+    .projectsList{
+        justify-content: center;
+    }
+
+    .websiteTile{
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }
