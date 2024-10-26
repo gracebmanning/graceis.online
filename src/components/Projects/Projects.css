@@ -74,6 +74,12 @@
     width: 100px;
 }
 
+.unboxedText{
+    width: 80%;
+    margin: 20px 0px;
+    text-align: justify;
+}
+
 .projectsContentBox{
     width: 80%;
     border: solid 2px var(--color-accent-two);
@@ -144,12 +150,19 @@
 }
 
 @media (max-width: 1024px){
+    .projectTile{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
     .websiteTile{
         width: 45%;
     }
 
     .musicVideoTile{
-        width: 80%;
+        width: 95%;
+        
+        
     }
 }
 
@@ -159,7 +172,13 @@
     }
 
     .websiteTile{
-        width: 80%;
+        width: 95%;
         margin-bottom: 20px;
+    }
+
+    .musicVideoTile{
+        iframe{
+            height: 220px;
+        }
     }
 }

@@ -1,6 +1,6 @@
 import './Projects.css';
 import { MdArrowOutward } from "react-icons/md";
-import { gracemanningCom, emmygardnerOnline, classifiedsLol, gracesPortal, itneedsmorecolor } from '../../assets/thumbnails/thumbnails.js';
+import { gracemanningCom, emmygardnerOnline, classifiedsLol, gracesPortal, itneedsmorecolor, graceIsOnline } from '../../assets/thumbnails/thumbnails.js';
 import { pinkBow } from '../../assets/assets';
 import { IoHome, IoDesktopOutline, IoHeadset, IoCutSharp, IoVideocam } from "react-icons/io5";
 import { useRef } from 'react';
@@ -35,6 +35,12 @@ const websites = [
         link: 'itneedsmorecolor.com',
         href: 'https://itneedsmorecolor.com/',
         thumbnail: itneedsmorecolor
+    },
+    {
+        title: 'the website you are viewing right at this very moment',
+        link: `let's see it again!`,
+        href: 'https://graceis.online/',
+        thumbnail: graceIsOnline
     },
 ]
 
@@ -130,7 +136,7 @@ export default function Projects(){
                         If you've looked at all those, you would realize by now that I never settle on one aesthetic. I love to design for any vision, any project!
                     </p>
                 </div>
-                <p>There is something to be said about a line of text. Maybe I can put some here and see what happens!</p>
+                <p className='unboxedText'>There is something to be said about a line of text. Maybe I can put some here and see what happens!</p>
                 <div className='projectsContentBox'>
                     <h3>project case study</h3>
                     <p>
