@@ -93,31 +93,31 @@ export default function Projects(){
                 </div>
                 <ul className='projectsNav'>
                     <li>
-                        <a href='/'>
+                        <a className='projectsNavButton' href='/'>
                             <IoHome className='projectNavIcon'/>
                             take me home!
                         </a>
                     </li>
                     <li>
-                        <button onClick={() => webRef.current?.scrollIntoView({behavior: 'smooth'})}>
+                        <button className='projectsNavButton' onClick={() => webRef.current?.scrollIntoView({behavior: 'smooth'})}>
                             <IoDesktopOutline className='projectNavIcon'/>
                             web
                         </button>
                     </li>
                     <li>
-                        <button onClick={() => musicVideosRef.current?.scrollIntoView({behavior: 'smooth'})}>
+                        <button className='projectsNavButton' onClick={() => musicVideosRef.current?.scrollIntoView({behavior: 'smooth'})}>
                             <IoHeadset className='projectNavIcon'/>
                             music videos
                         </button>
                     </li>
                     <li>
-                        <button onClick={() => liveVisualsRef.current?.scrollIntoView({behavior: 'smooth'})}>
+                        <button className='projectsNavButton' onClick={() => liveVisualsRef.current?.scrollIntoView({behavior: 'smooth'})}>
                             <IoVideocam className='projectNavIcon'/>
                             live visuals
                         </button>
                     </li>
                     <li>
-                        <button onClick={() => fiberArtsRef.current?.scrollIntoView({behavior: 'smooth'})}>
+                        <button className='projectsNavButton' onClick={() => fiberArtsRef.current?.scrollIntoView({behavior: 'smooth'})}>
                             <IoCutSharp className='projectNavIcon'/>
                             fiber arts, etc.
                         </button>
