@@ -46,16 +46,16 @@ const websites = [
 
 const musicVideos = [
     {
-        title: 'talk talk by charli xcx - lyric video',
+        title: 'black sheep by metric - lyric video',
         link: '',
         href: '',
-        embed: <iframe src="https://www.youtube.com/embed/QL--AfXtkCo?si=bKkyBOGr1yJQF7Tk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        embed: <iframe src="https://www.youtube.com/embed/YpCVh5VX8mc?si=-qsG2CKij9gbVPVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     },
     {
         title: 'talk talk by charli xcx - lyric video',
         link: '',
         href: '',
-        embed: <iframe src="https://www.youtube.com/embed/QL--AfXtkCo?si=Qg6-7WLleQU-jM4x" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        embed: <iframe src="https://www.youtube.com/embed/QL--AfXtkCo?si=bKkyBOGr1yJQF7Tk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
     },
 ]
 
