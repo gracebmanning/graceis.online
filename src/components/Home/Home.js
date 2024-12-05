@@ -34,7 +34,7 @@ export default function Home2(){
                             <img className='navImage' src={strawberry} alt='' />
                             <p className='navText'>youtube</p>
                         </a>
-                        <a className='navButton' id='instagramButton' href='https://www.instagram.com/graceis0nline/' target='_blank' rel='noreferrer'>
+                        <a className='navButton' id='instagramButton' href='https://www.instagram.com/graceis.online/' target='_blank' rel='noreferrer'>
                             <img className='navImage' id='lunamothImage' src={lunamoth} alt='' />
                             <p className='navText'>instagram</p>
                         </a>
