@@ -1,6 +1,7 @@
 import './Sources.css';
 import { daisies } from "../../assets/backgrounds/backgrounds";
 import { backarrow, fish, ladybug, embroideredstar, strawberry, lunamoth, envelope, bear, frame, pinkBow, dinosaur, internetarchive, winClassic } from '../../assets/assets';
+import { MdArrowOutward } from "react-icons/md";
 
 let assets = [
     // NAVIGATION
@@ -124,7 +125,7 @@ export default function Sources(){
                     <ul className='sourcesList'>
                         {assets.map((elem, index)=><li className='sourcesListItem' key={index}>
                                 <img src={elem.asset} alt={elem.alt}/>
-                                source: {(elem.source==='me') ? `${elem.link}` : <a href={elem.link} target='_blank' rel='noreferrer'>external link</a>}
+                                source: {(elem.source==='me') ? `${elem.link}` : <a href={elem.link} target='_blank' rel='noreferrer'>external link<MdArrowOutward/></a>}
                             </li>)}
                     </ul>
                 </div>
