@@ -1,6 +1,11 @@
 import './Projects.css';
 import { MdArrowOutward } from "react-icons/md";
-import { gracemanningCom, emmygardnerOnline, classifiedsLol, gracesPortal, itneedsmorecolor, graceIsOnline } from '../../assets/thumbnails/thumbnails.js';
+import { 
+    // THUMBNAILS
+    gracemanningCom, emmygardnerOnline, classifiedsLol, gracesPortal, itneedsmorecolor, graceIsOnline,
+    // FIBER ARTS
+    crochetScarf1, tusnoBag, pufferSnoopy,
+ } from '../../assets/projects/projects';
 import { pinkBow } from '../../assets/assets';
 import { IoHome, IoDesktopOutline, IoHeadset, IoCutSharp, IoVideocam } from "react-icons/io5";
 import { useRef } from 'react';
@@ -49,7 +54,7 @@ const musicVideos = [
         title: 'black sheep by metric - lyric video',
         link: '',
         href: '',
-        embed: <iframe src="https://www.youtube.com/embed/YpCVh5VX8mc?si=-qsG2CKij9gbVPVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        embed: <iframe src="https://www.youtube.com/embed/YpCVh5VX8mc?si=-qsG2CKij9gbVPVo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
     },
     {
         title: 'talk talk by charli xcx - lyric video',
@@ -58,6 +63,40 @@ const musicVideos = [
         embed: <iframe src="https://www.youtube.com/embed/QL--AfXtkCo?si=bKkyBOGr1yJQF7Tk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
     },
 ]
+
+const fiberArts = [
+    {
+        image: pufferSnoopy,
+        alt: '',
+        title: 'puffer snoopy [pattern from destinymakes.com]',
+        date: 'December 2024',
+        materials: 'acrylic yarn'
+    },
+    {
+        image: tusnoBag,
+        alt: '',
+        title: 'tsuno bag',
+        date: 'March 2024',
+        materials: 'cotton canvas fabric, polyester thread'
+    },
+    {
+        image: crochetScarf1,
+        alt: '',
+        title: 'skinny scarf',
+        date: 'January 2024',
+        materials: 'acrylic yarn'
+    },
+]
+
+function WebsiteTile(website, index){
+    return(
+        <div className='projectTile websiteTile' key={index}>
+            <img src={website.thumbnail} alt='website home page' />
+            <p>{website.title}</p>
+            <a href={website.href} target='_blank' rel='noreferrer'>{website.link}<MdArrowOutward/></a>
+        </div>
+    )
+}
 
 function MusicVideoTile(video, index){
     return(
@@ -69,12 +108,13 @@ function MusicVideoTile(video, index){
     )
 }
 
-function WebsiteTile(website, index){
+function FiberArtsTile(project, index){
     return(
-        <div className='projectTile websiteTile' key={index}>
-            <img src={website.thumbnail} alt='website home page' />
-            <p>{website.title}</p>
-            <a href={website.href} target='_blank' rel='noreferrer'>{website.link}<MdArrowOutward/></a>
+        <div className='projectTile fiberArtsTile' key={index}>
+            <img src={project.image} alt={project.alt} />
+            <h4>{project.title}</h4>
+            <p>{project.date}</p>
+            <p>materials: {project.materials}</p>
         </div>
     )
 }
@@ -180,19 +220,13 @@ export default function Projects(){
                 <div className='projectsContentBox' ref={fiberArtsRef}>
                     <h3>fiber arts</h3>
                     <p>
-                        This is where I may list some projects.
+                        I am actively learning how to sew, as well as improving my crochet and embroidery skills. I'll keep my projects here to track progress! ⋆ ˚｡⋆୨୧˚⋆ ˚｡⋆
                     </p>
                     <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <div className='projectsFillerImage'>
-                        </div>
-                        <div className='projectsFillerImage'>
-                        </div>
-                        <div className='projectsFillerImage'>
+                        <div className='projectsList'>
+                            {fiberArts.map((proj, index) => {return FiberArtsTile(proj, index)})}
                         </div>
                     </div>
-                    <p>
-                        ...and then describe it some more.
-                    </p>
                 </div>
             </div>
         
