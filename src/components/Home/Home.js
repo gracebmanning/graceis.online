@@ -40,7 +40,7 @@ export default function Home2(){
                         </a>
                     </div>
                 </div>
-                <h2 id='contactText'>contact [at] graceis [dot] online</h2>
+                <h2 id='contactText'>contact [@] graceis [.] online</h2>
             </div>
             <img className='backgroundImg bottomRight' id='homeDaisiesBottom' src={daisiesBottomFlipped} alt='' />
             <img className='bottomRight' id='whiteRabbit' src={whiteRabbit} alt='' />
