@@ -7,33 +7,39 @@ let assets = [
     {
         asset: backarrow,
         source: 'me',
-        alt: ''
+        link: 'drawn by me',
+        alt: 'black outlined arrow pointing left'
     },
 
     // HOME PAGE ICONS
     {
         asset: fish,
-        source: '',
+        source: 'external',
+        link: 'https://za.pinterest.com/pin/595741856993273761/',
         alt: ''
     },
     {
         asset: ladybug,
-        source: '',
+        source: 'external',
+        link: 'https://spectrum.ieee.org/microled-displays-could-show-up-in-products-as-soon-as-2020',
         alt: ''
     },
     {
         asset: embroideredstar,
-        source: '',
+        source: 'external',
+        link: 'https://www.walmart.com/ip/Wrights-Iron-On-Appliques-3-Pkg-Silver-Metallic-Stars-Pk-3-Wrights/43984845',
         alt: ''
     },
     {
         asset: strawberry,
-        source: '',
+        source: 'external',
+        link: 'https://www.gardeningknowhow.com/edible/fruits/strawberry/growing-jewel-strawberries.htm',
         alt: ''
     },
     {
         asset: lunamoth,
-        source: '',
+        source: 'external',
+        link: 'https://www.pinterest.com/pin/5066618328582739/',
         alt: ''
     },
 
@@ -41,42 +47,55 @@ let assets = [
     {
         asset: envelope,
         source: 'me',
+        link: 'drawn by me',
         alt: ''
     },
     {
         asset: bear,
-        source: '',
+        source: 'external',
+        link: 'https://www.macys.com/shop/product/aurora-large-bonny-bear-snuggly-plush-toy-tan-16?ID=17147799',
         alt: ''
     },
 
     // PROJECTS PAGE
     {
         asset: frame,
-        source: ''
+        source: 'external',
+        link: 'https://www.walmart.com/ip/Oval-Picture-Frames-Vintage-Gold-Frame-Mini-Picture-Frames-Small-Vingate-Picture-Frames-Gallery-Wall-Frames-Ornate-Frames-Antique-Picture-Frames/5341409853',
+        alt: ''
     },
     {
         asset: pinkBow,
-        source: ''
+        source: 'external',
+        link: 'https://fairyprincesspets.com/products/add-bows',
+        alt: ''
     },
 
     // EXPLORE PAGE
     {
         asset: dinosaur,
-        source: 'https://www.acehardware.com/departments/home-and-decor/novelty-items/toys-and-games/9060321'
+        source: 'external',
+        link: 'https://www.acehardware.com/departments/home-and-decor/novelty-items/toys-and-games/9060321',
+        alt: ''
     },
     {
         asset: internetarchive,
-        source: ''
+        source: 'external',
+        link: 'https://archive.org/details/logo-internetArchive-266x300-1',
+        alt: ''
     },
     {
         asset: winClassic,
-        source: ''
+        source: 'external',
+        link: 'https://winclassic.net/',
+        alt: ''
     },
     
     // BACKGROUNDS
     {
         asset: daisies,
-        source: 'my personal stationery collection; artist unknown',
+        source: 'me',
+        link: 'my personal stationery collection; artist unknown',
         alt: ''
     },
 
@@ -105,7 +124,7 @@ export default function Sources(){
                     <ul className='sourcesList'>
                         {assets.map((elem, index)=><li className='sourcesListItem' key={index}>
                                 <img src={elem.asset} alt={elem.alt}/>
-                                source: {(elem.source==='me' || elem.source==='my personal stationery collection; artist unknown') ? `${elem.source}` : <a href={elem.source} target='_blank' rel='noreferrer'>external link</a>}
+                                source: {(elem.source==='me') ? `${elem.link}` : <a href={elem.link} target='_blank' rel='noreferrer'>external link</a>}
                             </li>)}
                     </ul>
                 </div>

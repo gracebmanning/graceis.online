@@ -7,7 +7,8 @@ import lunamoth from './lunamoth.png';
 import envelope from './envelope.svg';
 import arrow from './arrow.svg';
 import bear from './bear.png';
-import frame from './frame-me.png';
+import frame from './frame.png';
+import frameMe from './frame-me.png';
 import dinosaur from './dinosaur.png';
 import pinkBow from './pink-bow.png';
 import grace from './grace.png';
@@ -35,6 +36,7 @@ export{
 
     // PROJECTS PAGE
     frame,
+    frameMe,
     pinkBow,
     
     // EXPLORE PAGE
