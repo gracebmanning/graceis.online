@@ -40,6 +40,7 @@ export default function About(){
                         <div className='aboutBioText'>
                             <p>I'm Grace :) a web developer, software engineer, visual designer, and creator.</p>
                             <p>I am passionate about human-centered design and creating technology that impacts people in a meaningful way.</p>
+                            <p>I have a B.S. in Computer Science from UC Irvine (go anteaters!!), which helped me discover the parts of software engineering that I absolutely love.</p>
                             <p style={{fontWeight: 'bold'}}>let's get in touch! email me at contact [@] graceis [.] online</p>
                         </div>
                     </div>
