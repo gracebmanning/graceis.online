@@ -1,0 +1,36 @@
+.sourcesContainer{
+    padding-top: 10px;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .backLink{
+        font-family: 'Lacquer';
+    }
+}
+
+.sourcesHeader{
+    margin-left: 0px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: last baseline;
+}
+
+.sourcesContentBox{
+    width: 80%;
+    border: solid 1.5px black;
+    background-color: rgba(236, 213, 229, 0.5);
+    margin: 20px 0px;
+    padding: 10px;
+    text-align: left;
+
+    h3{
+        margin: 2px 0px 10px 0px;
+    }
+}

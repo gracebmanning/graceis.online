@@ -1,6 +1,7 @@
 import './Explore.css';
 import { backarrow, dinosaur, internetarchive, winClassic } from '../../assets/assets';
 import { daisiesFlipped, daisiesBottom } from '../../assets/backgrounds/backgrounds';
+import { FaMapLocationDot } from "react-icons/fa6";
 
 export default function Explore(){
     return(
@@ -22,6 +23,16 @@ export default function Explore(){
                     <img id='dinosaur' src={dinosaur} alt='green dinosaur toy' />
                 </div>
                 <div className='exploreContentBox'>
+                    
+                    <h3>see the sources to all the images on this site!</h3>
+                    <div className='exploreLink'>
+                        <FaMapLocationDot id='maplocationdot' />
+                        <p>
+                            <a href='/sources'>image sources page</a>
+                        </p>
+                    </div>
+                    
+
                     <h3>explore the Internet Archive</h3>
                     <div className='exploreLink'>
                         <img id='internetarchive' src={internetarchive} alt='Internet Archive Logo. black roman architecture style building.' />

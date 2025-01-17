@@ -64,3 +64,8 @@
         height: 40px;
     }
 }
+
+#maplocationdot{
+    font-size: 40px;
+    margin-right: 5px;
+}
