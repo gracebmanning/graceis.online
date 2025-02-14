@@ -3,11 +3,9 @@ import { MdArrowOutward } from "react-icons/md";
 import { 
     // THUMBNAILS
     gracemanningCom, emmygardnerOnline, classifiedsLol, gracesPortal, itneedsmorecolor, graceIsOnline,
-    // FIBER ARTS
-    crochetScarf1, tusnoBag, pufferSnoopy,
  } from '../../assets/projects/projects';
 import { pinkBow } from '../../assets/assets';
-import { IoHome, IoDesktopOutline, IoHeadset, IoCutSharp, IoVideocam } from "react-icons/io5";
+import { IoHome, IoDesktopOutline, IoHeadset, IoVideocam } from "react-icons/io5";
 import { useRef } from 'react';
 
 const websites = [
@@ -64,7 +62,7 @@ const musicVideos = [
     },
 ]
 
-const fiberArts = [
+/*const fiberArts = [
     {
         image: pufferSnoopy,
         alt: '',
@@ -86,7 +84,7 @@ const fiberArts = [
         date: 'January 2024',
         materials: 'acrylic yarn'
     },
-]
+]*/
 
 function WebsiteTile(website, index){
     return(
@@ -108,7 +106,7 @@ function MusicVideoTile(video, index){
     )
 }
 
-function FiberArtsTile(project, index){
+/*function FiberArtsTile(project, index){
     return(
         <div className='projectTile fiberArtsTile' key={index}>
             <img src={project.image} alt={project.alt} />
@@ -117,13 +115,13 @@ function FiberArtsTile(project, index){
             <p>materials: {project.materials}</p>
         </div>
     )
-}
+}*/
 
 export default function Projects(){
     const webRef = useRef(null);
     const musicVideosRef = useRef(null);
     const liveVisualsRef = useRef(null);
-    const fiberArtsRef = useRef(null);
+    //const fiberArtsRef = useRef(null);
 
     return(
             <div className='container projectsContainer'>                
@@ -154,12 +152,6 @@ export default function Projects(){
                         <button className='projectsNavButton' onClick={() => liveVisualsRef.current?.scrollIntoView({behavior: 'smooth'})}>
                             <IoVideocam className='projectNavIcon'/>
                             live visuals
-                        </button>
-                    </li>
-                    <li>
-                        <button className='projectsNavButton' onClick={() => fiberArtsRef.current?.scrollIntoView({behavior: 'smooth'})}>
-                            <IoCutSharp className='projectNavIcon'/>
-                            fiber arts, etc.
                         </button>
                     </li>
                 </ul>
@@ -217,18 +209,40 @@ export default function Projects(){
                         ...and then describe it some more.
                     </p>
                 </div>
-                <div className='projectsContentBox' ref={fiberArtsRef}>
-                    <h3>fiber arts</h3>
-                    <p>
-                        I am actively learning how to sew, as well as improving my crochet and embroidery skills. I'll keep my projects here to track progress! ⋆ ˚｡⋆୨୧˚⋆ ˚｡⋆
-                    </p>
-                    <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <div className='projectsList'>
-                            {fiberArts.map((proj, index) => {return FiberArtsTile(proj, index)})}
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         
     )
 }
+
+/*
+
+import { 
+    // THUMBNAILS
+    gracemanningCom, emmygardnerOnline, classifiedsLol, gracesPortal, itneedsmorecolor, graceIsOnline,
+    // FIBER ARTS
+    crochetScarf1, tusnoBag, pufferSnoopy,
+} from '../../assets/projects/projects';
+
+import {IoCutSharp} from "react-icons/io5";
+
+<li>
+    <button className='projectsNavButton' onClick={() => fiberArtsRef.current?.scrollIntoView({behavior: 'smooth'})}>
+        <IoCutSharp className='projectNavIcon'/>
+        fiber arts, etc.
+    </button>
+</li>
+
+<div className='projectsContentBox' ref={fiberArtsRef}>
+    <h3>fiber arts</h3>
+    <p>
+        I am actively learning how to sew, as well as improving my crochet and embroidery skills. I'll keep my projects here to track progress! ⋆ ˚｡⋆୨୧˚⋆ ˚｡⋆
+    </p>
+    <div style={{display: 'flex', flexDirection: 'row'}}>
+        <div className='projectsList'>
+            {fiberArts.map((proj, index) => {return FiberArtsTile(proj, index)})}
+        </div>
+    </div>
+</div>
+
+*/
