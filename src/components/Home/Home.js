@@ -1,6 +1,7 @@
 import './Home.css';
 import { fish, ladybug, embroideredstar, strawberry, lunamoth } from '../../assets/assets.js';
 import { whiteRabbit, daisies, daisiesBottomFlipped } from '../../assets/backgrounds/backgrounds';
+import { Link } from 'react-router-dom';
 
 export default function Home2(){
     return(
@@ -14,20 +15,20 @@ export default function Home2(){
                 </div>
                 <div className='navContainer'>
                     <div className='navRow'>
-                        <a className='navButton' id='aboutButton' href='/about'>
+                        <Link className='navButton' id='aboutButton' to='/about'>
                             <img className='navImage' id='fishImage' src={fish} alt='silver fish with blue and yellow accents' />
                             <p className='navText'>about</p>
-                        </a>
-                        <a className='navButton' id='projectsButton' href='/projects'>
+                        </Link>
+                        <Link className='navButton' id='projectsButton' to='/projects'>
                             <img className='navImage' id='ladybugImage' src={ladybug} alt='' />
                             <p className='navText'>projects</p>
-                        </a>
+                        </Link>
                     </div>
                     <div className='navRow'>
-                        <a className='navButton' id='exploreButton' href='/explore'>
+                        <Link className='navButton' id='exploreButton' to='/explore'>
                             <img className='navImage' src={embroideredstar} alt='' />
                             <p className='navText'>explore</p>
-                        </a>
+                        </Link>
                     </div>
                     <div className='navRow'>
                         <a className='navButton' id='youtubeButton' href='https://www.youtube.com/@graceis.online' target='_blank' rel='noreferrer'>

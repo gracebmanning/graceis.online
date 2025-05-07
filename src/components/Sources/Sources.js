@@ -2,6 +2,7 @@ import './Sources.css';
 import { daisies } from "../../assets/backgrounds/backgrounds";
 import { backarrow, fish, ladybug, embroideredstar, strawberry, lunamoth, envelope, bear, frame, pinkBow, dinosaur, internetarchive, winClassic } from '../../assets/assets';
 import { MdArrowOutward } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 let assets = [
     // NAVIGATION
@@ -108,10 +109,10 @@ export default function Sources(){
             <img className='backgroundImg topLeft' id='homeDaisies' src={daisies} alt='two daisies with smaller purple blooms and surrounding greenery' />
             <div className='container sourcesContainer'>
                 <div className='subpageText'>
-                    <a className='backLink' href='/'>
+                    <Link className='backLink' to='/'>
                         <img src={backarrow} alt='sketch outline of arrow pointing left' />
                         go home
-                    </a>
+                    </Link>
                 </div>
                 <div className='subpageText subpageHeader sourcesHeader'>
                     <div className='subpageHeaderText'>

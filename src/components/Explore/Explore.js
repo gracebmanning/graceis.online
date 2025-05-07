@@ -2,6 +2,7 @@ import './Explore.css';
 import { backarrow, dinosaur, internetarchive, winClassic } from '../../assets/assets';
 import { daisiesFlipped, daisiesBottom } from '../../assets/backgrounds/backgrounds';
 import { FaMapLocationDot } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 export default function Explore(){
     return(
@@ -10,10 +11,10 @@ export default function Explore(){
             <img className='backgroundImg bottomLeft subpageDaisiesBottom' src={daisiesBottom} alt='' />
             <div className='container exploreContainer'>
                 <div className='subpageText'>
-                    <a className='backLink' href='/'>
+                    <Link className='backLink' to='/'>
                         <img src={backarrow} alt='sketch outline of arrow pointing left' />
                         go home
-                    </a>
+                    </Link>
                 </div>
                 <div className='subpageText subpageHeader exploreHeader'>
                     <div className='subpageHeaderText'>
@@ -28,7 +29,7 @@ export default function Explore(){
                     <div className='exploreLink'>
                         <FaMapLocationDot id='maplocationdot' />
                         <p>
-                            <a href='/sources'>image sources page</a>
+                            <Link to='/sources'>image sources page</Link>
                         </p>
                     </div>
                     

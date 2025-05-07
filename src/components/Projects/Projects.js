@@ -4,7 +4,8 @@ import { pinkBow } from '../../assets/assets';
 import { IoHome, IoDesktopOutline, IoHeadset, IoVideocam,  } from "react-icons/io5";
 import { useRef } from 'react';
 import { websites, musicVideos, touchdesignerClips } from './projectLists';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
 
 function WebsiteTile(website, index){
     return(
@@ -53,10 +54,10 @@ export default function Projects(){
                     <h2 className='projectsPreTitle'>you've entered grace's</h2>
                     <h1 className='projectsTitle'>Project Realm</h1>
                 </div>
-                <a className='projectsNavButton' href='/'>
+                <Link className='projectsNavButton' to='/'>
                     <IoHome className='projectNavIcon'/>
                     take me home!
-                </a>
+                </Link>
                 <ul className='projectsNav'>
                     <li>
                         <button className='projectsNavButton' onClick={() => webRef.current?.scrollIntoView({behavior: 'smooth'})}>

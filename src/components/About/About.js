@@ -1,6 +1,7 @@
 import './About.css';
 import { backarrow, bear, grace } from '../../assets/assets';
 import { daisiesFlipped, daisiesBottom } from '../../assets/backgrounds/backgrounds';
+import { Link } from 'react-router-dom';
 
 export default function About(){
     return(
@@ -9,10 +10,10 @@ export default function About(){
             <img className='backgroundImg bottomLeft subpageDaisiesBottom' src={daisiesBottom} alt='' />
             <div className='container subpageContainer'>
                 <div className='subpageText'>
-                    <a className='backLink' href='/'>
+                    <Link className='backLink' to='/'>
                         <img src={backarrow} alt='sketch outline of arrow pointing left' />
                         go home
-                    </a>
+                    </Link>
                 </div>
                 <div className='subpageText subpageHeader aboutHeader'>
                     <div className='subpageHeaderText'>
