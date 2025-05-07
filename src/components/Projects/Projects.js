@@ -1,10 +1,10 @@
 import './Projects.css';
 import { MdArrowOutward } from "react-icons/md";
 import { pinkBow } from '../../assets/assets';
-import { IoHome, IoDesktopOutline, IoHeadset, IoVideocam, IoLogoInstagram } from "react-icons/io5";
+import { IoHome, IoDesktopOutline, IoHeadset, IoVideocam,  } from "react-icons/io5";
 import { useRef } from 'react';
-import { InstagramEmbed } from 'react-social-media-embed';
-import { websites, musicVideos } from './projectLists';
+import { websites, musicVideos, touchdesignerClips } from './projectLists';
+import ReactPlayer from 'react-player'
 
 function WebsiteTile(website, index){
     return(
@@ -26,11 +26,26 @@ function MusicVideoTile(video, index){
     )
 }
 
+function TouchDesignerClipTile(proj, index){
+    console.log(proj.source);
+    return(
+        <div className='projectTile touchdesignerTile' key={index}>
+            <ReactPlayer
+                url={proj.source}
+                className="temp"
+                width="100%"
+                height="100%"
+                controls
+            />
+            <p>{proj.title}</p>
+        </div>
+    )
+}
+
 export default function Projects(){
     const webRef = useRef(null);
     const musicVideosRef = useRef(null);
-    const liveVisualsRef = useRef(null);
-    const IGRef = useRef(null);
+    const visualsRef = useRef(null);
 
     return(
             <div className='container projectsContainer'>                
@@ -56,15 +71,9 @@ export default function Projects(){
                         </button>
                     </li>
                     <li>
-                        <button className='projectsNavButton' onClick={() => liveVisualsRef.current?.scrollIntoView({behavior: 'smooth'})}>
+                        <button className='projectsNavButton' onClick={() => visualsRef.current?.scrollIntoView({behavior: 'smooth'})}>
                             <IoVideocam className='projectNavIcon'/>
-                            live visuals
-                        </button>
-                    </li>
-                    <li>
-                        <button className='projectsNavButton' onClick={() => liveVisualsRef.current?.scrollIntoView({behavior: 'smooth'})}>
-                            <IoLogoInstagram className='projectNavIcon'/>
-                            IG picks
+                            visuals
                         </button>
                     </li>
                 </ul>
@@ -85,44 +94,19 @@ export default function Projects(){
                 <div className='projectsContentBox' ref={musicVideosRef}>
                     <h3>music videos</h3>
                     <p>
-                        This is where I may list some projects.
+                        music / lyric videos created in TouchDesigner.
                     </p>
                     <div className='projectsList'>
                         {musicVideos.map((proj, index) => {return MusicVideoTile(proj, index)})}
                     </div>
-                    <p>
-                        ...and then describe it some more.
-                    </p>
                 </div>
-                <div className='projectsContentBox' ref={liveVisualsRef}>
-                    <h3>live visuals</h3>
+                <div className='projectsContentBox' ref={visualsRef}>
+                    <h3>touchdesigner visuals</h3>
                     <p>
-                        This is where I may list some projects.
+                        generative art created with TouchDesigner - NOT AI!
                     </p>
-                    <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <div className='projectsFillerImage'>
-                        </div>
-                        <div className='projectsFillerImage'>
-                        </div>
-                        <div className='projectsFillerImage'>
-                        </div>
-                    </div>
-                    <p>
-                        ...and then describe it some more.
-                    </p>
-                </div>
-                <div className='projectsContentBox' ref={IGRef}>
-                    <h3>picks from my Instagram</h3>
-                    <div class='projectsList'>
-                        <div className='instagramEmbed'>
-                            <InstagramEmbed url="https://www.instagram.com/p/DBkYdI7yQ6I/" width={330} />
-                        </div>
-                        <div className='instagramEmbed'>
-                            <InstagramEmbed url="https://www.instagram.com/p/DCIFhjHTA78/" width={330} />
-                        </div>
-                        <div className='instagramEmbed'>
-                            <InstagramEmbed url="https://www.instagram.com/p/DGUuDI7xWru/" width={330} />
-                        </div>
+                    <div className='projectsList'>
+                        {touchdesignerClips.map((proj, index) => {return TouchDesignerClipTile(proj, index)})}
                     </div>
                 </div>
             </div>

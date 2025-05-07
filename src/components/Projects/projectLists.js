@@ -1,3 +1,4 @@
+import { getCloudFrontVideo } from '../../utility/cloudfront';
 import { 
     // THUMBNAILS
     gracemanningCom, emmygardnerOnline, classifiedsLol, gracesPortal, itneedsmorecolor, graceIsOnline,
@@ -55,4 +56,23 @@ export const musicVideos = [
         href: '',
         embed: <iframe src="https://www.youtube.com/embed/QL--AfXtkCo?si=bKkyBOGr1yJQF7Tk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
     },
+]
+
+export const touchdesignerClips = [
+    {
+        title: 'VHS Animation 1',
+        source: "https://graceisonline.s3.us-west-2.amazonaws.com/videos/vhs-animation1.mp4"
+    },
+    {
+        title: 'VHS Animation 2',
+        source: getCloudFrontVideo('vhs-animation2.mp4')
+    },
+    {
+        title: 'VHS Animation 3',
+        source: getCloudFrontVideo('vhs-animation3.mp4')
+    },
+    {
+        title: 'VHS Animation 4',
+        source: getCloudFrontVideo('vhs-animation4.mp4')
+    }
 ]
