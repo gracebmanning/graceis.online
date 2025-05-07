@@ -36,9 +36,11 @@ function TouchDesignerClipTile(proj, index){
                 className="temp"
                 width="100%"
                 height="100%"
-                controls
+                controls={true}
+                loop={true}
             />
-            <p>{proj.title}</p>
+            <p style={{fontStyle: 'italic'}}>{proj.title}</p>
+            <p>{proj.date}</p>
         </div>
     )
 }
