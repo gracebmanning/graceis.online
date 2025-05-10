@@ -1,5 +1,5 @@
 import './Navigation.css';
-import {embroideredstar, ladybug, lunamoth, fish, bear, strawberry} from '../../assets/assets';
+import {embroideredstar, ladybug, lunamoth, fish, bear, strawberry, wiggleLine} from '../../assets/assets';
 import { Link, NavLink } from 'react-router-dom';
 
 const navList = [
@@ -75,22 +75,30 @@ export const HomeNav = () => {
 
 export const Navbar = () => {
   return (
-    <nav>
-        <ul>
-            {navList.map((item, index) => {
+    <nav className="navbar">
+        <Link className="navbarHeaderText" to="/">
+            <h1>grace manning</h1>
+            <h2>creative technologist & software engineer</h2>
+        </Link>
+        <ul className="navbarItems">
+            {navList.filter((item) => item.type === 'internal').map((item, index) => {
                 return(
-                    <li key={index}>
-                        {item.type === 'internal' 
-                        ? 
-                            <NavLink className="sideNavButton" activeClassName="sideNavButtonActive" to={item.link}>
-                                <img src={item.icon} alt='' />
-                                <p>{item.name}</p>
-                            </NavLink>
-                        :   <a href={item.link} target="_blank" rel="noreferrer">
-                                <img src={item.icon} alt='' />
-                                <p>{item.name}</p>
-                            </a>
-                        }
+                    <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
+                        <NavLink className={({ isActive }) => (isActive ? "navbarLink navbarLinkActive" : "navbarLink")} to={item.link}>
+                            <img className="navbarImage" src={item.icon} alt='' />
+                            <p className="navbarText">{item.name}</p>
+                        </NavLink>
+                    </li>
+                )
+            })}
+            <img className="navbarDivider" src={wiggleLine} alt="green wiggly line" />
+            {navList.filter((item) => item.type === 'external').map((item, index) => {
+                return(
+                    <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
+                        <a className="navbarLink" href={item.link} target="_blank" rel="noreferrer">
+                            <img className="navbarImage" src={item.icon} alt='' />
+                            <p className="navbarText">{item.name}</p>
+                        </a>
                     </li>
                 )
             })}

@@ -1,40 +1,13 @@
 import './About.css';
 import { backarrow, bear, grace } from '../../assets/assets';
 import { daisiesFlipped, daisiesBottom } from '../../assets/backgrounds/backgrounds';
-import { Link } from 'react-router-dom';
+import { Navbar } from '../Navigation/Navigation';
 
 export default function About(){
     return(
-        <div>
-            <img className='backgroundImg topRight subpageDaisies' src={daisiesFlipped} alt='two daisies with smaller purple blooms and surrounding greenery' />
-            <img className='backgroundImg bottomLeft subpageDaisiesBottom' src={daisiesBottom} alt='' />
-            <div className='container subpageContainer'>
-                <div className='subpageText'>
-                    <Link className='backLink' to='/'>
-                        <img src={backarrow} alt='sketch outline of arrow pointing left' />
-                        go home
-                    </Link>
-                </div>
-                <div className='subpageText subpageHeader aboutHeader'>
-                    <div className='subpageHeaderText'>
-                        <h2>about me</h2>
-                        <h1>grace manning</h1>
-                    </div>
-                    <img id='teddybear' src={bear} alt='brown teddy bear' />
-                </div>
-                <div className='subpageText aboutText'>
-                    <div className='aboutLine'>
-                        <p className='textCursive'>creative technologist,</p>
-                        <p className='textBasic'>⋆ ˚｡⋆୨୧˚౨ৎ</p>
-                    </div>
-                    <div className='aboutLine'>
-                        <p className='textBasic'>software engineer,</p>
-                    </div>
-                    <div className='aboutLine'>
-                        <p className='textBasic'>. ݁₊ ⊹ . ݁˖ . ݁</p>
-                        <p className='textHandwritten'>& maker of things</p>
-                    </div>
-                </div>
+        <div className="container2">
+            <Navbar/>
+            <div className="pageContent">
                 <div className='subpageText aboutText'>
                     <div className='aboutBio'>
                         <img src={grace} alt='grace takes a selfie with the camera from a high angle. she has her eyes closed and is smiling contently.' />
@@ -46,11 +19,57 @@ export default function About(){
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     )
 }
+
+/*
+<div>
+    <img className='backgroundImg topRight subpageDaisies' src={daisiesFlipped} alt='two daisies with smaller purple blooms and surrounding greenery' />
+    <img className='backgroundImg bottomLeft subpageDaisiesBottom' src={daisiesBottom} alt='' />
+    <div className='container subpageContainer'>
+        <div className='subpageText'>
+            <Link className='backLink' to='/'>
+                <img src={backarrow} alt='sketch outline of arrow pointing left' />
+                go home
+            </Link>
+        </div>
+        <div className='subpageText subpageHeader aboutHeader'>
+            <div className='subpageHeaderText'>
+                <h2>about me</h2>
+                <h1>grace manning</h1>
+            </div>
+            <img id='teddybear' src={bear} alt='brown teddy bear' />
+        </div>
+        <div className='subpageText aboutText'>
+            <div className='aboutLine'>
+                <p className='textCursive'>creative technologist,</p>
+                <p className='textBasic'>⋆ ˚｡⋆୨୧˚౨ৎ</p>
+            </div>
+            <div className='aboutLine'>
+                <p className='textBasic'>software engineer,</p>
+            </div>
+            <div className='aboutLine'>
+                <p className='textBasic'>. ݁₊ ⊹ . ݁˖ . ݁</p>
+                <p className='textHandwritten'>& maker of things</p>
+            </div>
+        </div>
+        <div className='subpageText aboutText'>
+            <div className='aboutBio'>
+                <img src={grace} alt='grace takes a selfie with the camera from a high angle. she has her eyes closed and is smiling contently.' />
+                <div className='aboutBioText'>
+                    <p>I'm Grace :) a web developer, software engineer, visual designer, and creator.</p>
+                    <p>I am passionate about human-centered design and creating technology that impacts people in a meaningful way.</p>
+                    <p>I have a B.S. in Computer Science from UC Irvine (go anteaters!!), which helped me discover the parts of software engineering that I absolutely love.</p>
+                    <p style={{fontWeight: 'bold'}}>let's get in touch! email me at contact [@] graceis [.] online</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+*/
 
 /*
 <div className='subpageText'>

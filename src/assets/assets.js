@@ -12,6 +12,7 @@ import frameMe from './frame-me.png';
 import dinosaur from './dinosaur.png';
 import pinkBow from './pink-bow.png';
 import grace from './grace.png';
+import wiggleLine from './wiggleLine.svg';
 
 // EXPLORE PAGE ICONS
 import internetarchive from './explore/internet-archive.png';
@@ -20,6 +21,7 @@ import winClassic from './explore/win-classic.ico';
 export{
     // NAVIGATION
     backarrow,
+    wiggleLine,
 
     // HOME PAGE ICONS
     fish,

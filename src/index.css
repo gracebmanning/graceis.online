@@ -63,6 +63,16 @@ body {
   min-height: 100vh;
 }
 
+.container2{
+  margin: 0px;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
 .backgroundImg{
   position: absolute;
   z-index: 0;

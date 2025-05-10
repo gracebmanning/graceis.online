@@ -85,7 +85,85 @@
 
 
 /* SIDEBAR NAV */
-/* stuff goes here */
+.navbar{
+    background-color: rgba(219, 233, 163, 0.4);
+    min-height: 100vh;
+}
+
+.navbarHeaderText{
+    text-align: left;
+    font-family: "Lacquer", system-ui;
+    text-decoration: none;
+    color: black;
+
+    h1{
+        font-size: 30px;
+        margin: 20px 0px 10px 10px;
+    }
+    h2{
+        font-size: 18px;
+        margin: 0px 0px 0px 10px;
+    }
+}
+
+.navbarDivider{
+    padding-right: 20px;
+}
+
+.navbarItems{
+    height: 100%;
+    padding: 0px;
+    margin: 20px 0px 0px 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.navbarButton{
+    padding: 0px;
+    transform: scale(1.0);
+    transition: 0.2s ease-in;
+}
+
+.navbarButton:hover{
+    transform: scale(1.01);
+    transition: 0.2s ease-out;
+}
+
+.navbarLink{
+    text-decoration: none;
+    color: black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbarLinkActive{
+    font-weight: bold;
+}
+
+.navbarImage{
+    height: 40px;
+    padding: 0px 5px 0px 0px;
+    margin: 0px;
+}
+
+.navbarText{
+    font-family: "Mountains of Christmas", serif;
+    font-size: 30px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#fishNavbar{
+    img{
+        height: 25px;
+    }
+}
+
 
 @media (max-width: 1024px){
     /* HOME PAGE NAV */
