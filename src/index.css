@@ -63,15 +63,35 @@ body {
   min-height: 100vh;
 }
 
-.container2{
+.pageContainer{
   margin: 0px;
   width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: start;
-  align-items: center;
+  align-items: start;
 }
+
+.sideContainer{
+  background-image: url(./assets/backgrounds2/daisiesFlipped.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  margin-top: 20px;
+  margin-left: 20px;
+  min-height: 95vh;
+  min-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+/* 
+save background image as low-opacity, then can use background-image CSS rule.
+would no longer need to have so many background CSS classes.
+*/
 
 .backgroundImg{
   position: absolute;

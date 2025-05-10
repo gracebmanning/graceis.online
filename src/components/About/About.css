@@ -1,15 +1,6 @@
-#teddybear{
-    height: 100px;
-    transform: rotate(-10deg);
-    margin-left: 10px;
-}
-
-#aboutContact p{
-    margin: 0px 0px 10px 0px;
-}
-
 .aboutText{
     width: 80%;
+    text-align: left;
 }
 
 .aboutLine{
@@ -19,33 +10,36 @@
     align-items: center;
 }
 
-.aboutBio{
+#aboutHeader{
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     text-align: left;
-
-    font-family: "Playpen Sans", cursive;
-    font-size: 20px;
-    background-color: rgba(236, 213, 229, 0.5);
-
     img{
-        height: 200px;
-        margin: 10px;
-    }
-
-    .aboutBioText{
+        height: 300px;
+        margin: 10px 10px 10px 0px;
+    } 
+    #aboutHeaderText{
+        height: 300px;
+        display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: left;
+        justify-content: space-between;
     }
+}
+
+#aboutParagraph{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    font-size: 18px;
 }
 
 .textBasic{
     font-family: "Inter", sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     margin: 0px;
 }
 
@@ -58,7 +52,7 @@
 
 .textWhimsy{
     font-family: "Playpen Sans", cursive;
-    font-size: 20px;
+    font-size: 24px;
     margin: 0px;
 }
 
@@ -66,6 +60,17 @@
     font-family: "Lacquer", system-ui;
     font-size: 30px;
     margin: 0px;
+}
+
+@media (max-width: 1024px){
+    #aboutHeader{
+        img{
+            height: 250px;
+        }
+        #aboutHeaderText{
+            height: 250px;
+        }
+    }
 }
 
 @media (max-width: 768px){
