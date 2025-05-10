@@ -1,41 +1,47 @@
+import './Navigation.css';
 import {embroideredstar, ladybug, lunamoth, fish, bear, strawberry} from '../../assets/assets';
 import { Link, NavLink } from 'react-router-dom';
-
 
 const navList = [
     {
         name: 'art',
         icon: embroideredstar,
+        iconID: 'star',
         type: 'internal',
         link: '/art'
     },
     {
         name: 'projects',
         icon: ladybug,
+        iconID: 'ladybug',
         type: 'internal',
         link: '/projects'
     },
     {
         name: 'about',
         icon: lunamoth,
+        iconID: 'lunamoth',
         type: 'internal',
         link: '/about'
     },
     {
         name: 'blog',
         icon: fish,
+        iconID: 'fish',
         type: 'internal',
         link: '/blog'
     },
     {
         name: 'instagram',
         icon: bear,
+        iconID: 'bear',
         type: 'external',
         link: 'https://www.instagram.com/graceis.online/'
     },
     {
         name: 'youtube',
         icon: strawberry,
+        iconID: 'strawberry',
         type: 'external',
         link: 'https://www.youtube.com/@graceis.online'
     },
@@ -44,22 +50,22 @@ const navList = [
 export const HomeNav = () => {
   return (
     <nav className="homeNav">
-        <ul>
+        <ul className="homeNavItems">
             {navList.map((item, index) => {
                 return(
-                    <ul key={index}>
+                    <li key={index} className='homeNavButton' id={`${item.iconID}Home`}>
                         {item.type === 'internal' 
                         ? 
-                            <Link className='homeNavButton' to={item.link}>
+                            <Link className="homeNavLink" to={item.link}>
                                 <img className='homeNavImage' src={item.icon} alt='' />
                                 <p className='homeNavText'>{item.name}</p>
                             </Link>
-                        :   <a className='homeNavButton' href={item.link} target="_blank" rel="noreferrer">
+                        :   <a className="homeNavLink" href={item.link} target="_blank" rel="noreferrer">
                                 <img className='homeNavImage' src={item.icon} alt='' />
                                 <p className='homeNavText'>{item.name}</p>
                             </a>
                         }
-                    </ul>
+                    </li>
                 )
             })}
         </ul>
@@ -73,7 +79,7 @@ export const Navbar = () => {
         <ul>
             {navList.map((item, index) => {
                 return(
-                    <ul key={index}>
+                    <li key={index}>
                         {item.type === 'internal' 
                         ? 
                             <NavLink className="sideNavButton" activeClassName="sideNavButtonActive" to={item.link}>
@@ -85,7 +91,7 @@ export const Navbar = () => {
                                 <p>{item.name}</p>
                             </a>
                         }
-                    </ul>
+                    </li>
                 )
             })}
         </ul>

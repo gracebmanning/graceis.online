@@ -1,20 +1,36 @@
+/* HOME PAGE NAV */
 .homeNav{
+    margin-top: 15px;
+    margin-left: 40px;
+    width: 75%;
+}
+
+.homeNavItems{
+    width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
 }
 
 .homeNavButton{
-    text-decoration: none;
-    color: black;
     transform: scale(1.0);
     transition: 0.2s ease-in;
+    width: fit-content;
+    height: fit-content;
 }
 
 .homeNavButton:hover{
     transform: scale(1.1);
     transition: 0.2s ease-out;
+}
+
+.homeNavLink{
+    text-decoration: none;
+    color: black;
 }
 
 .homeNavImage{
@@ -30,7 +46,49 @@
     margin: 0px;
 }
 
+#starHome{
+    padding-bottom: 70px;
+    padding-top: 10px;
+}
+
+#ladybugHome{
+    padding-top: 81px;
+    padding-left: 70px;
+    img{
+        transform: rotate(30deg);
+    }
+}
+
+#lunamothHome{
+    padding-bottom: 75px;
+    padding-left: 70px;
+    img{
+        transform: rotate(-10deg);
+    }
+}
+
+#fishHome{
+    padding-left: 60px;
+    img{
+        height: 80px;
+    }
+}
+
+#bearHome{
+    padding-top: 100px;
+    padding-left: 5px;
+}
+
+#strawberryHome{
+    padding-top: 1px;
+}
+
+
+/* SIDEBAR NAV */
+/* stuff goes here */
+
 @media (max-width: 1024px){
+    /* HOME PAGE NAV */
     .homeNavText{
         font-size: 35px;
     }
@@ -40,9 +98,26 @@
         padding: 0px;
         margin: 0px;
     }
+
+    #fishHome{
+        img{
+            height: 70px;
+        }
+    }
 }
 
-@media (max-width: 768px){    
+@media (max-width: 768px){  
+    /* HOME PAGE NAV */  
+    .homeNav{
+        margin-left: 20px;
+    }
+
+    .homeNavItems{
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        height: 500px;
+    }
+
     .homeNavImage{
         height: 80px;
         padding: 0px;
@@ -51,5 +126,44 @@
 
     .homeNavText{
         font-size: 30px;
+    }
+
+    #starHome{
+        padding-left: 0px;
+    }
+
+    #ladybugHome{
+        padding-top: 50px;
+        padding-left: 15px;
+        img{
+            transform: rotate(30deg);
+        }
+    }
+
+    #lunamothHome{
+        padding-bottom: 40px;
+        padding-left: 45px;
+        img{
+            transform: rotate(-10deg);
+        }
+    }
+
+    #fishHome{
+        padding-left: 50px;
+        padding-top: 50px;
+        img{
+            height: 60px;
+        }
+    }
+
+    #bearHome{
+        padding-top: 0px;
+        padding-bottom: 75px;
+        padding-right: 10px;
+    }
+
+    #strawberryHome{
+        padding-top: 20px;
+        padding-bottom: 0px;
     }
 }

@@ -1,9 +1,8 @@
 import './Home.css';
-import { fish, ladybug, embroideredstar, strawberry, lunamoth } from '../../assets/assets.js';
 import { whiteRabbit, daisies, daisiesBottomFlipped } from '../../assets/backgrounds/backgrounds';
-import { Link } from 'react-router-dom';
+import { HomeNav } from '../Navigation/Navigation.js';
 
-export default function Home2(){
+export default function Home(){
     return(
         <div style={{width: '100vw', height: '100vh', overflow: 'hidden'}}>
             <img className='backgroundImg topLeft' id='homeDaisies' src={daisies} alt='two daisies with smaller purple blooms and surrounding greenery' />
@@ -11,9 +10,17 @@ export default function Home2(){
             <div className='container homeContainer'>
                 <div className='headerText'>
                     <h1 id='title'>grace manning</h1>
-                    <h2 id='tagline'>creative technologist & internet dweller</h2>
+                    <h2 id='tagline'>creative technologist & software engineer</h2>
                 </div>
-                <div className='navContainer'>
+                <HomeNav/>
+                <h2 id='contactText'>contact [@] graceis.online</h2>
+            </div>
+            <img className='backgroundImg bottomRight' id='homeDaisiesBottom' src={daisiesBottomFlipped} alt='' />
+            <img className='bottomRight' id='whiteRabbit' src={whiteRabbit} alt='' />
+        </div>
+    )
+}
+/* <div className='navContainer'>
                     <div className='navRow'>
                         <Link className='navButton' id='aboutButton' to='/about'>
                             <img className='navImage' id='fishImage' src={fish} alt='silver fish with blue and yellow accents' />
@@ -40,11 +47,4 @@ export default function Home2(){
                             <p className='navText'>instagram</p>
                         </a>
                     </div>
-                </div>
-                <h2 id='contactText'>contact [@] graceis [.] online</h2>
-            </div>
-            <img className='backgroundImg bottomRight' id='homeDaisiesBottom' src={daisiesBottomFlipped} alt='' />
-            <img className='bottomRight' id='whiteRabbit' src={whiteRabbit} alt='' />
-        </div>
-    )
-}
+                </div> */
