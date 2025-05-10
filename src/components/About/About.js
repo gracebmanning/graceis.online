@@ -28,7 +28,7 @@ export default function About(){
                         <p className='textBasic'>⋆ ˚｡⋆୨୧˚౨ৎ</p>
                     </div>
                     <div className='aboutLine'>
-                        <p className='textBasic'>internet dweller,</p>
+                        <p className='textBasic'>software engineer,</p>
                     </div>
                     <div className='aboutLine'>
                         <p className='textBasic'>. ݁₊ ⊹ . ݁˖ . ݁</p>
