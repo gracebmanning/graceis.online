@@ -83,23 +83,9 @@
     }
 
     .aboutText {
-        width: 85%;
-        
+        width: 90%;
     }
-
-    .aboutBio{
-        flex-direction: column;
-        font-size: 16px;
-
-        p{
-            margin: 5px;
-        }
-
-        img{
-            height: 175px;
-        }
-    }
-
+    
     .textBasic{
         font-size: 20px;
     }
