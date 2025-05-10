@@ -1,0 +1,55 @@
+.homeNav{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px;
+}
+
+.homeNavButton{
+    text-decoration: none;
+    color: black;
+    transform: scale(1.0);
+    transition: 0.2s ease-in;
+}
+
+.homeNavButton:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-out;
+}
+
+.homeNavImage{
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.homeNavText{
+    font-family: "Mountains of Christmas", serif;
+    font-size: 40px;
+    padding: 0px;
+    margin: 0px;
+}
+
+@media (max-width: 1024px){
+    .homeNavText{
+        font-size: 35px;
+    }
+
+    .homeNavImage{
+        height: 90px;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 768px){    
+    .homeNavImage{
+        height: 80px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .homeNavText{
+        font-size: 30px;
+    }
+}
