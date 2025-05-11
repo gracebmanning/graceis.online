@@ -1,39 +1,38 @@
 import './About.css';
 import { grace } from '../../assets/assets';
-import { Navbar } from '../Navigation/Navigation';
+import { BasicLayout } from '../../layouts/BasicLayout';
+
+const AboutContent = 
+        <div className="aboutText">
+            <div id="aboutHeader">
+                <img src={grace} alt='' />
+                <div id="aboutHeaderText">
+                    <p className="textHandwritten">hi, i'm grace! i am a:</p>
+                    <div className='aboutLine'>
+                        <p className='textCursive'>creative technologist,</p>
+                        <p className='textBasic'>⋆ ˚｡⋆୨୧˚౨ৎ</p>
+                    </div>
+                    <div className='aboutLine'>
+                        <p className='textWhimsy'>software engineer,</p>
+                    </div>
+                    <div className='aboutLine'>
+                        <p className='textBasic'>. ݁₊ ⊹ . ݁˖ . ݁</p>
+                        <p className='textHandwritten'>& maker of things</p>
+                    </div>
+                </div> 
+            </div>
+            <div className="textBasic" id="aboutParagraph">
+                <p>What does that all mean? I enjoy doing lots of things and can't pick one, so I wear many hats: web developer, software engineer, visual designer, creator, ...the list goes on.</p>
+                <p>I am passionate about human-centered design and creating technology that impacts people in a meaningful way.</p>
+                <p>I have a B.S. in Computer Science from UC Irvine (go anteaters!!), which helped me discover the parts of software engineering that I absolutely love.</p>
+                <p style={{fontWeight: 'bold'}}>let's get in touch! email me at contact [@] graceis.online</p>
+            </div>
+        </div>
+
 
 export default function About(){
     return(
-        <div className="pageContainer">
-            <Navbar/>
-            <div className="sideContainer">
-                <div className="aboutText">
-                    <div id="aboutHeader">
-                        <img src={grace} alt='' />
-                        <div id="aboutHeaderText">
-                            <p className="textHandwritten">hi, i'm grace! i am a:</p>
-                            <div className='aboutLine'>
-                                <p className='textCursive'>creative technologist,</p>
-                                <p className='textBasic'>⋆ ˚｡⋆୨୧˚౨ৎ</p>
-                            </div>
-                            <div className='aboutLine'>
-                                <p className='textWhimsy'>software engineer,</p>
-                            </div>
-                            <div className='aboutLine'>
-                                <p className='textBasic'>. ݁₊ ⊹ . ݁˖ . ݁</p>
-                                <p className='textHandwritten'>& maker of things</p>
-                            </div>
-                        </div> 
-                    </div>
-                    <div className="textBasic" id="aboutParagraph">
-                        <p>What does that all mean? I enjoy doing lots of things and can't pick one, so I wear many hats: web developer, software engineer, visual designer, creator, ...the list goes on.</p>
-                        <p>I am passionate about human-centered design and creating technology that impacts people in a meaningful way.</p>
-                        <p>I have a B.S. in Computer Science from UC Irvine (go anteaters!!), which helped me discover the parts of software engineering that I absolutely love.</p>
-                        <p style={{fontWeight: 'bold'}}>let's get in touch! email me at contact [@] graceis.online</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        BasicLayout(AboutContent)
     )
 }
 

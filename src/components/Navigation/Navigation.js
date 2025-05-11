@@ -1,6 +1,10 @@
-import './Navigation.css';
+import './homeNav.css';
+import './navbar.css';
 import {embroideredstar, ladybug, lunamoth, fish, bear, strawberry, wiggleLine} from '../../assets/assets';
 import { Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { LuMenu } from "react-icons/lu";
+import { IoClose } from "react-icons/io5";
 
 const navList = [
     {
@@ -103,6 +107,53 @@ export const Navbar = () => {
                 )
             })}
         </ul>
+        <Link id="sourcesLink" to="/sources">
+            image sources
+        </Link>
     </nav>
   )
+}
+
+export const NavbarMobile = () => {
+    const [expanded, setExpanded] = useState(false);
+
+    return(
+        <nav className={expanded ? 'navbarMobile expanded' : 'navbarMobile'}>
+            <div className="navbarMobileHeader">
+                <Link className="navbarHeaderText" to="/">
+                    <h1>grace manning</h1>
+                </Link>
+                <LuMenu className={`navIcon ${expanded ? 'closed' : 'open'}`} onClick={() => {setExpanded(!expanded);}} />
+                <IoClose className={`navIcon ${expanded ? 'open' : 'closed'}`} onClick={() => {setExpanded(!expanded);}} />
+            </div>
+            <div className={`navbarMobileContent ${expanded ? 'open' : 'closed'}`}>
+                <ul className={expanded ? 'navbarItems expanded' : 'navbarItems'}>
+                    {navList.filter((item) => item.type === 'internal').map((item, index) => {
+                        return(
+                            <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
+                                <NavLink className={({ isActive }) => (isActive ? "navbarLink navbarLinkActive" : "navbarLink")} to={item.link}>
+                                    <img className="navbarImage" src={item.icon} alt='' />
+                                    <p className="navbarText">{item.name}</p>
+                                </NavLink>
+                            </li>
+                        )
+                    })}
+                    <img className="navbarDivider" src={wiggleLine} alt="green wiggly line" />
+                    {navList.filter((item) => item.type === 'external').map((item, index) => {
+                        return(
+                            <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
+                                <a className="navbarLink" href={item.link} target="_blank" rel="noreferrer">
+                                    <img className="navbarImage" src={item.icon} alt='' />
+                                    <p className="navbarText">{item.name}</p>
+                                </a>
+                            </li>
+                        )
+                    })}
+                </ul>
+                <Link id="sourcesLink" to="/sources">
+                    image sources
+                </Link>
+            </div>
+        </nav>
+    )
 }
