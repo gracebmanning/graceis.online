@@ -148,6 +148,57 @@
     margin: 5px;
 }
 
+/* NEW OBJECTS */
+.projectsFilter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+.filterList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: fit-content;
+    margin-left: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.filterListItem{
+    margin: 0px 10px 0px 10px;
+}
+
+.projectsDivider{
+    border-top: 1px solid black;
+    margin-right: 20px;
+}
+
+.projectsList{
+    width: 100%;
+}
+
+.projectTile2{
+    border-top: 1px solid black;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:first baseline;
+    align-items: center;
+}
+
+.projectThumbnail{
+    width: 300px;
+}
+
+
 @media (max-width: 1024px){
     .projectTile{
         margin-left: 5px;

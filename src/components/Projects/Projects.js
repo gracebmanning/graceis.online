@@ -3,9 +3,10 @@ import { MdArrowOutward } from "react-icons/md";
 import { pinkBow } from '../../assets/assets';
 import { IoHome, IoDesktopOutline, IoHeadset, IoVideocam,  } from "react-icons/io5";
 import { useRef } from 'react';
-import { websites, musicVideos, touchdesignerClips } from './projectLists';
+import { websites, musicVideos, touchdesignerClips, projects } from './projectLists';
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router-dom';
+import { BasicLayout } from '../../layouts/BasicLayout';
 
 function WebsiteTile(website, index){
     return(
@@ -28,7 +29,6 @@ function MusicVideoTile(video, index){
 }
 
 function TouchDesignerClipTile(proj, index){
-    console.log(proj.source);
     return(
         <div className='projectTile touchdesignerTile' key={index}>
             <ReactPlayer
@@ -117,21 +117,39 @@ export default function Projects(){
     )
 }
 
-/*
+function ProjectTile(project, index){
+    return(
+        <div key={index} className="projectTile2">
+            <img className="projectThumbnail" src={project.thumbnail} alt='' />
+            <div className="projectTileInfo">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <p>{project.date}</p>
+            </div>
+        </div>
+    )
+}
 
-<p className='unboxedText'>
-    There is something to be said about a line of text. Maybe I can put some here and see what happens!
-</p>
-<div className='projectsContentBox'>
-    <h3>project case study</h3>
-    <p>
-        This is where I may break down a project that I did.
-    </p>
-    <div className='projectsFillerImage'>
+export function Projects2(){
+    const content = 
+    <div style={{width: '100%'}}>
+        <div className="projectsFilter">
+            <p>filter:</p>
+            <ul className="filterList">
+                <li className="filterListItem">website</li>
+                <li className="filterListItem">music video</li>
+                <li className="filterListItem">other</li>
+            </ul>
+        </div>
+        <div className="projectsList">
+            {projects.map((proj, index) => {
+                return(
+                    ProjectTile(proj, index)
+                )})}
+        </div>
     </div>
-    <p>
-        ...and then describe it some more.
-    </p>
-</div>
 
-*/
+    return(
+        <BasicLayout content={content} />
+    )
+}
