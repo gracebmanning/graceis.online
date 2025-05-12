@@ -2,7 +2,7 @@
 
 export const posts = [
     {
-        title: "started my job! and pondering other avenues",
+        title: "test blog post",
         date: "May 11, 2025",
         tags: ["test"],
         content:
