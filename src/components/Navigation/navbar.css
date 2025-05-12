@@ -1,5 +1,6 @@
 /* SIDEBAR NAV */
 .navbar{
+    position: fixed;
     background-color: rgba(219, 233, 163, 0.4);
     min-height: 100vh;
     text-align: left;
@@ -96,6 +97,9 @@
 
 /* NAV MOBILE STYLING (<= 768PX) */
 .navbarMobile{
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: rgba(219, 233, 163, 0.4);
     width: 100%;
     text-align: left;

@@ -88,9 +88,9 @@ body {
   background-position: right;
 
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: calc(230px + 20px);
   min-height: 95vh;
-  min-width: 80vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -190,4 +190,11 @@ body {
   font-size: 22px;
   font-family: "Lacquer", system-ui;
   margin-top: 25px;
+}
+
+@media (max-width: 768px){
+  .sideContainer{
+    margin-left: 20px;
+    margin-top: 50px;
+  }
 }
