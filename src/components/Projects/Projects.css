@@ -150,11 +150,17 @@
 
 /* NEW OBJECTS */
 .projectsFilter{
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    background-color: white;
+    border-bottom: 1px solid black;
+
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
-    font-family: "Inter", sans-serif;
 }
 
 .filterList{
@@ -179,11 +185,12 @@
 }
 
 .projectsList{
+    margin-top: 30px;
     width: 100%;
 }
 
 .projectTile2{
-    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     margin-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -236,5 +243,10 @@
 
     .touchdesignerTile{
         width: 45%;
+    }
+
+    /* NEW PIECES */
+    .projectsFilter{
+        top: 50px;
     }
 }

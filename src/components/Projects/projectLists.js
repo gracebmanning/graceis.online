@@ -68,6 +68,38 @@ export const projects = [
                 Nunc egestas nisl ac dolor ultrices ultricies. Sed gravida risus non ipsum egestas consequat. Etiam eget nisi hendrerit, lobortis ligula porta, condimentum leo. Sed pellentesque ex eget tincidunt dapibus. Fusce rhoncus tincidunt lobortis. Suspendisse et elit at velit cursus dapibus vitae nec massa. Aliquam imperdiet leo nunc, sed placerat tellus placerat at. Phasellus maximus mattis magna, eu euismod est viverra sed. Pellentesque non eros elit. Quisque convallis tortor nec ipsum porttitor elementum. Mauris tincidunt rutrum metus, sed tempor elit hendrerit vel. Quisque elementum, odio in hendrerit pulvinar, purus est pulvinar ex, sit amet accumsan purus magna sed quam. Morbi eget rutrum tellus. Proin hendrerit, tellus sit amet eleifend ultricies, eros tortor placerat lorem, mattis interdum ligula massa ac eros. Nunc a commodo mauris.
             </p>
         </div>
+    },
+    {
+        title: 'test title 2',
+        description: 'brief description goes here',
+        date: 'May 2025',
+        type: 'website',
+        thumbnail: gracemanningCom,
+        body:
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis tellus eget odio facilisis vehicula. Sed nec convallis mauris, ac gravida magna. Integer in semper turpis. Donec id aliquam mauris. Vestibulum consectetur mauris ac sollicitudin rhoncus. In semper vel sem at porta. Nam maximus iaculis felis. Ut consequat massa at est rhoncus pellentesque. Cras semper nisi purus. Integer suscipit ex non dui faucibus, eu euismod nunc rutrum. Mauris vel purus risus. Sed vitae neque vitae sem auctor condimentum. Integer aliquam metus vitae volutpat dignissim. Sed ultrices dolor erat, a rhoncus odio laoreet a.
+            </p>
+            <p>
+                Nunc egestas nisl ac dolor ultrices ultricies. Sed gravida risus non ipsum egestas consequat. Etiam eget nisi hendrerit, lobortis ligula porta, condimentum leo. Sed pellentesque ex eget tincidunt dapibus. Fusce rhoncus tincidunt lobortis. Suspendisse et elit at velit cursus dapibus vitae nec massa. Aliquam imperdiet leo nunc, sed placerat tellus placerat at. Phasellus maximus mattis magna, eu euismod est viverra sed. Pellentesque non eros elit. Quisque convallis tortor nec ipsum porttitor elementum. Mauris tincidunt rutrum metus, sed tempor elit hendrerit vel. Quisque elementum, odio in hendrerit pulvinar, purus est pulvinar ex, sit amet accumsan purus magna sed quam. Morbi eget rutrum tellus. Proin hendrerit, tellus sit amet eleifend ultricies, eros tortor placerat lorem, mattis interdum ligula massa ac eros. Nunc a commodo mauris.
+            </p>
+        </div>
+    },
+    {
+        title: 'test title 2',
+        description: 'brief description goes here',
+        date: 'May 2025',
+        type: 'website',
+        thumbnail: gracemanningCom,
+        body:
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis tellus eget odio facilisis vehicula. Sed nec convallis mauris, ac gravida magna. Integer in semper turpis. Donec id aliquam mauris. Vestibulum consectetur mauris ac sollicitudin rhoncus. In semper vel sem at porta. Nam maximus iaculis felis. Ut consequat massa at est rhoncus pellentesque. Cras semper nisi purus. Integer suscipit ex non dui faucibus, eu euismod nunc rutrum. Mauris vel purus risus. Sed vitae neque vitae sem auctor condimentum. Integer aliquam metus vitae volutpat dignissim. Sed ultrices dolor erat, a rhoncus odio laoreet a.
+            </p>
+            <p>
+                Nunc egestas nisl ac dolor ultrices ultricies. Sed gravida risus non ipsum egestas consequat. Etiam eget nisi hendrerit, lobortis ligula porta, condimentum leo. Sed pellentesque ex eget tincidunt dapibus. Fusce rhoncus tincidunt lobortis. Suspendisse et elit at velit cursus dapibus vitae nec massa. Aliquam imperdiet leo nunc, sed placerat tellus placerat at. Phasellus maximus mattis magna, eu euismod est viverra sed. Pellentesque non eros elit. Quisque convallis tortor nec ipsum porttitor elementum. Mauris tincidunt rutrum metus, sed tempor elit hendrerit vel. Quisque elementum, odio in hendrerit pulvinar, purus est pulvinar ex, sit amet accumsan purus magna sed quam. Morbi eget rutrum tellus. Proin hendrerit, tellus sit amet eleifend ultricies, eros tortor placerat lorem, mattis interdum ligula massa ac eros. Nunc a commodo mauris.
+            </p>
+        </div>
     }
 ]
 
