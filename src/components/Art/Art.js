@@ -9,6 +9,6 @@ const content =
 
 export default function Art(){
     return(
-        BasicLayout(content)
+        <BasicLayout content={content} />
     )
 }

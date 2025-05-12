@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navbar, NavbarMobile } from "../components/Navigation/Navigation";
 
-export function BasicLayout(content) {
+export function BasicLayout({ content }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {

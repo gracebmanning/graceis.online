@@ -10,6 +10,6 @@ export default function Blog(){
     </div>
 
     return(
-        BasicLayout(content)
+        <BasicLayout content={content} />
     )
 }

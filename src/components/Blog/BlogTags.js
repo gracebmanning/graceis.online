@@ -22,7 +22,7 @@ function tagPage(tag){
         {filteredPosts.map((post) => BlogPreview(post))}
     </div>
     return(
-        BasicLayout(content)
+        <BasicLayout content={content} />
     );
 }
 
@@ -40,6 +40,6 @@ export function Tags(){
         </ul>
     </div>
     return(
-        BasicLayout(content)
+        <BasicLayout content={content} />
     );
 }

@@ -12,6 +12,6 @@ const content =
 
 export default function Surprise(){
     return(
-        BasicLayout(content)
+        <BasicLayout content={content} />
     )
 }

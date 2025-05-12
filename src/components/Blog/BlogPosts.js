@@ -54,7 +54,7 @@ function BlogPost(post, index){
     </div>
     
     return(
-        BasicLayout(content)
+        <BasicLayout content={content} />
     );
 }
 
@@ -80,6 +80,6 @@ export function Posts(){
             {posts.map((post) => BlogPreview(post))}
         </div>
     return(
-        BasicLayout(content)
+        <BasicLayout content={content} />
     );
 }

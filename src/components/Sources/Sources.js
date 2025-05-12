@@ -104,6 +104,6 @@ const content =
 
 export default function Sources(){
     return(
-        BasicLayout(content)
+        <BasicLayout content={content} />
     )
 }

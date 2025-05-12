@@ -7,6 +7,6 @@ const content =
 
 export default function PageNotFound(){
     return(
-        BasicLayout(content)
+        <BasicLayout content={content} />
     )
 }

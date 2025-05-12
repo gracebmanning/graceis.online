@@ -32,7 +32,7 @@ const AboutContent =
 
 export default function About(){
     return(
-        BasicLayout(AboutContent)
+        <BasicLayout content={AboutContent} />
     )
 }
 
