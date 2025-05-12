@@ -1,8 +1,8 @@
 import './Sources.css';
 import { daisies } from "../../assets/backgrounds/backgrounds";
-import { backarrow, fish, ladybug, embroideredstar, strawberry, lunamoth, envelope, bear, frame, pinkBow, dinosaur, internetarchive, winClassic } from '../../assets/assets';
+import { backarrow, fish, ladybug, embroideredstar, strawberry, lunamoth, envelope, bear, frame, pinkBow, dinosaur } from '../../assets/assets';
 import { MdArrowOutward } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { BasicLayout } from '../../layouts/BasicLayout';
 
 let assets = [
     // NAVIGATION
@@ -80,18 +80,6 @@ let assets = [
         link: 'https://www.acehardware.com/departments/home-and-decor/novelty-items/toys-and-games/9060321',
         alt: ''
     },
-    {
-        asset: internetarchive,
-        source: 'external',
-        link: 'https://archive.org/details/logo-internetArchive-266x300-1',
-        alt: ''
-    },
-    {
-        asset: winClassic,
-        source: 'external',
-        link: 'https://winclassic.net/',
-        alt: ''
-    },
     
     // BACKGROUNDS
     {
@@ -103,34 +91,19 @@ let assets = [
 
 ]
 
+const content = 
+    <div className='sourcesContentBox'>
+        i am working on compiling all sources for my images into a list. thanks for your patience!
+        <ul className='sourcesList'>
+            {assets.map((elem, index)=><li className='sourcesListItem' key={index}>
+                    <img src={elem.asset} alt={elem.alt}/>
+                    source: {(elem.source==='me') ? `${elem.link}` : <a href={elem.link} target='_blank' rel='noreferrer'>external link<MdArrowOutward/></a>}
+                </li>)}
+        </ul>
+    </div>
+
 export default function Sources(){
     return(
-        <div style={{width: '100vw', height: '100vh', overflow: 'hidden'}}>
-            <img className='backgroundImg topLeft' id='homeDaisies' src={daisies} alt='two daisies with smaller purple blooms and surrounding greenery' />
-            <div className='container sourcesContainer'>
-                <div className='subpageText'>
-                    <Link className='backLink' to='/'>
-                        <img src={backarrow} alt='sketch outline of arrow pointing left' />
-                        go home
-                    </Link>
-                </div>
-                <div className='subpageText subpageHeader sourcesHeader'>
-                    <div className='subpageHeaderText'>
-                        <h2>this is the</h2>
-                        <h1>sources page</h1>
-                    </div>
-                    <img id='dinosaur' src={dinosaur} alt='green dinosaur toy' />
-                </div>
-                <div className='sourcesContentBox'>
-                    i am working on compiling all sources for my images into a list. thanks for your patience!
-                    <ul className='sourcesList'>
-                        {assets.map((elem, index)=><li className='sourcesListItem' key={index}>
-                                <img src={elem.asset} alt={elem.alt}/>
-                                source: {(elem.source==='me') ? `${elem.link}` : <a href={elem.link} target='_blank' rel='noreferrer'>external link<MdArrowOutward/></a>}
-                            </li>)}
-                    </ul>
-                </div>
-            </div>
-        </div>
+        BasicLayout(content)
     )
 }
