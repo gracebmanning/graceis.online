@@ -13,6 +13,9 @@ import dinosaur from './dinosaur.png';
 import pinkBow from './pink-bow.png';
 import grace from './grace3.jpg';
 import wiggleLine from './wiggleLine.svg';
+import bunny from './bunny.gif';
+import chickEgg1 from './chick-egg1.gif';
+import chickEgg2 from './chick-egg2.gif';
 
 // EXPLORE PAGE ICONS
 import internetarchive from './explore/internet-archive.png';
@@ -44,6 +47,10 @@ export{
     // EXPLORE PAGE
     dinosaur, // https://www.acehardware.com/departments/home-and-decor/novelty-items/toys-and-games/9060321
     internetarchive,
-    winClassic
+    winClassic,
 
+    // SURPRISE PAGE
+    bunny,
+    chickEgg1,
+    chickEgg2
 }

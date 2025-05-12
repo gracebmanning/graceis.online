@@ -1,13 +1,17 @@
 import './Surprise.css';
-import { daisies } from "../../assets/backgrounds/backgrounds"
+import { BasicLayout } from '../../layouts/BasicLayout';
+import { bunny, chickEgg1, chickEgg2 } from '../../assets/assets';
+
+const content = 
+    <div className='surpriseContainer'>
+        <h1>surprise! you found an easter egg :-)</h1>
+        <img src={bunny} alt='' />
+        <img src={chickEgg1} alt='' />
+        <img src={chickEgg2} alt='' />
+    </div>
 
 export default function Surprise(){
     return(
-        <div style={{width: '100vw', height: '100vh', overflow: 'hidden'}}>
-            <img className='backgroundImg topLeft' id='homeDaisies' src={daisies} alt='two daisies with smaller purple blooms and surrounding greenery' />
-            <div className='container surpriseContainer'>
-                <h1>surprise! you found an easter egg :-)</h1>
-            </div>
-        </div>
+        BasicLayout(content)
     )
 }
