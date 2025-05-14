@@ -11,7 +11,7 @@ export const projectRoutes = projects.map((project) => <Route path={projectRoute
 const filters = ['website', 'music video', 'other']
 export default function Projects(){
     return(
-        <ProjectPage projects={projects} filters={filters} header={"commercial projects"} />
+        <ProjectPage projects={projects} filters={filters} header={"commercial projects"} type="project" />
     )
 }
 

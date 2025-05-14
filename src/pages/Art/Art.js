@@ -11,6 +11,6 @@ export const artRoutes = art.map((project) => <Route path={artRoute(project)} el
 const filters = ['website', 'music video', 'other'];
 export default function Art(){
     return(
-        <ProjectPage projects={art} filters={filters} header={"personal (non-commercial) projects"} />
+        <ProjectPage projects={art} filters={filters} header={"personal (non-commercial) projects"} type="art" />
     )
 }

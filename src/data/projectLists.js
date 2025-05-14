@@ -1,6 +1,5 @@
 import { getCloudFrontVideo } from '../utility/cloudfront';
-import { 
-    emmygardnerOnline, classifiedsLol,} from '../assets/projects/projects';
+import { emmygardnerOnline } from '../assets/projects/projects';
 
 export const projects = [
     {
@@ -13,16 +12,6 @@ export const projects = [
         <div>
             <a href="https://emmygardner.online/">link</a>
         </div>
-    },
-    
-]
-
-export const websites = [
-    {
-        title: 'a craigslist knockoff',
-        link: 'classifieds.lol',
-        href: 'https://classifieds.lol/',
-        thumbnail: classifiedsLol
     },
 ]
 
