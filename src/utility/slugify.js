@@ -1,4 +1,4 @@
-export function slugify(date, str) {
+function slugifyBlogPost(date, str) {
     str = str.toLowerCase().trim();
     str = str.replace(/\s+/g, '-'); // Replace spaces with hyphens
     str = str.replace(/[^a-z0-9-]/g, ''); // Remove non-alphanumeric characters except hyphens
@@ -12,10 +12,25 @@ export function slugify(date, str) {
     return formattedDate + "-" + str;
 }
 
+function slugify(str){
+    str = str.toLowerCase().trim();
+    str = str.replace(/\s+/g, '-'); // Replace spaces with hyphens
+    str = str.replace(/[^a-z0-9-]/g, ''); // Remove non-alphanumeric characters except hyphens
+    return str;
+}
+
 export function postRoute(post){
-    return "/blog/posts/" + slugify(post.date, post.title);
+    return "/blog/posts/" + slugifyBlogPost(post.date, post.title);
 }
 
 export function tagRoute(tag){
     return "/blog/tags/" + tag;
+}
+
+export function projectRoute(proj){
+    return "/projects/" + slugify(proj.title);
+}
+
+export function artRoute(art){
+    return "/art/" + slugify(art.title);
 }

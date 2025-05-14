@@ -1,5 +1,7 @@
 .projectTile2{
     font-family: "Inter", sans-serif;
+    text-decoration: none;
+    color: black;
     border-bottom: 1px solid black;
     margin-right: 20px;
     padding-top: 20px;
@@ -9,6 +11,13 @@
     flex-direction: row;
     justify-content:first baseline;
     align-items: center;
+    background: none;
+    transition: 0.1s ease-in;
+}
+
+.projectTile2:hover{
+    background-color: rgba(225, 207, 220, 0.2);
+    transition: 0.1s ease-out;
 }
 
 .projectThumbnail{

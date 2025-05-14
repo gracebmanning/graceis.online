@@ -126,7 +126,7 @@ export function Projects2(){
         <div className="projectsList">
             {projects.map((proj, index) => {
                 return(
-                    <ProjectTile key={index} project={proj} />
+                    <ProjectTile key={index} project={proj} type="project" />
                 )})}
         </div>
     </div>

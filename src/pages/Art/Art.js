@@ -11,7 +11,7 @@ export default function Art(){
         <div className="projectsList">
             {art.map((proj, index) => {
                 return(
-                    <ProjectTile project={proj} key={index} />
+                    <ProjectTile key={index} project={proj} type="art" />
                 )})}
         </div>
     </div>

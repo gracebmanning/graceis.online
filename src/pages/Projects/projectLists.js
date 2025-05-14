@@ -1,8 +1,9 @@
 import { getCloudFrontVideo } from '../../utility/cloudfront';
+import { Route } from 'react-router-dom';
+import { projectRoute } from '../../utility/slugify';
+import { ProjectPage } from '../../layouts/ProjectPage';
 import { 
-    // THUMBNAILS
-    emmygardnerOnline, classifiedsLol,
- } from '../../assets/projects/projects';
+    emmygardnerOnline, classifiedsLol,} from '../../assets/projects/projects';
 
 export const projects = [
     {
@@ -18,6 +19,9 @@ export const projects = [
     },
     
 ]
+
+// ROUTES FOR ALL PROJECTS
+export const projectRoutes = projects.map((project) => <Route path={projectRoute(project)} element={<ProjectPage project={project} />} key={project.title} />);
 
 export const websites = [
     {

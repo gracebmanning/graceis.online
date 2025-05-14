@@ -1,5 +1,9 @@
+import { Route } from 'react-router-dom';
+import { artRoute } from '../../utility/slugify';
+import { ProjectPage } from '../../layouts/ProjectPage';
 import { gracemanningCom, classifiedsLol, gracesPortal, itneedsmorecolor} from '../../assets/projects/projects';
 
+// ALL ART PROJECTS (SEE ROUTES BELOW)
 export const art = [
     {
         title: 'classifieds.lol',
@@ -46,3 +50,6 @@ export const art = [
         </div>
     },
 ]
+
+// ROUTES FOR ALL ART PROJECTS
+export const artRoutes = art.map((project) => <Route path={artRoute(project)} element={<ProjectPage project={project} />} key={project.title} />);
