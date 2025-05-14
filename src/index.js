@@ -9,8 +9,7 @@ import Art, {artRoutes} from './pages/Art/Art';
 import Blog from './pages/Blog/Blog';
 import { Posts, postRoutes } from './pages/Blog/BlogPosts';
 import { Tags, tagRoutes } from './pages/Blog/BlogTags';
-//import Projects from './components/Projects/Projects';
-import { Projects2, projectRoutes } from './pages/Projects/Projects';
+import Projects, { projectRoutes } from './pages/Projects/Projects';
 import Surprise from './pages/Surprise/Surprise';
 import Sources from './pages/Sources/Sources';
 
@@ -28,7 +27,7 @@ root.render(
       <Route path="/blog/posts" element={<Posts/>} />
       <Route path="blog/tags" element={<Tags/>} />
       {tagRoutes}
-      <Route path="/projects" element={<Projects2/>} />
+      <Route path="/projects" element={<Projects/>} />
       {projectRoutes}
       <Route path="/surprise" element={<Surprise/>} />
       <Route path="/sources" element={<Sources/>} />

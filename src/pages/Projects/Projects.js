@@ -1,11 +1,5 @@
 import './Projects.css';
-import { MdArrowOutward } from "react-icons/md";
-import { pinkBow } from '../../assets/assets';
-import { IoHome, IoDesktopOutline, IoHeadset, IoVideocam,  } from "react-icons/io5";
-import { useRef } from 'react';
-import { websites, musicVideos, touchdesignerClips, projects } from '../../data/projectLists';
-import ReactPlayer from 'react-player';
-import { Link } from 'react-router-dom';
+import { projects } from '../../data/projectLists';
 import { BasicLayout } from '../../layouts/BasicLayout';
 import ProjectTile from '../../components/ProjectTile/ProjectTile';
 import ProjectFilter from '../../components/ProjectFilter/ProjectFilter';
@@ -13,6 +7,27 @@ import { Route } from 'react-router-dom';
 import { projectRoute } from '../../utility/slugify';
 import { ProjectPage } from '../../layouts/ProjectPage';
 
+// ROUTES FOR ALL PROJECTS
+export const projectRoutes = projects.map((project) => <Route path={projectRoute(project)} element={<ProjectPage project={project} />} key={project.title} />);
+
+export default function Projects(){
+    const content = 
+    <div style={{width: '100%'}}>
+        <ProjectFilter/>
+        <div className="projectsList">
+            {projects.map((proj, index) => {
+                return(
+                    <ProjectTile key={index} project={proj} type="project" />
+                )})}
+        </div>
+    </div>
+
+    return(
+        <BasicLayout content={content} />
+    )
+}
+
+/*
 function WebsiteTile(website, index){
     return(
         <div className='projectTile websiteTile' key={index}>
@@ -123,22 +138,4 @@ export default function Projects(){
 }
 
 
-// ROUTES FOR ALL PROJECTS
-export const projectRoutes = projects.map((project) => <Route path={projectRoute(project)} element={<ProjectPage project={project} />} key={project.title} />);
-
-export function Projects2(){
-    const content = 
-    <div style={{width: '100%'}}>
-        <ProjectFilter/>
-        <div className="projectsList">
-            {projects.map((proj, index) => {
-                return(
-                    <ProjectTile key={index} project={proj} type="project" />
-                )})}
-        </div>
-    </div>
-
-    return(
-        <BasicLayout content={content} />
-    )
-}
+*/
