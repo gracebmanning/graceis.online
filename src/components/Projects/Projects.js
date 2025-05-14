@@ -7,6 +7,8 @@ import { websites, musicVideos, touchdesignerClips, projects } from './projectLi
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router-dom';
 import { BasicLayout } from '../../layouts/BasicLayout';
+import ProjectTile from '../ProjectTile/ProjectTile';
+import ProjectFilter from '../ProjectFilter/ProjectFilter';
 
 function WebsiteTile(website, index){
     return(
@@ -117,34 +119,14 @@ export default function Projects(){
     )
 }
 
-function ProjectTile(project, index){
-    return(
-        <div key={index} className="projectTile2">
-            <img className="projectThumbnail" src={project.thumbnail} alt='' />
-            <div className="projectTileInfo">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <p>{project.date}</p>
-            </div>
-        </div>
-    )
-}
-
 export function Projects2(){
     const content = 
     <div style={{width: '100%'}}>
-        <div className="projectsFilter">
-            <p>filter:</p>
-            <ul className="filterList">
-                <li className="filterListItem">website</li>
-                <li className="filterListItem">music video</li>
-                <li className="filterListItem">other</li>
-            </ul>
-        </div>
+        <ProjectFilter/>
         <div className="projectsList">
             {projects.map((proj, index) => {
                 return(
-                    ProjectTile(proj, index)
+                    <ProjectTile key={index} project={proj} />
                 )})}
         </div>
     </div>

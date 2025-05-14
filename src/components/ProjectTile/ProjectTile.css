@@ -1,0 +1,25 @@
+.projectTile2{
+    font-family: "Inter", sans-serif;
+    border-bottom: 1px solid black;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:first baseline;
+    align-items: center;
+}
+
+.projectThumbnail{
+    width: 350px;
+}
+
+.projectTileInfo{
+    margin-left: 10px;
+    h3{
+        font-family: "Lacquer", system-ui;
+        font-size: 30px;
+        margin: 0px;
+    }
+}
