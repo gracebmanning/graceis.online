@@ -1,33 +1,17 @@
 import './Projects.css';
 import { projects } from '../../data/projectLists';
-import { BasicLayout } from '../../layouts/BasicLayout';
-import ProjectTile from '../../components/ProjectTile/ProjectTile';
-import ProjectFilter from '../../components/ProjectFilter/ProjectFilter';
 import { Route } from 'react-router-dom';
 import { projectRoute } from '../../utility/slugify';
+import { IndividualProjectPage } from '../../layouts/IndividualProjectPage';
 import { ProjectPage } from '../../layouts/ProjectPage';
 
 // ROUTES FOR ALL PROJECTS
-export const projectRoutes = projects.map((project) => <Route path={projectRoute(project)} element={<ProjectPage project={project} />} key={project.title} />);
+export const projectRoutes = projects.map((project) => <Route path={projectRoute(project)} element={<IndividualProjectPage project={project} />} key={project.title} />);
 
 const filters = ['website', 'music video', 'other']
 export default function Projects(){
-    const content = 
-    <div style={{width: '100%'}}>
-        <div className="projectsHeader">
-            <p style={{margin: '0px', fontStyle: 'italic'}}>commercial projects</p>
-            <ProjectFilter projects={projects} filters={filters} />
-        </div>
-        <div className="projectsList">
-            {projects.map((proj, index) => {
-                return(
-                    <ProjectTile key={index} project={proj} type="project" />
-                )})}
-        </div>
-    </div>
-
     return(
-        <BasicLayout content={content} />
+        <ProjectPage projects={projects} filters={filters} header={"commercial projects"} />
     )
 }
 
