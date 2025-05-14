@@ -3,12 +3,15 @@ import { MdArrowOutward } from "react-icons/md";
 import { pinkBow } from '../../assets/assets';
 import { IoHome, IoDesktopOutline, IoHeadset, IoVideocam,  } from "react-icons/io5";
 import { useRef } from 'react';
-import { websites, musicVideos, touchdesignerClips, projects } from './projectLists';
+import { websites, musicVideos, touchdesignerClips, projects } from '../../data/projectLists';
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router-dom';
 import { BasicLayout } from '../../layouts/BasicLayout';
 import ProjectTile from '../../components/ProjectTile/ProjectTile';
 import ProjectFilter from '../../components/ProjectFilter/ProjectFilter';
+import { Route } from 'react-router-dom';
+import { projectRoute } from '../../utility/slugify';
+import { ProjectPage } from '../../layouts/ProjectPage';
 
 function WebsiteTile(website, index){
     return(
@@ -118,6 +121,10 @@ export default function Projects(){
         
     )
 }
+
+
+// ROUTES FOR ALL PROJECTS
+export const projectRoutes = projects.map((project) => <Route path={projectRoute(project)} element={<ProjectPage project={project} />} key={project.title} />);
 
 export function Projects2(){
     const content = 

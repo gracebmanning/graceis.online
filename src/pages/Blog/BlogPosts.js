@@ -1,4 +1,4 @@
-import { posts } from "./posts";
+import { posts } from "../../data/posts";
 import { Route, Link } from "react-router-dom";
 import { BsEnvelopeHeart } from "react-icons/bs";
 import { postRoute, tagRoute } from '../../utility/slugify';

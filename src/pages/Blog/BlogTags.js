@@ -1,5 +1,5 @@
 import { Route, Link } from 'react-router-dom';
-import { posts } from './posts';
+import { posts } from '../../data/posts';
 import { BlogPreview } from './BlogPosts';
 import { tagRoute } from '../../utility/slugify';
 import { BasicLayout } from '../../layouts/BasicLayout';
