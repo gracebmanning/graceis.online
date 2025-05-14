@@ -1,4 +1,27 @@
-.projectsList{
-    margin-top: 30px;
+.projectsHeader{
+    position: fixed;
+    top: 0;
+    height: 80px;
     width: 100%;
+    font-family: "Inter", sans-serif;
+    background-color: white;
+    border-bottom: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projectsList{
+    margin-top: 60px;
+    width: 100%;
+}
+
+@media (max-width: 768px){
+    .projectsHeader{
+        top: 50px;
+    }
+    .projectsList{
+        margin-top: 70px;
+    }
 }

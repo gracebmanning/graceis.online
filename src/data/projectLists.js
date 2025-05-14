@@ -11,7 +11,7 @@ export const projects = [
         thumbnail: emmygardnerOnline,
         body:
         <div>
-            <a href="https://emmygardner.online/">here</a>
+            <a href="https://emmygardner.online/">link</a>
         </div>
     },
     

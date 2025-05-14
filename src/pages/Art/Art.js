@@ -1,4 +1,4 @@
-import './Art.css';
+import '../Projects/Projects.css';
 import {BasicLayout} from '../../layouts/BasicLayout';
 import ProjectTile from '../../components/ProjectTile/ProjectTile';
 import ProjectFilter from '../../components/ProjectFilter/ProjectFilter';
@@ -13,7 +13,10 @@ export const artRoutes = art.map((project) => <Route path={artRoute(project)} el
 export default function Art(){
     const content = 
     <div style={{width: '100%'}}>
-        <ProjectFilter/>
+        <div className="projectsHeader">
+            <p style={{margin: '0px', fontStyle: 'italic'}}>personal (non-commercial) projects</p>
+            <ProjectFilter/>
+        </div>
         <div className="projectsList">
             {art.map((proj, index) => {
                 return(
