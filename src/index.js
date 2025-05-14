@@ -2,17 +2,17 @@ import './index.css';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from 'react-router-dom';
-import PageNotFound from './components/404/404';
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Art from './components/Art/Art';
-import Blog from './components/Blog/Blog';
-import { Posts, postRoutes } from './components/Blog/BlogPosts';
-import { Tags, tagRoutes } from './components/Blog/BlogTags';
+import PageNotFound from './pages/404/404';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Art from './pages/Art/Art';
+import Blog from './pages/Blog/Blog';
+import { Posts, postRoutes } from './pages/Blog/BlogPosts';
+import { Tags, tagRoutes } from './pages/Blog/BlogTags';
 //import Projects from './components/Projects/Projects';
-import { Projects2 } from './components/Projects/Projects';
-import Surprise from './components/Surprise/Surprise';
-import Sources from './components/Sources/Sources';
+import { Projects2 } from './pages/Projects/Projects';
+import Surprise from './pages/Surprise/Surprise';
+import Sources from './pages/Sources/Sources';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,7 +1,7 @@
 import './Art.css';
 import {BasicLayout} from '../../layouts/BasicLayout';
-import ProjectTile from '../ProjectTile/ProjectTile';
-import ProjectFilter from '../ProjectFilter/ProjectFilter';
+import ProjectTile from '../../components/ProjectTile/ProjectTile';
+import ProjectFilter from '../../components/ProjectFilter/ProjectFilter';
 import { art } from './artList';
 
 export default function Art(){

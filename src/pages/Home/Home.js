@@ -1,6 +1,6 @@
 import './Home.css';
-import { whiteRabbit, daisies, daisiesBottomFlipped } from '../../assets/backgrounds/backgrounds';
-import { HomeNav } from '../Navigation/Navigation.js';
+import { whiteRabbit, daisies, daisiesBottomFlipped } from '../../assets/backgrounds/backgrounds.js';
+import { HomeNav } from '../../components/Navigation/Navigation.js';
 
 export default function Home(){
     return(

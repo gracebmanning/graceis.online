@@ -7,8 +7,8 @@ import { websites, musicVideos, touchdesignerClips, projects } from './projectLi
 import ReactPlayer from 'react-player';
 import { Link } from 'react-router-dom';
 import { BasicLayout } from '../../layouts/BasicLayout';
-import ProjectTile from '../ProjectTile/ProjectTile';
-import ProjectFilter from '../ProjectFilter/ProjectFilter';
+import ProjectTile from '../../components/ProjectTile/ProjectTile';
+import ProjectFilter from '../../components/ProjectFilter/ProjectFilter';
 
 function WebsiteTile(website, index){
     return(
