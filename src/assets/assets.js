@@ -16,7 +16,6 @@ import emmygardnerOnlineImg from './thumbnails/emmygardner-online.png';
 import classifiedsLolImg from './thumbnails/classifieds-lol.png';
 import gracesPortalImg from './thumbnails/graces-portal.png';
 import itneedsmorecolorImg from './thumbnails/itneedsmorecolor.png';
-import graceIsOnlineImg from './thumbnails/graceis-online.png';
 
 import arrowImg from './icons/arrow.svg';
 import backarrowImg from './icons/backarrow.svg';
@@ -93,58 +92,51 @@ export const daisiesBottomFlippedTransparent = {
 
 export const whiteRabbit = {
     src: whiteRabbitImg,
-    alt: '',
-    source: '',
-    link: ''
+    alt: 'black-and-white illustration of the Alice in Wonderland white rabbit in a checkered coat holding an umbrella, appearing to walk hurriedly through tall grass while checking his watch.',
+    source: 'external',
+    link: 'https://commons.wikimedia.org/wiki/File:De_Alice%27s_Abenteuer_im_Wunderland_Carroll_pic_02.jpg'
 };
 
 // THUMBNAILS
 export const gracemanningCom = {
     src: gracemanningComImg,
     alt: '',
-    source: '',
-    link: ''
+    source: 'external',
+    link: 'https://grace-manning.com/'
 };
 
 export const emmygardnerOnline = {
     src: emmygardnerOnlineImg,
     alt: '',
-    source: '',
-    link: ''
+    source: 'external',
+    link: 'https://www.emmygardner.online/'
 };
 
 export const classifiedsLol = {
     src: classifiedsLolImg,
     alt: '',
-    source: '',
-    link: ''
+    source: 'external',
+    link: 'https://classifieds.lol/'
 };
 
 export const gracesPortal = {
     src: gracesPortalImg,
     alt: '',
-    source: '',
-    link: ''
+    source: 'external',
+    link: 'https://graces-portal.net/'
 };
 
 export const itneedsmorecolor = {
     src: itneedsmorecolorImg,
     alt: '',
-    source: '',
-    link: ''
-};
-
-export const graceIsOnline = {
-    src: graceIsOnlineImg,
-    alt: '',
-    source: '',
-    link: ''
+    source: 'external',
+    link: 'https://itneedsmorecolor.com/'
 };
 
 // ICONS
 export const arrow = {
     src: arrowImg,
-    alt: '',
+    alt: 'a thin black arrow pointing down',
     source: 'internal',
     link: 'drawn by me'
 };
@@ -158,49 +150,49 @@ export const backarrow = {
 
 export const bear = {
     src: bearImg,
-    alt: '',
+    alt: 'A brown teddy bear sitting on a white background, looking soft and cuddly.',
     source: 'external',
     link: 'https://www.macys.com/shop/product/aurora-large-bonny-bear-snuggly-plush-toy-tan-16?ID=17147799'
 };
 
 export const embroideredstar = {
     src: embroideredstarImg,
-    alt: '',
+    alt: 'Silver embroidered star patch.',
     source: 'external',
     link: 'https://www.walmart.com/ip/Wrights-Iron-On-Appliques-3-Pkg-Silver-Metallic-Stars-Pk-3-Wrights/43984845'
 };
 
 export const envelope = {
     src: envelopeImg,
-    alt: '',
+    alt: 'A hand-drawn white envelope with a pink heart sealing it closed.',
     source: 'internal',
     link: 'drawn by me'
 };
 
 export const fish = {
     src: fishImg,
-    alt: '',
+    alt: 'A fish with a silvery-grey body, a blue stripe, and yellow fins.',
     source: 'external',
     link: 'https://za.pinterest.com/pin/595741856993273761/'
 };
 
 export const ladybug = {
     src: ladybugImg,
-    alt: '',
+    alt: 'A red ladybug with black spots.',
     source: 'external',
     link: 'https://spectrum.ieee.org/microled-displays-could-show-up-in-products-as-soon-as-2020'
 };
 
 export const lunamoth = {
     src: lunamothImg,
-    alt: '',
+    alt: 'A bright green Luna moth with distinctive circular eyespots, long wing tails, and reddish-purple wing borders.',
     source: 'external',
     link: 'https://www.pinterest.com/pin/5066618328582739/'
 };
 
 export const strawberry = {
     src: strawberryImg,
-    alt: '',
+    alt: 'A bright red strawberry with a green stem.',
     source: 'external',
     link: 'https://www.gardeningknowhow.com/edible/fruits/strawberry/growing-jewel-strawberries.htm'
 };
@@ -208,28 +200,28 @@ export const strawberry = {
 // OTHER
 export const bunny = {
     src: bunnyImg,
-    alt: '',
-    source: '',
-    link: ''
+    alt: 'A soft brown bunny sitting on a patch of grass with its eyes closed, surrounded by pink flowers. Its ears move back and forth as it crinkles its nose.',
+    source: 'external',
+    link: 'https://web.archive.org/web/20091021125706/http://www.geocities.com/corabbitroundup/paasbunny.gif'
 };
 
 export const chickEgg1 = {
     src: chickEgg1Img,
-    alt: '',
-    source: '',
-    link: ''
+    alt: 'A bright yelow chick comes out of a pink egg with colorful stripes, cracking it and spreading its wings as it emerges.',
+    source: 'external',
+    link: 'https://web.archive.org/web/20090901233013im_/http://www.geocities.com/mkvalerie/Holidays/Easter/ChickEgg.gif'
 };
 
 export const chickEgg2 = {
     src: chickEgg2Img,
-    alt: '',
-    source: '',
-    link: ''
+    alt: 'A yellow chick comes out of a pink, green, and purple striped egg, cracking it and waving one wing as it emerges. The egg sits amonst flowers.',
+    source: 'external',
+    link: 'https://web.archive.org/web/20090830222905/http://www.geocities.com/astridsplace/jeggchik.gif'
 };
 
 export const grace = {
     src: graceImg,
-    alt: '',
+    alt: 'Grace, a white woman with blond hair, crouches down and smiles for a photo. She is wearing a navy blue top with light wash denim shorts, plus red cowboy boots, a red purse, and red sunglasses. A smiley face is drawn in white ink in the top left corner of the photo.',
     source: 'internal',
     link: 'this is just a photo of me'
 };
@@ -258,7 +250,6 @@ export const allImages = [
     classifiedsLol,
     gracesPortal,
     itneedsmorecolor,
-    graceIsOnline,
     //ICONS
     arrow,
     backarrow,
