@@ -82,7 +82,7 @@ body {
 }
 
 .sideContainer{
-  background-image: url(./assets/backgrounds2/daisiesFlipped.jpg);
+  background-image: url(./assets/backgrounds/daisiesFlipped_50opacity.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;

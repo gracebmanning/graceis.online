@@ -8,7 +8,11 @@ export default function ProjectTile({ project, type }) {
       className="projectTile2"
       to={type === "art" ? artRoute(project) : projectRoute(project)}
     >
-      <img className="projectThumbnail" src={project.thumbnail} alt="" />
+      <img
+        className="projectThumbnail"
+        src={project.thumbnail.src}
+        alt={project.thumbnail.alt}
+      />
       <div className="projectTileInfo">
         <h3>{project.title}</h3>
         <p>{project.description}</p>

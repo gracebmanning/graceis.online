@@ -5,7 +5,7 @@ import { BasicLayout } from '../../layouts/BasicLayout';
 const AboutContent = 
         <div className="aboutText">
             <div id="aboutHeader">
-                <img src={grace} alt='' />
+                <img src={grace.src} alt={grace.alt} />
                 <div id="aboutHeaderText">
                     <p className="textHandwritten">hi, i'm grace! i am a:</p>
                     <div className='aboutLine'>

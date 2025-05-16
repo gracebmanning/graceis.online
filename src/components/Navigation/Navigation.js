@@ -61,11 +61,11 @@ export const HomeNav = () => {
                         {item.type === 'internal' 
                         ? 
                             <Link className="homeNavLink" to={item.link}>
-                                <img className='homeNavImage' src={item.icon} alt='' />
+                                <img className='homeNavImage' src={item.icon.src} alt={item.icon.alt} />
                                 <p className='homeNavText'>{item.name}</p>
                             </Link>
                         :   <a className="homeNavLink" href={item.link} target="_blank" rel="noreferrer">
-                                <img className='homeNavImage' src={item.icon} alt='' />
+                                <img className='homeNavImage' src={item.icon.src} alt={item.icon.alt} />
                                 <p className='homeNavText'>{item.name}</p>
                             </a>
                         }
@@ -89,18 +89,18 @@ export const Navbar = () => {
                 return(
                     <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
                         <NavLink className={({ isActive }) => (isActive ? "navbarLink navbarLinkActive" : "navbarLink")} to={item.link}>
-                            <img className="navbarImage" src={item.icon} alt='' />
+                            <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
                             <p className="navbarText">{item.name}</p>
                         </NavLink>
                     </li>
                 )
             })}
-            <img className="navbarDivider" src={wiggleLine} alt="green wiggly line" />
+            <img className="navbarDivider" src={wiggleLine.src} alt={wiggleLine.alt} />
             {navList.filter((item) => item.type === 'external').map((item, index) => {
                 return(
                     <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
                         <a className="navbarLink" href={item.link} target="_blank" rel="noreferrer">
-                            <img className="navbarImage" src={item.icon} alt='' />
+                            <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
                             <p className="navbarText">{item.name}</p>
                         </a>
                     </li>
@@ -132,18 +132,18 @@ export const NavbarMobile = () => {
                         return(
                             <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
                                 <NavLink className={({ isActive }) => (isActive ? "navbarLink navbarLinkActive" : "navbarLink")} to={item.link}>
-                                    <img className="navbarImage" src={item.icon} alt='' />
+                                    <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
                                     <p className="navbarText">{item.name}</p>
                                 </NavLink>
                             </li>
                         )
                     })}
-                    <img className="navbarDivider" src={wiggleLine} alt="green wiggly line" />
+                    <img className="navbarDivider" src={wiggleLine.src} alt={wiggleLine.alt} />
                     {navList.filter((item) => item.type === 'external').map((item, index) => {
                         return(
                             <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
                                 <a className="navbarLink" href={item.link} target="_blank" rel="noreferrer">
-                                    <img className="navbarImage" src={item.icon} alt='' />
+                                    <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
                                     <p className="navbarText">{item.name}</p>
                                 </a>
                             </li>

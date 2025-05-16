@@ -1,5 +1,5 @@
 import { getCloudFrontVideo } from '../utility/cloudfront';
-import { emmygardnerOnline } from '../assets/projects/projects';
+import { emmygardnerOnline } from '../assets/assets';
 
 export const projects = [
     {

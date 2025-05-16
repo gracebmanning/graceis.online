@@ -1,11 +1,11 @@
 import './Home.css';
-import { whiteRabbit, daisies, daisiesBottomFlipped } from '../../assets/backgrounds/backgrounds.js';
+import { whiteRabbit, daisies, daisiesBottomFlipped } from '../../assets/assets.js';
 import { HomeNav } from '../../components/Navigation/Navigation.js';
 
 export default function Home(){
     return(
         <div style={{width: '100vw', height: '100vh', overflow: 'hidden'}}>
-            <img className='backgroundImg topLeft' id='homeDaisies' src={daisies} alt='two daisies with smaller purple blooms and surrounding greenery' />
+            <img className='backgroundImg topLeft' id='homeDaisies' src={daisies.src} alt={daisies.alt} />
             
             <div className='container homeContainer'>
                 <div className='headerText'>
@@ -15,36 +15,8 @@ export default function Home(){
                 <HomeNav/>
                 <h2 id='contactText'>contact [@] graceis.online</h2>
             </div>
-            <img className='backgroundImg bottomRight' id='homeDaisiesBottom' src={daisiesBottomFlipped} alt='' />
-            <img className='bottomRight' id='whiteRabbit' src={whiteRabbit} alt='' />
+            <img className='backgroundImg bottomRight' id='homeDaisiesBottom' src={daisiesBottomFlipped.src} alt={daisiesBottomFlipped.alt} />
+            <img className='bottomRight' id='whiteRabbit' src={whiteRabbit.src} alt={whiteRabbit.alt} />
         </div>
     )
 }
-/* <div className='navContainer'>
-                    <div className='navRow'>
-                        <Link className='navButton' id='aboutButton' to='/about'>
-                            <img className='navImage' id='fishImage' src={fish} alt='silver fish with blue and yellow accents' />
-                            <p className='navText'>about</p>
-                        </Link>
-                        <Link className='navButton' id='projectsButton' to='/projects'>
-                            <img className='navImage' id='ladybugImage' src={ladybug} alt='' />
-                            <p className='navText'>projects</p>
-                        </Link>
-                    </div>
-                    <div className='navRow'>
-                        <Link className='navButton' id='exploreButton' to='/explore'>
-                            <img className='navImage' src={embroideredstar} alt='' />
-                            <p className='navText'>explore</p>
-                        </Link>
-                    </div>
-                    <div className='navRow'>
-                        <a className='navButton' id='youtubeButton' href='https://www.youtube.com/@graceis.online' target='_blank' rel='noreferrer'>
-                            <img className='navImage' src={strawberry} alt='' />
-                            <p className='navText'>youtube</p>
-                        </a>
-                        <a className='navButton' id='instagramButton' href='https://www.instagram.com/graceis.online/' target='_blank' rel='noreferrer'>
-                            <img className='navImage' id='lunamothImage' src={lunamoth} alt='' />
-                            <p className='navText'>instagram</p>
-                        </a>
-                    </div>
-                </div> */

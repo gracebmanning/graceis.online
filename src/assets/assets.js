@@ -18,15 +18,15 @@ import gracesPortalImg from './thumbnails/graces-portal.png';
 import itneedsmorecolorImg from './thumbnails/itneedsmorecolor.png';
 import graceIsOnlineImg from './thumbnails/graceis-online.png';
 
-import arrowImg from './arrow.svg';
-import backarrowImg from './backarrow.svg';
-import bearImg from './bear.png';
-import embroideredstarImg from './embroidered-star.png';
-import envelopeImg from './envelope.svg';
-import fishImg from './fish.png';
-import ladybugImg from './ladybug.png';
-import lunamothImg from './lunamoth.png';
-import strawberryImg from './strawberry.png';
+import arrowImg from './icons/arrow.svg';
+import backarrowImg from './icons/backarrow.svg';
+import bearImg from './icons/bear.png';
+import embroideredstarImg from './icons/embroidered-star.png';
+import envelopeImg from './icons/envelope.svg';
+import fishImg from './icons/fish.png';
+import ladybugImg from './icons/ladybug.png';
+import lunamothImg from './icons/lunamoth.png';
+import strawberryImg from './icons/strawberry.png';
 
 import bunnyImg from './other/bunny.gif';
 import chickEgg1Img from './other/chick-egg1.gif';
@@ -37,56 +37,56 @@ import wiggleLineImg from './other/wiggleLine.svg';
 // BACKGROUNDS
 export const daisies = {
     src: daisiesImg,
-    alt: '',
+    alt: 'two white daisies with smaller purple blooms and surrounding greenery',
     source: 'internal',
     link: 'my personal stationery collection; artist unknown'
 };
 
 export const daisiesTransparent = {
     src: daisiesTransparentImg,
-    alt: '',
+    alt: 'two white daisies with smaller purple blooms and surrounding greenery',
     source: 'internal',
     link: 'my personal stationery collection; artist unknown'
 };
 
 export const daisiesFlipped = {
     src: daisiesFlippedImg,
-    alt: '',
+    alt: 'two white daisies with smaller purple blooms and surrounding greenery',
     source: 'internal',
     link: 'my personal stationery collection; artist unknown'
 };
 
 export const daisiesFlippedTransparent = {
     src: daisiesFlippedTransparentImg,
-    alt: '',
+    alt: 'two white daisies with smaller purple blooms and surrounding greenery',
     source: 'internal',
     link: 'my personal stationery collection; artist unknown'
 };
 
 export const daisiesBottom = {
     src: daisiesBottomImg,
-    alt: '',
+    alt: 'two white daisies with smaller purple blooms and surrounding greenery',
     source: 'internal',
     link: 'my personal stationery collection; artist unknown'
 };
 
 export const daisiesBottomTransparent = {
     src: daisiesBottomTransparentImg,
-    alt: '',
+    alt: 'two white daisies with smaller purple blooms and surrounding greenery',
     source: 'internal',
     link: 'my personal stationery collection; artist unknown'
 };
 
 export const daisiesBottomFlipped = {
     src: daisiesBottomFlippedImg,
-    alt: '',
+    alt: 'two white daisies with smaller purple blooms and surrounding greenery',
     source: 'internal',
     link: 'my personal stationery collection; artist unknown'
 };
 
 export const daisiesBottomFlippedTransparent = {
     src: daisiesBottomFlippedTransparentImg,
-    alt: '',
+    alt: 'two white daisies with smaller purple blooms and surrounding greenery',
     source: 'internal',
     link: 'my personal stationery collection; artist unknown'
 };
@@ -236,12 +236,12 @@ export const grace = {
 
 export const wiggleLine = {
     src: wiggleLineImg,
-    alt: '',
+    alt: 'green wiggly line',
     source: 'internal',
     link: 'drawn by me'
 };
 
-export const allImages = {
+export const allImages = [
     //BACKGROUNDS
     daisies,
     daisiesTransparent,
@@ -275,4 +275,4 @@ export const allImages = {
     chickEgg2,
     grace,
     wiggleLine,
-};
+];

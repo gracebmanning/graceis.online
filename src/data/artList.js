@@ -1,4 +1,4 @@
-import { gracemanningCom, classifiedsLol, gracesPortal, itneedsmorecolor} from '../assets/projects/projects';
+import { gracemanningCom, classifiedsLol, gracesPortal, itneedsmorecolor} from '../assets/assets';
 
 // ALL ART PROJECTS (SEE ROUTES BELOW)
 export const art = [
