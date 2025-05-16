@@ -12,5 +12,5 @@ export function IndividualProjectPage({ project }) {
       {project.body}
     </div>
   );
-  return <BasicLayout content={content} />;
+  return <BasicLayout title={project.title} content={content} />;
 }

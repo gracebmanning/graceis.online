@@ -20,6 +20,6 @@ const content =
 
 export default function Sources(){
     return(
-        <BasicLayout content={content} />
+        <BasicLayout title={"Sources"} content={content} />
     )
 }

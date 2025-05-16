@@ -1,7 +1,21 @@
 import { useEffect, useState } from "react";
 import { Navbar, NavbarMobile } from "../components/Navigation/Navigation";
+import { useLocation } from "react-router-dom";
+import ReactGA from "react-ga4";
 
-export function BasicLayout({ content }) {
+export function BasicLayout({ title, content }) {
+  // GOOGLE ANALYTICS
+  ReactGA.initialize("G-40KJD20ZZC");
+  let location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname,
+      title: { title },
+    });
+  }, [location, title]);
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {

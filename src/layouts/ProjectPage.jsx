@@ -50,5 +50,7 @@ export function ProjectPage({ projects, header, type }) {
     </div>
   );
 
-  return <BasicLayout content={content} />;
+  const pageTitle = type === "art" ? "Art" : "Projects";
+
+  return <BasicLayout title={pageTitle} content={content} />;
 }
