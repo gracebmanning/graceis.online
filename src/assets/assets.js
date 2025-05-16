@@ -1,247 +1,281 @@
+// src/assets/assets.js (or imageData.js)
+
+// ADD "Img" TO END OF NAME
+import daisiesImg from './backgrounds/daisies.jpg';
+import daisiesTransparentImg from './backgrounds/daisies_50opacity.jpg';
+import daisiesFlippedImg from './backgrounds/daisiesFlipped.jpg';
+import daisiesFlippedTransparentImg from './backgrounds/daisiesFlipped_50opacity.jpg';
+import daisiesBottomImg from './backgrounds/daisiesBottom.jpg';
+import daisiesBottomTransparentImg from './backgrounds/daisiesBottom_50opacity.jpg';
+import daisiesBottomFlippedImg from './backgrounds/daisiesBottomFlipped.jpg';
+import daisiesBottomFlippedTransparentImg from './backgrounds/daisiesBottomFlipped_50opacity.jpg';
+import whiteRabbitImg from './backgrounds/white-rabbit.png';
+
+import gracemanningComImg from './thumbnails/grace-manning.png';
+import emmygardnerOnlineImg from './thumbnails/emmygardner-online.png';
+import classifiedsLolImg from './thumbnails/classifieds-lol.png';
+import gracesPortalImg from './thumbnails/graces-portal.png';
+import itneedsmorecolorImg from './thumbnails/itneedsmorecolor.png';
+import graceIsOnlineImg from './thumbnails/graceis-online.png';
+
+import arrowImg from './arrow.svg';
+import backarrowImg from './backarrow.svg';
+import bearImg from './bear.png';
+import embroideredstarImg from './embroidered-star.png';
+import envelopeImg from './envelope.svg';
+import fishImg from './fish.png';
+import ladybugImg from './ladybug.png';
+import lunamothImg from './lunamoth.png';
+import strawberryImg from './strawberry.png';
+
+import bunnyImg from './other/bunny.gif';
+import chickEgg1Img from './other/chick-egg1.gif';
+import chickEgg2Img from './other/chick-egg2.gif';
+import graceImg from './other/grace3.jpg';
+import wiggleLineImg from './other/wiggleLine.svg';
+
 // BACKGROUNDS
-import daisies from './backgrounds/daisies.jpg';
-import daisies_transparent from './backgrounds/daisies_50opacity.jpg';
-import daisiesFlipped from './backgrounds/daisiesFlipped.jpg';
-import daisiesFlipped_transparent from './backgrounds/daisiesFlipped_50opacity.jpg';
-import daisiesBottom from './backgrounds/daisiesBottom.jpg';
-import daisiesBottom_transparent from './backgrounds/daisiesBottom_50opacity.jpg';
-import daisiesBottomFlipped from './backgrounds/daisiesBottomFlipped.jpg';
-import daisiesBottomFlipped_transparent from './backgrounds/daisiesBottomFlipped_50opacity.jpg';
-import whiteRabbit from './backgrounds/white-rabbit.png';
+export const daisies = {
+    src: daisiesImg,
+    alt: '',
+    source: 'internal',
+    link: 'my personal stationery collection; artist unknown'
+};
+
+export const daisiesTransparent = {
+    src: daisiesTransparentImg,
+    alt: '',
+    source: 'internal',
+    link: 'my personal stationery collection; artist unknown'
+};
+
+export const daisiesFlipped = {
+    src: daisiesFlippedImg,
+    alt: '',
+    source: 'internal',
+    link: 'my personal stationery collection; artist unknown'
+};
+
+export const daisiesFlippedTransparent = {
+    src: daisiesFlippedTransparentImg,
+    alt: '',
+    source: 'internal',
+    link: 'my personal stationery collection; artist unknown'
+};
+
+export const daisiesBottom = {
+    src: daisiesBottomImg,
+    alt: '',
+    source: 'internal',
+    link: 'my personal stationery collection; artist unknown'
+};
+
+export const daisiesBottomTransparent = {
+    src: daisiesBottomTransparentImg,
+    alt: '',
+    source: 'internal',
+    link: 'my personal stationery collection; artist unknown'
+};
+
+export const daisiesBottomFlipped = {
+    src: daisiesBottomFlippedImg,
+    alt: '',
+    source: 'internal',
+    link: 'my personal stationery collection; artist unknown'
+};
+
+export const daisiesBottomFlippedTransparent = {
+    src: daisiesBottomFlippedTransparentImg,
+    alt: '',
+    source: 'internal',
+    link: 'my personal stationery collection; artist unknown'
+};
+
+export const whiteRabbit = {
+    src: whiteRabbitImg,
+    alt: '',
+    source: '',
+    link: ''
+};
 
 // THUMBNAILS
-import gracemanningCom from './thumbnails/grace-manning.png';
-import emmygardnerOnline from './thumbnails/emmygardner-online.png';
-import classifiedsLol from './thumbnails/classifieds-lol.png';
-import gracesPortal from './thumbnails/graces-portal.png';
-import itneedsmorecolor from './thumbnails/itneedsmorecolor.png';
-import graceIsOnline from './thumbnails/graceis-online.png';
+export const gracemanningCom = {
+    src: gracemanningComImg,
+    alt: '',
+    source: '',
+    link: ''
+};
+
+export const emmygardnerOnline = {
+    src: emmygardnerOnlineImg,
+    alt: '',
+    source: '',
+    link: ''
+};
+
+export const classifiedsLol = {
+    src: classifiedsLolImg,
+    alt: '',
+    source: '',
+    link: ''
+};
+
+export const gracesPortal = {
+    src: gracesPortalImg,
+    alt: '',
+    source: '',
+    link: ''
+};
+
+export const itneedsmorecolor = {
+    src: itneedsmorecolorImg,
+    alt: '',
+    source: '',
+    link: ''
+};
+
+export const graceIsOnline = {
+    src: graceIsOnlineImg,
+    alt: '',
+    source: '',
+    link: ''
+};
 
 // ICONS
-import arrow from './arrow.svg';
-import backarrow from './backarrow.svg';
-import bear from './bear.png';
-import embroideredstar from './embroidered-star.png';
-import envelope from './envelope.svg';
-import fish from './fish.png';
-import ladybug from './ladybug.png';
-import lunamoth from './lunamoth.png';
-import strawberry from './strawberry.png';
+export const arrow = {
+    src: arrowImg,
+    alt: '',
+    source: 'internal',
+    link: 'drawn by me'
+};
+
+export const backarrow = {
+    src: backarrowImg,
+    alt: 'black outlined arrow pointing left',
+    source: 'internal',
+    link: 'drawn by me'
+};
+
+export const bear = {
+    src: bearImg,
+    alt: '',
+    source: 'external',
+    link: 'https://www.macys.com/shop/product/aurora-large-bonny-bear-snuggly-plush-toy-tan-16?ID=17147799'
+};
+
+export const embroideredstar = {
+    src: embroideredstarImg,
+    alt: '',
+    source: 'external',
+    link: 'https://www.walmart.com/ip/Wrights-Iron-On-Appliques-3-Pkg-Silver-Metallic-Stars-Pk-3-Wrights/43984845'
+};
+
+export const envelope = {
+    src: envelopeImg,
+    alt: '',
+    source: 'internal',
+    link: 'drawn by me'
+};
+
+export const fish = {
+    src: fishImg,
+    alt: '',
+    source: 'external',
+    link: 'https://za.pinterest.com/pin/595741856993273761/'
+};
+
+export const ladybug = {
+    src: ladybugImg,
+    alt: '',
+    source: 'external',
+    link: 'https://spectrum.ieee.org/microled-displays-could-show-up-in-products-as-soon-as-2020'
+};
+
+export const lunamoth = {
+    src: lunamothImg,
+    alt: '',
+    source: 'external',
+    link: 'https://www.pinterest.com/pin/5066618328582739/'
+};
+
+export const strawberry = {
+    src: strawberryImg,
+    alt: '',
+    source: 'external',
+    link: 'https://www.gardeningknowhow.com/edible/fruits/strawberry/growing-jewel-strawberries.htm'
+};
 
 // OTHER
-import bunny from './other/bunny.gif';
-import chickEgg1 from './other/chick-egg1.gif';
-import chickEgg2 from './other/chick-egg2.gif';
-import grace from './other/grace3.jpg';
-import wiggleLine from './other/wiggleLine.svg';
-
-// SOURCE IS EITHER INTERNAL OR EXTERNAL
-const images = {
-    // BACKGROUNDS
-    daisies: {
-        src: daisies,
-        alt: '',
-        source: 'internal', 
-        link: 'my personal stationery collection; artist unknown'
-    },
-    daisies_transparent: {
-        src: daisies_transparent,
-        alt: '',
-        source: 'internal', 
-        link: 'my personal stationery collection; artist unknown'
-    },
-    daisiesFlipped: {
-        src: daisiesFlipped,
-        alt: '',
-        source: 'internal', 
-        link: 'my personal stationery collection; artist unknown'
-    },
-    daisiesFlipped_transparent: {
-        src: daisiesFlipped_transparent,
-        alt: '',
-        source: 'internal', 
-        link: 'my personal stationery collection; artist unknown'
-    },
-    daisiesBottom: {
-        src: daisiesBottom,
-        alt: '',
-        source: 'internal', 
-        link: 'my personal stationery collection; artist unknown'
-    },
-    daisiesBottom_transparent: {
-        src: daisiesBottom_transparent,
-        alt: '',
-        source: 'internal', 
-        link: 'my personal stationery collection; artist unknown'
-    },
-    daisiesBottomFlipped: {
-        src: daisiesBottomFlipped,
-        alt: '',
-        source: 'internal', 
-        link: 'my personal stationery collection; artist unknown'
-    },
-    daisiesBottomFlipped_transparent: {
-        src: daisiesBottomFlipped_transparent,
-        alt: '',
-        source: 'internal', 
-        link: 'my personal stationery collection; artist unknown'
-    },
-    whiteRabbit: {
-        src: whiteRabbit,
-        alt: '',
-        source: '', 
-        link: ''
-    },
-
-    // THUMBNAILS
-    gracemanningCom:{
-        src: gracemanningCom,
-        alt: '',
-        source: '', 
-        link: ''
-    },
-    emmygardnerOnline:{
-        src: emmygardnerOnline,
-        alt: '',
-        source: '', 
-        link: ''
-    },
-    classifiedsLol:{
-        src: classifiedsLol,
-        alt: '',
-        source: '', 
-        link: ''
-    },
-    gracesPortal:{
-        src: gracesPortal,
-        alt: '',
-        source: '', 
-        link: ''
-    },
-    itneedsmorecolor:{
-        src: itneedsmorecolor,
-        alt: '',
-        source: '', 
-        link: ''
-    },
-    graceIsOnline:{
-        src: graceIsOnline,
-        alt: '',
-        source: '', 
-        link: ''
-    },
-
-    // ICONS
-    arrow:{
-        src: arrow,
-        alt: '',
-        source: 'internal', 
-        link: 'drawn by me'
-    },
-    backarrow:{
-        src: backarrow,
-        alt: 'black outlined arrow pointing left',
-        source: 'internal', 
-        link: 'drawn by me'
-    },
-    bear:{
-        src: bear,
-        alt: '',
-        source: 'external', 
-        link: 'https://www.macys.com/shop/product/aurora-large-bonny-bear-snuggly-plush-toy-tan-16?ID=17147799'
-    },
-    embroideredstar:{
-        src: embroideredstar,
-        alt: '',
-        source: 'external', 
-        link: 'https://www.walmart.com/ip/Wrights-Iron-On-Appliques-3-Pkg-Silver-Metallic-Stars-Pk-3-Wrights/43984845'
-    },
-    envelope:{
-        src: envelope,
-        alt: '',
-        source: 'internal', 
-        link: 'drawn by me'
-    },
-    fish:{
-        src: fish,
-        alt: '',
-        source: 'external', 
-        link: 'https://za.pinterest.com/pin/595741856993273761/'
-    },
-    ladybug:{
-        src: ladybug,
-        alt: '',
-        source: 'external', 
-        link: 'https://spectrum.ieee.org/microled-displays-could-show-up-in-products-as-soon-as-2020'
-    },
-    lunamoth:{
-        src: lunamoth,
-        alt: '',
-        source: 'external', 
-        link: 'https://www.pinterest.com/pin/5066618328582739/'
-    },
-    strawberry:{
-        src: strawberry,
-        alt: '',
-        source: 'external', 
-        link: 'https://www.gardeningknowhow.com/edible/fruits/strawberry/growing-jewel-strawberries.htm'
-    },
-
-    // OTHER
-    bunny:{
-        src: bunny,
-        alt: '',
-        source: '', 
-        link: ''
-    },
-    chickEgg1:{
-        src: chickEgg1,
-        alt: '',
-        source: '', 
-        link: ''
-    },
-    chickEgg2:{
-        src: chickEgg2,
-        alt: '',
-        source: '', 
-        link: ''
-    },
-    grace:{
-        src: grace,
-        alt: '',
-        source: 'internal', 
-        link: 'this is just a photo of me'
-    },
-    wiggleLine:{
-        src: wiggleLine,
-        alt: '',
-        source: 'internal', 
-        link: 'drawn by me'
-    },
-}
-
-export default images;
-
-/* ALTERNATIVE STRUCTURE
-
-// Alternative imageData.js structure for better tree-shaking
-import emmygardnerOnlineThumbnail from './images/emmygardnerOnlineThumbnail.jpg';
-import specificProjectImage1 from './images/projects/specificProject1.png';
-
-export const emmyGardnerOnlineThumb = {
-    src: emmygardnerOnlineThumbnail,
-    alt: '...',
-    originalSource: '...'
+export const bunny = {
+    src: bunnyImg,
+    alt: '',
+    source: '',
+    link: ''
 };
 
-export const projSpecific1 = {
-    src: specificProjectImage1,
-    alt: '...',
-    originalSource: '...'
+export const chickEgg1 = {
+    src: chickEgg1Img,
+    alt: '',
+    source: '',
+    link: ''
 };
 
-// You could still export an object of all for the Sources page
-const allImages = { emmyGardnerOnlineThumb, projSpecific1, ... };
-export { allImages };
+export const chickEgg2 = {
+    src: chickEgg2Img,
+    alt: '',
+    source: '',
+    link: ''
+};
 
-*/
+export const grace = {
+    src: graceImg,
+    alt: '',
+    source: 'internal',
+    link: 'this is just a photo of me'
+};
+
+export const wiggleLine = {
+    src: wiggleLineImg,
+    alt: '',
+    source: 'internal',
+    link: 'drawn by me'
+};
+
+
+// --- Optional: Export an object containing all for convenience (e.g., Sources Page) ---
+// Recreate the object using the cleaner exported constant names
+export const allImages = {
+    //BACKGROUNDS
+    daisies,
+    daisiesTransparent,
+    daisiesFlipped,
+    daisiesFlippedTransparent,
+    daisiesBottom,
+    daisiesBottomTransparent,
+    daisiesBottomFlipped,
+    daisiesBottomFlippedTransparent,
+    whiteRabbit,
+    //THUMBNAILS
+    gracemanningCom,
+    emmygardnerOnline,
+    classifiedsLol,
+    gracesPortal,
+    itneedsmorecolor,
+    graceIsOnline,
+    //ICONS
+    arrow,
+    backarrow,
+    bear,
+    embroideredstar,
+    envelope,
+    fish,
+    ladybug,
+    lunamoth,
+    strawberry,
+    //OTHER
+    bunny,
+    chickEgg1,
+    chickEgg2,
+    grace,
+    wiggleLine,
+};
