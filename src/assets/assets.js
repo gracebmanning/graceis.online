@@ -241,9 +241,6 @@ export const wiggleLine = {
     link: 'drawn by me'
 };
 
-
-// --- Optional: Export an object containing all for convenience (e.g., Sources Page) ---
-// Recreate the object using the cleaner exported constant names
 export const allImages = {
     //BACKGROUNDS
     daisies,
