@@ -5,12 +5,15 @@ import { allImages } from '../../assets/assets';
 
 const content = 
     <div className='sourcesContentBox'>
-        i am working on compiling all sources for my images into a list. thanks for your patience!
+        all of my images sources, in one place.
         <ul className='sourcesList'>
             {allImages.map((elem, index)=>
                 <li className='sourcesListItem' key={index}>
                     <img src={elem.src} alt={elem.alt}/>
-                    source: {(elem.source==='internal') ? `${elem.link}` : <a href={elem.link} target='_blank' rel='noreferrer'>external link<MdArrowOutward/></a>}
+                    <div>
+                        <p>source:</p>
+                        <p>{(elem.source==='internal') ? `${elem.link}` : <a href={elem.link} target='_blank' rel='noreferrer'>external link<MdArrowOutward/></a>}</p>
+                    </div>
                 </li>)}
         </ul>
     </div>
