@@ -8,9 +8,10 @@ export const art = [
         type: 'website',
         date: 'August 2023 - Present',
         thumbnail: classifiedsLol,
+        externalLink: 'https://classifieds.lol/',
         body:
         <div>
-            <a href='https://classifieds.lol/'>here</a>
+            This is a description of the project.
         </div>
     },
     {
@@ -19,9 +20,10 @@ export const art = [
         type: 'website',
         date: 'November 2023 - September 2024',
         thumbnail: gracemanningCom,
+        externalLink: 'https://grace-manning.com/',
         body:
         <div>
-            <a href='https://grace-manning.com/'>here</a>
+            This is a description of the project.
         </div>
     },
     {
@@ -30,9 +32,10 @@ export const art = [
         type: 'website',
         date: 'August 2023 - Present',
         thumbnail: gracesPortal,
+        externalLink: 'https://graces-portal.net/',
         body:
         <div>
-            <a href='https://graces-portal.net/'>here</a>
+            This is a description of the project.
         </div>
     },
     {
@@ -41,9 +44,10 @@ export const art = [
         type: 'website',
         date: 'January 2024',
         thumbnail: itneedsmorecolor,
+        externalLink: 'https://itneedsmorecolor.com/',
         body:
         <div>
-            <a href='https://itneedsmorecolor.com/'>here</a>
+            This is a description of the project.
         </div>
     },
 ]

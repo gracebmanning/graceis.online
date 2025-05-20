@@ -56,6 +56,16 @@ body {
   background-color: #FDFDF8;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #ECD5E5;
+}
+
+::selection {
+  color: black;
+  background: #ECD5E5;
+}
+
 /* phase out? */
 .container{
   position: absolute;

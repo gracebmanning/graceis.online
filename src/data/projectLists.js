@@ -8,9 +8,10 @@ export const projects = [
         date: 'October 2024 - Present',
         type: 'website',
         thumbnail: emmygardnerOnline,
+        externalLink: "https://emmygardner.online/",
         body:
         <div>
-            <a href="https://emmygardner.online/">link</a>
+            I created a portfolio website for my friend Emmy, who works in media production. This is a <a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a> app that uses <a href="https://www.sanity.io/" target="_blank" rel="noreferrer">Sanity</a> for content management.
         </div>
     },
 ]
