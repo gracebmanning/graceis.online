@@ -57,12 +57,10 @@ body {
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: black;
   background: #ECD5E5;
 }
 
 ::selection {
-  color: black;
   background: #ECD5E5;
 }
 
