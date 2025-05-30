@@ -8,18 +8,18 @@ import { IoClose } from "react-icons/io5";
 
 const navList = [
     {
-        name: 'art',
-        icon: embroideredstar,
-        iconID: 'star',
-        type: 'internal',
-        link: '/art'
-    },
-    {
         name: 'projects',
         icon: ladybug,
         iconID: 'ladybug',
         type: 'internal',
         link: '/projects'
+    },
+    {
+        name: 'just for fun',
+        icon: embroideredstar,
+        iconID: 'star',
+        type: 'internal',
+        link: '/just-for-fun'
     },
     {
         name: 'about',

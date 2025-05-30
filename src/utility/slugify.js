@@ -32,5 +32,5 @@ export function projectRoute(proj){
 }
 
 export function artRoute(art){
-    return "/art/" + slugify(art.title);
+    return "/just-for-fun/" + slugify(art.title);
 }
