@@ -1,5 +1,5 @@
 import '../Projects/Projects.css';
-import { art } from '../../data/artList';
+import { art } from '../../data/justForFun';
 import { Route } from 'react-router-dom';
 import { artRoute } from '../../utility/slugify';
 import { IndividualProjectPage } from '../../layouts/IndividualProjectPage';

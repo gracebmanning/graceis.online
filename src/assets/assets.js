@@ -16,6 +16,9 @@ import emmygardnerOnlineImg from './thumbnails/emmygardner-online.png';
 import classifiedsLolImg from './thumbnails/classifieds-lol.png';
 import gracesPortalImg from './thumbnails/graces-portal.png';
 import itneedsmorecolorImg from './thumbnails/itneedsmorecolor.png';
+import blackSheepImg from './thumbnails/blacksheep.jpg';
+import talkTalkImg from './thumbnails/talktalk.jpg';
+import trippyNoiseImg from './thumbnails/trippyNoise.jpg';
 
 import arrowImg from './icons/arrow.svg';
 import backarrowImg from './icons/backarrow.svg';
@@ -133,6 +136,27 @@ export const itneedsmorecolor = {
     link: 'https://itneedsmorecolor.com/'
 };
 
+export const blackSheep = {
+    src: blackSheepImg,
+    alt: '',
+    source: 'external',
+    link: 'https://youtu.be/YpCVh5VX8mc?si=z2jw1SIGACTs7kBS'
+};
+
+export const talkTalk = {
+    src: talkTalkImg,
+    alt: '',
+    source: 'external',
+    link: 'https://youtu.be/QL--AfXtkCo?si=R8jK70u1ZaVr2m6x'
+};
+
+export const trippyNoise = {
+    src: trippyNoiseImg,
+    alt: '',
+    source: 'external',
+    link: ''
+};
+
 // ICONS
 export const arrow = {
     src: arrowImg,
@@ -233,7 +257,7 @@ export const wiggleLine = {
     link: 'drawn by me'
 };
 
-export const allImages = [
+export const ImgSourceExport = [
     //BACKGROUNDS
     daisies,
     daisiesTransparent,
@@ -244,12 +268,6 @@ export const allImages = [
     daisiesBottomFlipped,
     daisiesBottomFlippedTransparent,
     whiteRabbit,
-    //THUMBNAILS
-    gracemanningCom,
-    emmygardnerOnline,
-    classifiedsLol,
-    gracesPortal,
-    itneedsmorecolor,
     //ICONS
     arrow,
     backarrow,

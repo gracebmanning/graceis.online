@@ -1,5 +1,5 @@
 import './Projects.css';
-import { projects } from '../../data/projectLists';
+import { projects } from '../../data/projects';
 import { Route } from 'react-router-dom';
 import { projectRoute } from '../../utility/slugify';
 import { IndividualProjectPage } from '../../layouts/IndividualProjectPage';

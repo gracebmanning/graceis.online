@@ -1,13 +1,13 @@
 import './Sources.css';
 import { MdArrowOutward } from "react-icons/md";
 import { BasicLayout } from '../../layouts/BasicLayout';
-import { allImages } from '../../assets/assets';
+import { ImgSourceExport } from '../../assets/assets';
 
 const content = 
     <div className='sourcesContentBox'>
         all of my images sources, in one place.
         <ul className='sourcesList'>
-            {allImages.map((elem, index)=>
+            {ImgSourceExport.map((elem, index)=>
                 <li className='sourcesListItem' key={index}>
                     <img src={elem.src} alt={elem.alt}/>
                     <div>
