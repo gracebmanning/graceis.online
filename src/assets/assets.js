@@ -19,6 +19,9 @@ import itneedsmorecolorImg from './thumbnails/itneedsmorecolor.png';
 import blackSheepImg from './thumbnails/blacksheep.jpg';
 import talkTalkImg from './thumbnails/talktalk.jpg';
 import trippyNoiseImg from './thumbnails/trippyNoise.jpg';
+import vhsAnimationsImg from './thumbnails/vhsAnimations.jpg';
+import feedbackVisualsImg from './thumbnails/feedbackVisuals.jpg';
+import curseIsLiftedImg from './thumbnails/curseIsLifted.jpg';
 
 import arrowImg from './icons/arrow.svg';
 import backarrowImg from './icons/backarrow.svg';
@@ -153,7 +156,28 @@ export const talkTalk = {
 export const trippyNoise = {
     src: trippyNoiseImg,
     alt: '',
-    source: 'external',
+    source: 'internal',
+    link: ''
+};
+
+export const vhsAnimations = {
+    src: vhsAnimationsImg,
+    alt: '',
+    source: 'internal',
+    link: ''
+};
+
+export const feedbackVisuals = {
+    src: feedbackVisualsImg,
+    alt: '',
+    source: 'internal',
+    link: ''
+};
+
+export const curseIsLifted = {
+    src: curseIsLiftedImg,
+    alt: '',
+    source: 'internal',
     link: ''
 };
 

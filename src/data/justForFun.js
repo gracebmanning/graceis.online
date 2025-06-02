@@ -1,9 +1,28 @@
 import { getCloudFrontVideo } from '../utility/cloudfront';
-import { gracemanningCom, classifiedsLol, gracesPortal, itneedsmorecolor, blackSheep, talkTalk, trippyNoise} from '../assets/assets';
+import { gracemanningCom, classifiedsLol, gracesPortal, itneedsmorecolor, blackSheep, talkTalk, trippyNoise, vhsAnimations, feedbackVisuals, curseIsLifted} from '../assets/assets';
 import ReactPlayer from 'react-player';
 
 // TODO: custom component with all react player settings. Might be different between visual vs. youtube video.
 export const art = [
+    {
+        title: 'mini visual: "curse is lifted" by bassvictim',
+        description: 'visuals created in TouchDesigner',
+        type: 'lyric video',
+        date: 'June 2025',
+        thumbnail: curseIsLifted,
+        externalLink: null,
+        body:
+        <div>
+            <ReactPlayer
+                url={getCloudFrontVideo('Curse-Is-Lifted.mp4')}
+                className="temp"
+                width="70%"
+                height="360px"
+                controls={true}
+                loop={true}
+                />
+        </div>
+    },
     {
         title: 'pulsing noise 1 & 2',
         description: 'visuals created in TouchDesigner',
@@ -44,11 +63,11 @@ export const art = [
         </div>
     },
     {
-        title: 'learning about feedback',
+        title: 'feedback practice',
         description: 'visuals created in TouchDesigner',
         type: 'random visual',
         date: 'November 2024',
-        thumbnail: trippyNoise,
+        thumbnail: feedbackVisuals,
         externalLink: null,
         body:
         <div>
@@ -98,7 +117,7 @@ export const art = [
         description: 'visuals created in TouchDesigner',
         type: 'random visual',
         date: 'October 2024',
-        thumbnail: trippyNoise,
+        thumbnail: vhsAnimations,
         externalLink: null,
         body:
         <div>
