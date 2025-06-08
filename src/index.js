@@ -6,7 +6,6 @@ import PageNotFound from './pages/404/404';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Art, {artRoutes} from './pages/Art/Art';
-import Blog from './pages/Blog/Blog';
 import { Posts, postRoutes } from './pages/Blog/BlogPosts';
 import { Tags, tagRoutes } from './pages/Blog/BlogTags';
 import Projects, { projectRoutes } from './pages/Projects/Projects';
@@ -22,7 +21,7 @@ root.render(
       <Route path="/about" element={<About/>} />
       <Route path="/just-for-fun" element={<Art/>} />
       {artRoutes}
-      <Route path="/blog" element={<Blog/>} />
+      <Route path="/blog" element={<Posts/>} />
       {postRoutes}
       <Route path="/blog/posts" element={<Posts/>} />
       <Route path="blog/tags" element={<Tags/>} />

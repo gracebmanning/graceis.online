@@ -5,12 +5,10 @@ export default function ProjectFilter({ filters, activeFilter, onFilterChange })
         <div className="projectsFilter">
             <p>filter:</p>
             <ul className="filterList">
-                {filters.map((filter) => {
+                {filters.map((filter, index) => {
                     return(
-                        <li key={filter} onClick={() => onFilterChange(filter)} className={activeFilter === filter ? 'filterListItem active' : 'filterListItem'}>
-                            
-                                {filter}
-                            
+                        <li key={index} onClick={() => onFilterChange(filter)} className={activeFilter === filter ? 'filterListItem active' : 'filterListItem'}>
+                            {filter}
                         </li>
                     )
                 })}

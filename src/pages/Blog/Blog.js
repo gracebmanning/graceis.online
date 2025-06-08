@@ -2,14 +2,15 @@ import './Blog.css';
 import { BasicLayout } from '../../layouts/BasicLayout';
 import { Link } from 'react-router-dom';
 
-
+// NOT CURRENTLY IN USE
 export default function Blog(){
     const content = 
     <div>
-        This will be a place where I list recent posts. See <Link to="/blog/posts">all posts here</Link>
+        <h1>Blog Home</h1>
+        <p>Featured Posts</p>
+        <Link to='/blog/posts'>All Posts</Link>
     </div>
-
     return(
-        <BasicLayout title={"Blog"} content={content} />
-    )
+        <BasicLayout title="Blog Home" content={content} />
+    );
 }

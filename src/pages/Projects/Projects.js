@@ -8,10 +8,9 @@ import { ProjectPage } from '../../layouts/ProjectPage';
 // ROUTES FOR ALL PROJECTS
 export const projectRoutes = projects.map((project) => <Route path={projectRoute(project)} element={<IndividualProjectPage project={project} />} key={project.title} />);
 
-const filters = ['website', 'music video', 'other']
 export default function Projects(){
     return(
-        <ProjectPage projects={projects} filters={filters} header={"commercial projects"} type="project" />
+        <ProjectPage projects={projects} header={"commercial projects"} type="project" />
     )
 }
 

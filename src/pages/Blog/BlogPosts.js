@@ -1,8 +1,9 @@
+import './Blog.css';
 import { posts } from "../../data/posts";
 import { Route, Link } from "react-router-dom";
-import { BsEnvelopeHeart } from "react-icons/bs";
 import { postRoute, tagRoute } from '../../utility/slugify';
 import { BasicLayout } from "../../layouts/BasicLayout";
+import { BlogPage } from "../../layouts/BlogListPage";
 
 // ROUTES FOR ALL BLOG POSTS
 export const postRoutes = posts.map((post, index) => <Route path={postRoute(post)} element={BlogPost(post, index)} key={post.title} />);
@@ -32,24 +33,26 @@ function BlogPost(post, index){
     }
 
     const content = 
-    <div>
-        <div className="blogContainer">
+    <div className="blogPostPage">
+        <div>
             <h1>{post.title}</h1>
             <h2>{post.date}</h2>
-            <p className="blogTags">tags:</p>
-            <ul>
-                {post.tags.sort().map((tag) => {
-                    return(
-                        <li key={tag}>
-                            <Link to={tagRoute(tag)}>{tag}</Link>
-                        </li>
-                )})}
-            </ul>
+            <div className="blogPostTagList">
+                <p>tags:</p>
+                <ul>
+                    {post.tags.sort().map((tag) => {
+                        return(
+                            <li key={tag}>
+                                <Link to={tagRoute(tag)}>{tag}</Link>
+                            </li>
+                    )})}
+                </ul>
+            </div>
             {post.content}
         </div>
         <div className="blogFooterLinks">
-            <span className="footerLink">{prev}</span>
-            <span className="footerLink">{next}</span>
+            <span className="footerLink">←{prev}</span>
+            <span className="footerLink">{next}→</span>
         </div>
     </div>
     
@@ -59,27 +62,20 @@ function BlogPost(post, index){
 }
 
 // BLOG PREVIEW TILE
-export function BlogPreview(post){
+export function BlogPreview({post}){
     return(
-        <div key={post.title}>
-            <BsEnvelopeHeart className="envelopeIcon" />
-            <div>
-                <h2>{post.title}</h2>
-                <h3>{post.date}</h3>
-                <Link to={postRoute(post)}>read here!</Link>
-            </div>
+        <div className="blogPreview" key={post.title}>
+            <h2>{post.title}</h2>
+            <h3>{post.date}</h3>
+            <p>tags: {post.tags.map((tag, index) => { return(<Link key={index} to={tagRoute(tag)}>{tag}</Link>) })}</p>
+            <p className="blogPreviewText">{post.previewText}</p>
+            <Link to={postRoute(post)}>read here!</Link>
         </div>
     );
 }
 
-// POSTS PAGE - SHOWING ALL POSTS
 export function Posts(){
-    const content = 
-        <div>
-            <h1>All Posts</h1>
-            {posts.map((post) => BlogPreview(post))}
-        </div>
     return(
-        <BasicLayout title={"All Blog Posts"} content={content} />
+        <BlogPage title="all blog posts" posts={posts} />
     );
 }

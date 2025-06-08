@@ -1,8 +1,9 @@
+import './Blog.css';
 import { Route, Link } from 'react-router-dom';
 import { posts } from '../../data/posts';
-import { BlogPreview } from './BlogPosts';
 import { tagRoute } from '../../utility/slugify';
 import { BasicLayout } from '../../layouts/BasicLayout';
+import { BlogPage } from '../../layouts/BlogListPage';
 
 // ALL TAGS LIST
 const tags = [];
@@ -16,13 +17,8 @@ export const tagRoutes = tags.map((tag) => <Route path={tagRoute(tag)} element={
 // INDIVIDUAL TAG PAGE
 function tagPage(tag){
     const filteredPosts = posts.filter((post) => post.tags.includes(tag));
-    const content =
-    <div>
-        <h1>posts tagged with: {tag}</h1>
-        {filteredPosts.map((post) => BlogPreview(post))}
-    </div>
     return(
-        <BasicLayout title={`Posts Tagged With: ${tag}`} content={content} />
+        <BlogPage title={`posts tagged with: ${tag}`} posts={filteredPosts} />
     );
 }
 
