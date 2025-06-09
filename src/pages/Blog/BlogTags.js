@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom';
 import { posts } from '../../data/posts';
 import { tagRoute } from '../../utility/slugify';
 import { BasicLayout } from '../../layouts/BasicLayout';
-import { BlogPage } from '../../layouts/BlogListPage';
+import { List } from '../../components/List/List';
 
 // ALL TAGS LIST
 const tags = [];
@@ -18,7 +18,7 @@ export const tagRoutes = tags.map((tag) => <Route path={tagRoute(tag)} element={
 function tagPage(tag){
     const filteredPosts = posts.filter((post) => post.tags.includes(tag));
     return(
-        <BlogPage title={`posts tagged with: ${tag}`} posts={filteredPosts} />
+        <List header={`posts tagged with: ${tag}`} items={filteredPosts} type={3} />
     );
 }
 

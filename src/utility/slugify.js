@@ -34,3 +34,7 @@ export function projectRoute(proj){
 export function artRoute(art){
     return "/just-for-fun/" + slugify(art.title);
 }
+
+export function subpageRoute(subpage, item){
+    return "/" + subpage + "/" + slugify(item.title);
+}

@@ -3,7 +3,7 @@ import { posts } from "../../data/posts";
 import { Route, Link } from "react-router-dom";
 import { postRoute, tagRoute } from '../../utility/slugify';
 import { BasicLayout } from "../../layouts/BasicLayout";
-import { BlogPage } from "../../layouts/BlogListPage";
+import { List } from '../../components/List/List';
 
 // ROUTES FOR ALL BLOG POSTS
 export const postRoutes = posts.map((post, index) => <Route path={postRoute(post)} element={BlogPost(post, index)} key={post.title} />);
@@ -61,21 +61,8 @@ function BlogPost(post, index){
     );
 }
 
-// BLOG PREVIEW TILE
-export function BlogPreview({post}){
-    return(
-        <div className="blogPreview" key={post.title}>
-            <h2>{post.title}</h2>
-            <h3>{post.date}</h3>
-            <p>tags: {post.tags.map((tag, index) => { return(<Link key={index} to={tagRoute(tag)}>{tag}</Link>) })}</p>
-            <p className="blogPreviewText">{post.previewText}</p>
-            <Link to={postRoute(post)}>read here!</Link>
-        </div>
-    );
-}
-
 export function Posts(){
     return(
-        <BlogPage title="all blog posts" posts={posts} />
+        <List header={"all blog posts"} items={posts} type={3} />
     );
 }

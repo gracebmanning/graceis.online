@@ -1,7 +1,7 @@
-.blogHeader{
+.listHeader{
     position: fixed;
     top: 0;
-    height: 80px;
+    height: 110px;
     width: 100%;
     font-family: "Inter", sans-serif;
     background-color: white;
@@ -12,35 +12,49 @@
     justify-content: center;
 }
 
-.blogSearchAndSort{
+.listSearchAndSort{
     margin-top: 10px;
     
     input{
         font-family: "Inter", sans-serif;
         font-size: 16px;
         margin-right: 5px;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 3px 6px;
     }
     button{
         font-family: "Inter", sans-serif;
         font-size: 16px;
         margin-right: 15px;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 3px 6px;
+    }
+    button:hover{
+        cursor: pointer;
+        color: white;
+        background-color: black;
     }
     select{
         font-family: "Inter", sans-serif;
         font-size: 16px;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 3px 6px;
     }
 }
 
-.blogList{
-    margin-top: 60px;
+.listItems{
+    margin-top: 90px;
     width: 100%;
 }
 
 @media (max-width: 768px){
-    .blogHeader{
+    .listHeader{
         top: 50px;
     }
-    .blogList{
+    .listItems{
         margin-top: 70px;
     }
 }

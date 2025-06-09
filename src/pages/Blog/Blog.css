@@ -2,50 +2,6 @@
     font-family: "Inter", sans-serif;
 }
 
-.blogPreview{
-    font-family: "Inter", sans-serif;
-    text-decoration: none;
-    color: black;
-    border-bottom: 1px solid black;
-    margin-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: first baseline;
-    background: none;
-
-    h2{
-        margin-top: 0px;
-    }
-
-    h3{
-        margin: 0px;
-    }
-
-    p{
-        margin: 0px;
-    }
-
-    .blogPreviewText{
-        margin-top: 15px;
-        margin-bottom: 5px;
-    }
-
-    a{
-        color: black;
-        transition: 0.1s ease-in;
-        padding: 2px 0px;
-    }
-    
-    a:hover{
-        background-color: #ECD5E5;
-        transition: 0.1s ease-out;
-    }
-}
-
 .blogPostPage{
     font-family: "Inter", sans-serif;
     width: 100%;
