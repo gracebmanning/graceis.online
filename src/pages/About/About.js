@@ -1,5 +1,5 @@
 import './About.css';
-import { grace } from '../../assets/assets';
+import { earthStar, grace } from '../../assets/assets';
 import { BasicLayout } from '../../layouts/BasicLayout';
 
 const AboutContent = 
@@ -27,6 +27,7 @@ const AboutContent =
                 <p>I have a B.S. in Computer Science from UC Irvine (go anteaters!!), which helped me discover the parts of software engineering that I absolutely love.</p>
                 <p style={{fontWeight: 'bold'}}>let's get in touch! email me at contact [@] graceis.online</p>
             </div>
+            <img src={earthStar.src} alt={earthStar.alt} style={{width: "90px"}} />
         </div>
 
 

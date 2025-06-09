@@ -37,6 +37,7 @@ import bunnyImg from './other/bunny.gif';
 import chickEgg1Img from './other/chick-egg1.gif';
 import chickEgg2Img from './other/chick-egg2.gif';
 import graceImg from './other/grace3.jpg';
+import earthStarImg from './other/earth-star.png';
 import wiggleLineImg from './other/wiggleLine.svg';
 
 // BACKGROUNDS
@@ -274,6 +275,13 @@ export const grace = {
     link: 'this is just a photo of me'
 };
 
+export const earthStar = {
+    src: earthStarImg,
+    alt: 'a pixelated drawing of the earth with a star on it, and a mouse pointer clicking on the star',
+    source: 'internal',
+    link: 'drawn by me'
+};
+
 export const wiggleLine = {
     src: wiggleLineImg,
     alt: 'green wiggly line',
@@ -307,5 +315,6 @@ export const ImgSourceExport = [
     chickEgg1,
     chickEgg2,
     grace,
+    earthStar,
     wiggleLine,
 ];
