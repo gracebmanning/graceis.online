@@ -1,36 +1,33 @@
 import { getCloudFrontVideo } from '../utility/cloudfront';
 import { gracemanningCom, classifiedsLol, gracesPortal, itneedsmorecolor, blackSheep, talkTalk, trippyNoise, vhsAnimations, feedbackVisuals, curseIsLifted} from '../assets/assets';
 import ReactPlayer from 'react-player';
+import CaptionedVideo from '../components/CaptionedVideo/CaptionedVideo';
 
-// TODO: match fields to those in projects.js
 // TODO: custom component with all react player settings. Might be different between visual vs. youtube video.
 export const justForFun = [
     {
         title: 'mini visual: "curse is lifted" by bassvictim',
         description: 'visuals created in TouchDesigner',
-        tags: ['lyric video'],
         date: 'June 2025',
+        type: 'lyric video',
         thumbnail: curseIsLifted,
         externalLink: null,
+        isFeatured: true,
+        isOngoing: false,
         body:
         <div>
-            <ReactPlayer
-                url={getCloudFrontVideo('Curse-Is-Lifted.mp4')}
-                className="temp"
-                width="70%"
-                height="360px"
-                controls={true}
-                loop={true}
-                />
+            <CaptionedVideo source={getCloudFrontVideo('Curse-Is-Lifted.mp4')} size={'medium'} caption={'this is the caption'} />
         </div>
     },
     {
         title: 'pulsing noise 1 & 2',
         description: 'visuals created in TouchDesigner',
-        tags: ['random visual'],
         date: 'February 2025',
+        type: ['random visual'],
         thumbnail: trippyNoise,
         externalLink: null,
+        isFeatured: false,
+        isOngoing: false,
         body:
         <div>
             <ReactPlayer
@@ -54,10 +51,12 @@ export const justForFun = [
     {
         title: '"black sheep" by metric',
         description: 'a lyric video for "Black Sheep" by Metric, created using TouchDesigner.',
-        tags: ['lyric video'],
         date: 'November 2024',
+        type: ['lyric video'],
         thumbnail: blackSheep,
         externalLink: 'https://youtu.be/YpCVh5VX8mc?si=Wb8XaNh3WSLOeOGl',
+        isFeatured: true,
+        isOngoing: false,
         body:
         <div>
             This is a description of the project.
@@ -66,10 +65,12 @@ export const justForFun = [
     {
         title: 'feedback practice',
         description: 'visuals created in TouchDesigner',
-        tags: ['random visual'],
         date: 'November 2024',
+        type: 'random visual',
         thumbnail: feedbackVisuals,
         externalLink: null,
+        isFeatured: false,
+        isOngoing: false,
         body:
         <div>
             <p>Motion Trail</p>
@@ -104,10 +105,12 @@ export const justForFun = [
     {
         title: '"talk talk" by charli xcx',
         description: 'a lyric video for "Talk Talk" by Charli xcx, created using TouchDesigner.',
-        tags: ['lyric video'],
         date: 'October 2024',
+        type: 'lyric video',
         thumbnail: talkTalk,
         externalLink: 'https://youtu.be/QL--AfXtkCo?si=rLCsXsu1IpqQuV2K',
+        isFeatured: true,
+        isOngoing: false,
         body:
         <div>
             This is a description of the project.
@@ -116,12 +119,15 @@ export const justForFun = [
     {
         title: 'vhs animations',
         description: 'visuals created in TouchDesigner',
-        tags: ['random visual'],
         date: 'October 2024',
+        type: 'random visual',
         thumbnail: vhsAnimations,
         externalLink: null,
+        isFeatured: false,
+        isOngoing: false,
         body:
         <div>
+            utilized a __tutorial__ (link here) to create these and get practice with visualizing motion from CHOPs
             <ReactPlayer
                 url={getCloudFrontVideo('vhs-animation1.mp4')}
                 className="temp"
@@ -159,10 +165,12 @@ export const justForFun = [
     {
         title: 'itneedsmorecolor.com',
         description: 'the website that was going to be the one you are currently looking at, until I redesigned the entire thing...',
-        tags: ['website'],
         date: 'January 2024',
+        type: 'website',
         thumbnail: itneedsmorecolor,
         externalLink: 'https://itneedsmorecolor.com/',
+        isFeatured: false,
+        isOngoing: false,
         body:
         <div>
             This is a description of the project.
@@ -171,10 +179,12 @@ export const justForFun = [
     {
         title: 'classifieds.lol',
         description: 'a craigslist knockoff',
-        tags: ['website'],
-        date: 'August 2023 - Present',
+        date: 'August 2023',
+        type: 'website',
         thumbnail: classifiedsLol,
         externalLink: 'https://classifieds.lol/',
+        isFeatured: false,
+        isOngoing: true,
         body:
         <div>
             This is a description of the project.
@@ -183,10 +193,12 @@ export const justForFun = [
     {
         title: 'grace-manning.com',
         description: 'a (professional) portfolio website for myself',
-        tags: ['website'],
         date: 'November 2023 - September 2024',
+        type: 'website',
         thumbnail: gracemanningCom,
         externalLink: 'https://grace-manning.com/',
+        isFeatured: false,
+        isOngoing: true,
         body:
         <div>
             This is a description of the project.
@@ -195,10 +207,12 @@ export const justForFun = [
     {
         title: 'graces-portal.net',
         description: 'my personal portal on the internet',
-        tags: ['website'],
-        date: 'August 2023 - Present',
+        date: 'August 2023',
+        type: 'website',
         thumbnail: gracesPortal,
         externalLink: 'https://graces-portal.net/',
+        isFeatured: false,
+        isOngoing: false,
         body:
         <div>
             This is a description of the project.

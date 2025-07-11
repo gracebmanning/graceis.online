@@ -1,0 +1,27 @@
+.badge{
+    margin: 5px;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-family: "Inter";
+    font-weight: 500;
+}
+
+.badgeSmall{
+    font-size: 16px;
+}
+
+.badgeMedium{
+    font-size: 18px;
+}
+
+.bgFeatured{
+    background-color: var(--color-accent-one);
+}
+
+.bgOngoing{
+    background-color: var(--color-light);
+}
+
+.bgOther{
+    background-color: #d1b5c8;
+}

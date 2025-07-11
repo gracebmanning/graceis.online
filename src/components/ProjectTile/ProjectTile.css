@@ -32,3 +32,11 @@
         margin: 0px;
     }
 }
+
+.projectTileBadges{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+}

@@ -3,7 +3,7 @@ import { Navbar, NavbarMobile } from "../components/Navigation/Navigation";
 import { useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
 
-export function BasicLayout({ title, content }) {
+export function BasicLayout({ title, content, bg = true }) {
   // GOOGLE ANALYTICS
   ReactGA.initialize("G-40KJD20ZZC");
   let location = useLocation();
@@ -33,7 +33,9 @@ export function BasicLayout({ title, content }) {
       className={windowWidth <= 768 ? "pageContainerMobile" : "pageContainer"}
     >
       {windowWidth <= 768 ? <NavbarMobile /> : <Navbar />}
-      <div className="sideContainer">{content}</div>
+      <div className={bg ? "sideContainer" : "sideContainerNoBg"}>
+        {content}
+      </div>
     </div>
   );
 }

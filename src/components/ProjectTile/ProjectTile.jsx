@@ -1,6 +1,7 @@
 import "./ProjectTile.css";
 import { Link } from "react-router-dom";
 import { artRoute, projectRoute } from "../../utility/slugify";
+import Badge from "../Badges/Badges";
 
 export function ProjectTile({ project, type }) {
   return (
@@ -17,6 +18,13 @@ export function ProjectTile({ project, type }) {
         <h3>{project.title}</h3>
         <p>{project.description}</p>
         <p>{project.date}</p>
+        <div className="projectTileBadges">
+          <Badge size={"small"} type={project.type} />
+          {project.isFeatured ? (
+            <Badge size={"small"} type={"featured"} />
+          ) : null}
+          {project.isOngoing ? <Badge size={"small"} type={"ongoing"} /> : null}
+        </div>
       </div>
     </Link>
   );

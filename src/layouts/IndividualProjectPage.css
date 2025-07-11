@@ -3,14 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-
-.individualProjectPageContent{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
 
     img{
@@ -21,22 +13,25 @@
         font-family: Lacquer;
         font-size: 30px;
         margin: 10px 0px 0px 0px;
-        text-decoration: underline;
-        text-decoration-color: #ECD5E5;
     }
 }
 
+
 .individualProjectPageDetails{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 20px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ECD5E5;
 
-    p{
+    .individualProjectDate{
         font-family: Inter;
         font-size: 18px;
         font-weight: 500;
+        margin: 0px;
     }
 
     a{
@@ -74,5 +69,11 @@
     a:hover{
         color: #ECD5E5;
         background-color: black;
+    }
+}
+
+@media (max-width: 1000px) {
+    .individualProjectPageContent{
+        width: 100%;
     }
 }
