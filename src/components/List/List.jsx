@@ -33,10 +33,9 @@ export function List({ header, items, type }) {
   const allTags = useMemo(() => {
     const tags = new Set();
     itemsArray.forEach((item) => {
-      if (item.tags && Array.isArray(item.tags)) {
-        item.tags.forEach((tag) => tags.add(tag));
-      }
+      tags.add(item.type);
     });
+    console.log(tags);
     return Array.from(tags).sort();
   }, [itemsArray]);
 
@@ -90,9 +89,7 @@ export function List({ header, items, type }) {
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase()); // Changed previewText to description
 
-      const matchesTag = selectedTag
-        ? item.tags && item.tags.includes(selectedTag)
-        : true; // If no tag selected, all items match
+      const matchesTag = selectedTag ? item.type === selectedTag : true; // If no tag selected, all items match
 
       return matchesSearch && matchesTag;
     });
@@ -101,22 +98,24 @@ export function List({ header, items, type }) {
   const content = (
     <div style={{ width: "100%" }}>
       <div className="listHeader">
-        <p style={{ margin: "0px", fontStyle: "italic" }}>{header}</p>
+        <p className="listHeaderTitle">{header}</p>
         <div className="listSearchAndSort">
-          {/* Search Bar */}
-          <input
-            type="text"
-            placeholder="Search titles..."
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
-            onKeyDown={handleKeyPress}
-            className=""
-          />
+          <div>
+            {/* Search Bar */}
+            <input
+              type="text"
+              placeholder="Search titles..."
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              onKeyDown={handleKeyPress}
+              className=""
+            />
+            {/* Search Button */}
+            <button onClick={handleSearch} className="">
+              Search
+            </button>
+          </div>
 
-          {/* Search Button */}
-          <button onClick={handleSearch} className="">
-            Search
-          </button>
           {/* Sorting Dropdown */}
           <select
             onChange={(e) => setSortOrder(e.target.value)}

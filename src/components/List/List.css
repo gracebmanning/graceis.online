@@ -6,14 +6,23 @@
     font-family: "Inter", sans-serif;
     background-color: white;
     border-bottom: 1px solid black;
+    filter: drop-shadow(2px 2px 5px var(--color-accent-two));
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+.listHeaderTitle{
+    margin: 0px;
+    font-style: italic;
+
+}
+
 .listSearchAndSort{
     margin-top: 10px;
+    display: flex;
+    flex-direction: row;
     
     input{
         font-family: "Inter", sans-serif;
@@ -30,6 +39,7 @@
         border: 1px solid black;
         border-radius: 10px;
         padding: 3px 6px;
+        width: fit-content;
     }
     button:hover{
         cursor: pointer;
@@ -42,6 +52,7 @@
         border: 1px solid black;
         border-radius: 10px;
         padding: 3px 6px;
+        width: fit-content;
     }
 }
 
@@ -54,7 +65,22 @@
     .listHeader{
         top: 50px;
     }
+
+    .listHeaderTitle{
+        padding-top: 25px;
+        padding-left: 5px;
+    }
+
+    .listSearchAndSort{
+        flex-direction: column;
+        padding-left: 5px;
+
+        select{
+            margin-top: 5px;
+        }
+    }
+
     .listItems{
-        margin-top: 70px;
+        margin-top: 130px;
     }
 }

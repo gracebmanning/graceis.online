@@ -8,9 +8,8 @@ export const projects = [
         type: 'website',
         thumbnail: emmygardnerOnline,
         externalLink: "https://emmygardner.online/",
-        isFeatured: true, // Mark as featured
-        isOngoing: true, // Mark as ongoing
-        tags: ["website"],
+        isFeatured: true,
+        isOngoing: true,
         body:
         <div>
             I created a portfolio website for my friend Emmy, who works in media production. This is a <a href="https://nextjs.org/" target="_blank" rel="noreferrer">Next.js</a> app that uses <a href="https://www.sanity.io/" target="_blank" rel="noreferrer">Sanity</a> for content management.

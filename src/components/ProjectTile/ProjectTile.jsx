@@ -6,7 +6,7 @@ import Badge from "../Badges/Badges";
 export function ProjectTile({ project, type }) {
   return (
     <Link
-      className="projectTile2"
+      className="projectTile"
       to={type === "justForFun" ? artRoute(project) : projectRoute(project)}
     >
       <img

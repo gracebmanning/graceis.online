@@ -33,7 +33,7 @@ export function BasicLayout({ title, content, bg = true }) {
       className={windowWidth <= 768 ? "pageContainerMobile" : "pageContainer"}
     >
       {windowWidth <= 768 ? <NavbarMobile /> : <Navbar />}
-      <div className={bg ? "sideContainer" : "sideContainerNoBg"}>
+      <div className={bg ? "sideContainer" : "sideContainer noBg"}>
         {content}
       </div>
     </div>

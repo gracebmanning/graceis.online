@@ -106,17 +106,9 @@ body {
   align-items: baseline;
 }
 
-.sideContainerNoBg{
+.noBg{
   background-color: #FDFDF8;
-
-  margin-top: 20px;
-  margin-left: calc(230px + 20px);
-  min-height: 95vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: baseline;
+  background-image: none;
 }
 
 
@@ -217,7 +209,7 @@ body {
 
 @media (max-width: 768px){
   .sideContainer{
-    margin-left: 20px;
+    margin-left: 0px;
     margin-top: 50px;
   }
 }
