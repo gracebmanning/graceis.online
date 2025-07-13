@@ -1,12 +1,13 @@
 import "./IndividualProjectPage.css";
 import { BasicLayout } from "./BasicLayout";
 import { MdArrowOutward } from "react-icons/md";
+import { Link } from "react-router-dom";
 import Badge from "../components/Badges/Badges";
 
 export function IndividualProjectPage({ project }) {
   const content = (
     <div className="individualProjectPageContainer">
-      <p>← back</p>
+      <Link to="">← back</Link>
       <img src={project.thumbnail.src} alt={project.thumbnail.alt} />
       <h3>{project.title}</h3>
       <div className="individualProjectPageDetails">

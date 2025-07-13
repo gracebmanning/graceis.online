@@ -31,6 +31,9 @@
         font-size: 30px;
         margin: 0px;
     }
+    p{
+        margin: 5px 5px 2px 0px;
+    }
 }
 
 .projectTileBadges{
@@ -50,9 +53,10 @@
     }
 
     .projectTileInfo{
-    margin-left: 5px;
-    h3{
-        font-size: 24px;
+        margin-left: 5px;
+
+        h3{
+            font-size: 24px;
+        }
     }
-}
 }

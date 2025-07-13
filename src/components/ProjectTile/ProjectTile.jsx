@@ -16,7 +16,6 @@ export function ProjectTile({ project, type }) {
       />
       <div className="projectTileInfo">
         <h3>{project.title}</h3>
-        <p>{project.description}</p>
         <p>{project.date}</p>
         <div className="projectTileBadges">
           <Badge size={"small"} type={project.type} />
@@ -25,6 +24,7 @@ export function ProjectTile({ project, type }) {
           ) : null}
           {project.isOngoing ? <Badge size={"small"} type={"ongoing"} /> : null}
         </div>
+        <p>{project.description}</p>
       </div>
     </Link>
   );
