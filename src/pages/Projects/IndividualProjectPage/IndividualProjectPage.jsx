@@ -1,8 +1,8 @@
 import "./IndividualProjectPage.css";
-import { BasicLayout } from "./BasicLayout";
+import { BasicLayout } from "../../../layouts/BasicLayout";
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Badge from "../components/Badges/Badges";
+import Badge from "../../../components/Badges/Badges";
 
 export function IndividualProjectPage({ project }) {
   const content = (

@@ -2,7 +2,7 @@ import './Projects.css';
 import { projects } from '../../data/projects';
 import { Route } from 'react-router-dom';
 import { subpageRoute } from '../../utility/slugify';
-import { IndividualProjectPage } from '../../layouts/IndividualProjectPage';
+import { IndividualProjectPage } from './IndividualProjectPage/IndividualProjectPage';
 import { List } from '../../components/List/List';
 
 // ROUTES FOR ALL PROJECTS

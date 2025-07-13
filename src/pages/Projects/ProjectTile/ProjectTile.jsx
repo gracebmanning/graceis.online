@@ -1,7 +1,7 @@
 import "./ProjectTile.css";
 import { Link } from "react-router-dom";
-import { artRoute, projectRoute } from "../../utility/slugify";
-import Badge from "../Badges/Badges";
+import { artRoute, projectRoute } from "../../../utility/slugify";
+import Badge from "../../../components/Badges/Badges";
 
 export function ProjectTile({ project, type }) {
   return (

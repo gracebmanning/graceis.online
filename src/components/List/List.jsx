@@ -1,8 +1,8 @@
 import "./List.css";
 import { BasicLayout } from "../../layouts/BasicLayout";
 import { useState, useEffect, useMemo } from "react";
-import { BlogTile } from "../BlogTile/BlogTile";
-import { ProjectTile } from "../ProjectTile/ProjectTile";
+import { BlogTile } from "../../pages/Blog/BlogTile/BlogTile";
+import { ProjectTile } from "../../pages/Projects/ProjectTile/ProjectTile";
 import { monthToNumber } from "../../utility/monthToNumber";
 import { ListFilter } from "../ListFilter/ListFilter";
 
@@ -33,11 +33,20 @@ export function List({ header, items, type }) {
   const allTags = useMemo(() => {
     const tags = new Set();
     itemsArray.forEach((item) => {
-      tags.add(item.type);
+      // if Blog
+      if (type === 3) {
+        if (item.tags && Array.isArray(item.tags)) {
+          item.tags.forEach((tag) => tags.add(tag));
+        }
+      }
+      // else (type is Project or Just For Fun)
+      else {
+        tags.add(item.type);
+      }
     });
     console.log(tags);
     return Array.from(tags).sort();
-  }, [itemsArray]);
+  }, [itemsArray, type]);
 
   // Sort items based on featured status then selected order
   const sortedItems = useMemo(() => {
@@ -85,15 +94,28 @@ export function List({ header, items, type }) {
 
   const filteredItems = useMemo(() => {
     return sortedItems.filter((item) => {
+      console.log(searchQuery);
+      console.log(item.date);
       const matchesSearch =
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()); // Changed previewText to description
+        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.date.toLowerCase().includes(searchQuery.toLowerCase());
 
-      const matchesTag = selectedTag ? item.type === selectedTag : true; // If no tag selected, all items match
+      let matchesTag = null;
+      // if Blog post
+      if (type === 3) {
+        matchesTag = selectedTag
+          ? item.tags && item.tags.includes(selectedTag)
+          : true; // If no tag selected, all items match
+      }
+      // else (type is Project or Just For Fun)
+      else {
+        matchesTag = selectedTag ? item.type === selectedTag : true; // If no tag selected, all items match
+      }
 
       return matchesSearch && matchesTag;
     });
-  }, [sortedItems, searchQuery, selectedTag]);
+  }, [sortedItems, searchQuery, selectedTag, type]);
 
   const content = (
     <div style={{ width: "100%" }}>

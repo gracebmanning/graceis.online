@@ -2,7 +2,7 @@ import '../Projects/Projects.css';
 import { justForFun } from '../../data/justForFun';
 import { Route } from 'react-router-dom';
 import { subpageRoute } from '../../utility/slugify';
-import { IndividualProjectPage } from '../../layouts/IndividualProjectPage';
+import { IndividualProjectPage } from '../Projects/IndividualProjectPage/IndividualProjectPage';
 //import { ProjectPage } from '../../layouts/ProjectPage';
 import { List } from '../../components/List/List';
 
