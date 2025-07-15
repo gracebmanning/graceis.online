@@ -3,11 +3,9 @@ import { getCloudFrontVideo } from '../utility/cloudfront';
 import { gracemanningCom, classifiedsLol, gracesPortal, itneedsmorecolor, blackSheep, talkTalk, pulsingNoise, vhsAnimations, feedbackVisuals, curseIsLifted} from '../assets/assets';
 // OTHER IMAGES
 import { pulsingNoiseNetwork1, pulsingNoiseNetwork2 } from '../assets/assets'; 
-import ReactPlayer from 'react-player';
 import CaptionedVideo from '../components/CaptionedVideo/CaptionedVideo';
 import CaptionedImage from '../components/CaptionedImage/CaptionedImage';
 
-// TODO: custom component with all react player settings. Might be different between visual vs. youtube video.
 export const justForFun = [
     {
         title: 'mini visual: "curse is lifted" by bassvictim',
@@ -89,33 +87,14 @@ export const justForFun = [
         isOngoing: false,
         body:
         <div>
-            <p>Motion Trail</p>
-            <ReactPlayer
-                url={getCloudFrontVideo('Motiontrail.mp4')}
-                className="temp"
-                width="70%"
-                height="360px"
-                controls={true}
-                loop={true}
-                />
-            <p>Decay and Dissolve</p>
-            <ReactPlayer
-            url={getCloudFrontVideo('Decayanddissolve.mp4')}
-            className="temp"
-            width="70%"
-            height="360px"
-            controls={true}
-            loop={true}
-            />
-            <p>Mirror Triangles</p>
-            <ReactPlayer
-            url={getCloudFrontVideo('Mirrortriangles.mp4')}
-            className="temp"
-            width="70%"
-            height="360px"
-            controls={true}
-            loop={true}
-            />
+            <p>
+                Thank you to Okamirufu Visualizer for the <a href="https://youtu.be/a7KtirwLoyo?si=gfeFmiFZW3cyBF2h" rel="noreferrer" target="_blank">What is Feedback?</a> video / tutorial. Fun practice!
+            </p>
+            <div style={{display: "flex", flexDirection: "row", justifyContent: "first baseline", gap: "20px"}}>
+                <CaptionedVideo source={getCloudFrontVideo('Motiontrail.mp4')} size='small' caption='Motion Trail' />
+                <CaptionedVideo source={getCloudFrontVideo('Decayanddissolve.mp4')} size='small' caption='Decay and Dissolve' />
+                <CaptionedVideo source={getCloudFrontVideo('Mirrortriangles.mp4')} size='small' caption='Mirror Triangles' />
+            </div>
         </div>
     },
     {
@@ -129,7 +108,15 @@ export const justForFun = [
         isOngoing: false,
         body:
         <div>
-            This is a description of the project.
+            <p>
+                This was my first step into lyric videos. These always reveal what song was stuck in my head at the time :)
+            </p>
+            <p>
+                Thank you to bileam tschepe (elekktronaut) for
+                the <a href="https://youtu.be/rYet0SwTYa0?si=0GJZ_X1LAFD-WglB" target="_blank" rel="noreferrer">instancing tutorial</a>, 
+                specifically the Audio Spectrum chapter for visualizing waveforms!
+            </p>
+            <CaptionedVideo source={getCloudFrontVideo('TalkTalk-LyricVideo.mp4')} size='large' caption='lyric video for "Talk Talk" by Charli xcx, created by Grace Manning' />
         </div>
     },
     {
@@ -143,39 +130,19 @@ export const justForFun = [
         isOngoing: false,
         body:
         <div>
-            utilized a __tutorial__ (link here) to create these and get practice with visualizing motion from CHOPs
-            <ReactPlayer
-                url={getCloudFrontVideo('vhs-animation1.mp4')}
-                className="temp"
-                width="70%"
-                height="360px"
-                controls={true}
-                loop={true}
-                />
-            <ReactPlayer
-            url={getCloudFrontVideo('vhs-animation2.mp4')}
-            className="temp"
-            width="70%"
-            height="360px"
-            controls={true}
-            loop={true}
-            />
-            <ReactPlayer
-            url={getCloudFrontVideo('vhs-animation3.mp4')}
-            className="temp"
-            width="70%"
-            height="360px"
-            controls={true}
-            loop={true}
-            />
-            <ReactPlayer
-            url={getCloudFrontVideo('vhs-animation4.mp4')}
-            className="temp"
-            width="70%"
-            height="360px"
-            controls={true}
-            loop={true}
-            />
+            <p>
+                Practicing how to visualize motion using CHOP channels.
+            </p>
+            <p>
+                Thank you to bileam tschepe (elekktronaut) for
+                the <a href="https://youtu.be/WS4iZxoQT5s?si=juRd41Ya21RqeB3v" target="_blank" rel="noreferrer">Simple VHS Animations tutorial</a>!
+            </p>
+            <div style={{display: "flex", flexDirection: "row", justifyContent: "first baseline", gap: "20px"}}>
+                <CaptionedVideo source={getCloudFrontVideo('vhs-animation1.mp4')} size='small' caption='Motion Trail' />
+                <CaptionedVideo source={getCloudFrontVideo('vhs-animation2.mp4')} size='small' caption='Decay and Dissolve' />
+                <CaptionedVideo source={getCloudFrontVideo('vhs-animation3.mp4')} size='small' caption='Mirror Triangles' />
+                <CaptionedVideo source={getCloudFrontVideo('vhs-animation4.mp4')} size='small' caption='Mirror Triangles' />
+            </div>
         </div>
     },
     {
@@ -189,7 +156,7 @@ export const justForFun = [
         isOngoing: false,
         body:
         <div>
-            This is a description of the project.
+            [project details coming soon]
         </div>
     },
     {
@@ -203,7 +170,7 @@ export const justForFun = [
         isOngoing: true,
         body:
         <div>
-            This is a description of the project.
+            [project details coming soon]
         </div>
     },
     {
@@ -217,7 +184,7 @@ export const justForFun = [
         isOngoing: true,
         body:
         <div>
-            This is a description of the project.
+            [project details coming soon]
         </div>
     },
     {
@@ -231,7 +198,7 @@ export const justForFun = [
         isOngoing: false,
         body:
         <div>
-            This is a description of the project.
+            [project details coming soon]
         </div>
     },
 ]
