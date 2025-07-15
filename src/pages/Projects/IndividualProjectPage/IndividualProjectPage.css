@@ -6,7 +6,7 @@
     align-items: flex-start;
 
     img{
-        width: 75%;
+        width: 60%;
     }
 
     h3{
@@ -61,16 +61,18 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 10px 0px;
     padding-bottom: 10px;
     border-bottom: 2px solid #ECD5E5;
 }
 
 .individualProjectPageBody{
+    width: 90%;
     font-family: "Inter";
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
+    padding-bottom: 20px;
 
     a{
         color: black;

@@ -13,8 +13,8 @@ export function IndividualProjectPage({ project }) {
       <div className="individualProjectPageDetails">
         <p className="individualProjectDate">{project.date}</p>
         {project.externalLink === null ? null : (
-          <a href={project.externalLink} target="_blank" rel="noreferrer">
-            link
+          <a href={project.externalLink[1]} target="_blank" rel="noreferrer">
+            {project.externalLink[0]}
             <MdArrowOutward style={{ marginLeft: "2px", fontSize: "18px" }} />
           </a>
         )}

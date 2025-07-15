@@ -11,6 +11,7 @@ import daisiesBottomFlippedImg from './backgrounds/daisiesBottomFlipped.jpg';
 import daisiesBottomFlippedTransparentImg from './backgrounds/daisiesBottomFlipped_50opacity.jpg';
 import whiteRabbitImg from './backgrounds/white-rabbit.png';
 
+// THUMBNAILS
 import gracemanningComImg from './thumbnails/grace-manning.png';
 import emmygardnerOnlineImg from './thumbnails/emmygardner-online.png';
 import classifiedsLolImg from './thumbnails/classifieds-lol.png';
@@ -18,11 +19,12 @@ import gracesPortalImg from './thumbnails/graces-portal.png';
 import itneedsmorecolorImg from './thumbnails/itneedsmorecolor.png';
 import blackSheepImg from './thumbnails/blacksheep.jpg';
 import talkTalkImg from './thumbnails/talktalk.jpg';
-import trippyNoiseImg from './thumbnails/trippyNoise.jpg';
+import pulsingNoiseImg from './thumbnails/trippyNoise.jpg';
 import vhsAnimationsImg from './thumbnails/vhsAnimations.jpg';
 import feedbackVisualsImg from './thumbnails/feedbackVisuals.jpg';
 import curseIsLiftedImg from './thumbnails/curseIsLifted.jpg';
 
+// NAVIGATION
 import arrowImg from './icons/arrow.svg';
 import backarrowImg from './icons/backarrow.svg';
 import bearImg from './icons/bear.png';
@@ -33,6 +35,15 @@ import ladybugImg from './icons/ladybug.png';
 import lunamothImg from './icons/lunamoth.png';
 import strawberryImg from './icons/strawberry.png';
 
+// POSTS - BLOG
+
+// POSTS - JUST FOR FUN
+import pulsingNoise1Img from './posts/justForFun/pulsingNoise1.png';
+import pulsingNoise2Img from './posts/justForFun/pulsingNoise2.png';
+
+// POSTS - PROJECTS
+
+// OTHER
 import bunnyImg from './other/bunny.gif';
 import chickEgg1Img from './other/chick-egg1.gif';
 import chickEgg2Img from './other/chick-egg2.gif';
@@ -154,8 +165,8 @@ export const talkTalk = {
     link: 'https://youtu.be/QL--AfXtkCo?si=R8jK70u1ZaVr2m6x'
 };
 
-export const trippyNoise = {
-    src: trippyNoiseImg,
+export const pulsingNoise = {
+    src: pulsingNoiseImg,
     alt: '',
     source: 'internal',
     link: ''
@@ -245,6 +256,25 @@ export const strawberry = {
     source: 'external',
     link: 'https://www.gardeningknowhow.com/edible/fruits/strawberry/growing-jewel-strawberries.htm'
 };
+
+// POSTS - BLOG
+
+// POSTS - JUST FOR FUN
+export const pulsingNoiseNetwork1 = {
+    src: pulsingNoise1Img,
+    alt: '',
+    source: 'internal',
+    link: 'my TouchDesigner network'
+}
+
+export const pulsingNoiseNetwork2 = {
+    src: pulsingNoise2Img,
+    alt: '',
+    source: 'internal',
+    link: 'my TouchDesigner network'
+}
+
+// POSTS - PROJECTS
 
 // OTHER
 export const bunny = {

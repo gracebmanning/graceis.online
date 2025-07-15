@@ -7,7 +7,7 @@ export const projects = [
         date: 'October 2024', // Use a consistent date format for easier parsing
         type: 'website',
         thumbnail: emmygardnerOnline,
-        externalLink: "https://emmygardner.online/",
+        externalLink: ["see it live", "https://emmygardner.online/"],
         isFeatured: true,
         isOngoing: true,
         body:
