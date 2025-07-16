@@ -20,11 +20,11 @@ function slugify(str){
 }
 
 export function postRoute(post){
-    return "/posts/" + slugifyBlogPost(post.date, post.title);
+    return "/blog/posts/" + slugifyBlogPost(post.date, post.title);
 }
 
 export function tagRoute(tag){
-    return "/tags/" + tag;
+    return "/blog/tags/" + tag;
 }
 
 export function projectRoute(proj){

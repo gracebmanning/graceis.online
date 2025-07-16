@@ -2,7 +2,7 @@ import './Blog.css';
 import { Route, Link } from 'react-router-dom';
 import { posts } from '../../data/posts';
 import { tagRoute } from '../../utility/slugify';
-import { BlogLayout } from '../../layouts/BlogLayout';
+import { BasicLayout } from '../../layouts/BasicLayout';
 import { List } from '../../components/List/List';
 
 // ALL TAGS LIST
@@ -36,6 +36,6 @@ export function Tags(){
         </ul>
     </div>
     return(
-        <BlogLayout title={"All Blog Tags"} content={content} />
+        <BasicLayout title={"All Blog Tags"} content={content} />
     );
 }

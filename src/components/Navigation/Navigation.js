@@ -6,69 +6,56 @@ import { useState } from 'react';
 import { LuMenu } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 
-const mainNavList = [
+const navList = [
     {
         name: 'projects',
         icon: ladybug,
         iconID: 'ladybug',
         type: 'internal',
-        link: '/projects',
-        social: false
+        link: '/projects'
     },
     {
         name: 'just for fun',
         icon: embroideredstar,
         iconID: 'star',
         type: 'internal',
-        link: '/just-for-fun',
-        social: false
+        link: '/just-for-fun'
     },
     {
         name: 'about',
         icon: lunamoth,
         iconID: 'lunamoth',
         type: 'internal',
-        link: '/about',
-        social: false
+        link: '/about'
     },
     {
         name: 'blog',
         icon: fish,
         iconID: 'fish',
-        type: 'external',
-        link: 'https://blog.graceis.online',
-        social: false
+        type: 'internal',
+        link: '/blog'
     },
     {
         name: 'instagram',
         icon: bear,
         iconID: 'bear',
         type: 'external',
-        link: 'https://www.instagram.com/graceis.online/',
-        social: true
+        link: 'https://www.instagram.com/graceis.online/'
     },
     {
         name: 'youtube',
         icon: strawberry,
         iconID: 'strawberry',
         type: 'external',
-        link: 'https://www.youtube.com/@graceis.online',
-        social: true
+        link: 'https://www.youtube.com/@graceis.online'
     },
 ]
-
-let blogNavList = JSON.parse(JSON.stringify(mainNavList));
-blogNavList.forEach((item) => {
-    if(item.type === 'internal'){
-        item.link = 'https://graceis.online' + item.link;
-    }
-})
 
 export const HomeNav = () => {
   return (
     <nav className="homeNav">
         <ul className="homeNavItems">
-            {mainNavList.map((item, index) => {
+            {navList.map((item, index) => {
                 return(
                     <li key={index} className='homeNavButton' id={`${item.iconID}Home`}>
                         {item.type === 'internal' 
@@ -90,50 +77,34 @@ export const HomeNav = () => {
   )
 }
 
-function getNavbarLink(item, index){
-    if(item.type === 'internal'){
-        return(
-            <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
-                <NavLink className={({ isActive }) => (isActive ? "navbarLink navbarLinkActive" : "navbarLink")} to={item.link}>
-                    <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
-                    <p className="navbarText">{item.name}</p>
-                </NavLink>
-            </li>
-        )
-    } else{
-        return(
-            <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
-                <a className="navbarLink" href={item.link} target="_blank" rel="noreferrer">
-                    <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
-                    <p className="navbarText">{item.name}</p>
-                </a>
-            </li>
-        )
-    }
-}
-
-export const Navbar = ({navListType}) => {
-    console.log(navListType);
-    let navList = null;
-    if(navListType === 'main'){
-        navList = mainNavList;
-    } else if(navListType === 'blog'){
-        navList = blogNavList;
-    }
-    console.log(navList);
+export const Navbar = () => {
   return (
     <nav className="navbar">
-        <Link className="navbarHeaderText" to={navListType === 'main' ? '/' : 'https://graceis.online'}>
+        <Link className="navbarHeaderText" to="/">
             <h1>grace manning</h1>
             <h2>creative technologist & software engineer</h2>
         </Link>
         <ul className="navbarItems">
-            {navList.filter((item) => !item.social).map((item, index) => {
-                return(getNavbarLink(item, index))
+            {navList.filter((item) => item.type === 'internal').map((item, index) => {
+                return(
+                    <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
+                        <NavLink className={({ isActive }) => (isActive ? "navbarLink navbarLinkActive" : "navbarLink")} to={item.link}>
+                            <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
+                            <p className="navbarText">{item.name}</p>
+                        </NavLink>
+                    </li>
+                )
             })}
             <img className="navbarDivider" src={wiggleLine.src} alt={wiggleLine.alt} />
-            {navList.filter((item) => item.social).map((item, index) => {
-                return(getNavbarLink(item, index))
+            {navList.filter((item) => item.type === 'external').map((item, index) => {
+                return(
+                    <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
+                        <a className="navbarLink" href={item.link} target="_blank" rel="noreferrer">
+                            <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
+                            <p className="navbarText">{item.name}</p>
+                        </a>
+                    </li>
+                )
             })}
         </ul>
         <Link id="sourcesLink" to="/sources">
@@ -143,42 +114,13 @@ export const Navbar = ({navListType}) => {
   )
 }
 
-function getNavbarMobileLink(item, index){
-    if(item.type === 'internal'){
-        return(
-            <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
-                <NavLink className={({ isActive }) => (isActive ? "navbarLink navbarLinkActive" : "navbarLink")} to={item.link}>
-                    <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
-                    <p className="navbarText">{item.name}</p>
-                </NavLink>
-            </li>
-        )
-    } else{
-        return(
-            <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
-                <a className="navbarLink" href={item.link} target="_blank" rel="noreferrer">
-                    <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
-                    <p className="navbarText">{item.name}</p>
-                </a>
-            </li>
-        )
-    }
-}
-
-export const NavbarMobile = ({navListType}) => {
+export const NavbarMobile = () => {
     const [expanded, setExpanded] = useState(false);
-
-    let navList = null;
-    if(navListType === 'main'){
-        navList = mainNavList;
-    } else if(navListType === 'blog'){
-        navList = blogNavList;
-    }
 
     return(
         <nav className={expanded ? 'navbarMobile expanded' : 'navbarMobile'}>
             <div className="navbarMobileHeader">
-                <Link className="navbarHeaderText" to={navListType === 'main' ? '/' : 'https://graceis.online'}>
+                <Link className="navbarHeaderText" to="/">
                     <h1>grace manning</h1>
                 </Link>
                 <LuMenu className={`navIcon ${expanded ? 'closed' : 'open'}`} onClick={() => {setExpanded(!expanded);}} />
@@ -186,12 +128,26 @@ export const NavbarMobile = ({navListType}) => {
             </div>
             <div className={`navbarMobileContent ${expanded ? 'open' : 'closed'}`}>
                 <ul className={expanded ? 'navbarItems expanded' : 'navbarItems'}>
-                    {navList.filter((item) => !item.social).map((item, index) => {
-                        return getNavbarMobileLink(item, index);                      
+                    {navList.filter((item) => item.type === 'internal').map((item, index) => {
+                        return(
+                            <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
+                                <NavLink className={({ isActive }) => (isActive ? "navbarLink navbarLinkActive" : "navbarLink")} to={item.link}>
+                                    <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
+                                    <p className="navbarText">{item.name}</p>
+                                </NavLink>
+                            </li>
+                        )
                     })}
                     <img className="navbarDivider" src={wiggleLine.src} alt={wiggleLine.alt} />
-                    {navList.filter((item) => item.social).map((item, index) => {
-                        return getNavbarMobileLink(item, index)
+                    {navList.filter((item) => item.type === 'external').map((item, index) => {
+                        return(
+                            <li key={index} className="navbarButton" id={`${item.iconID}Navbar`}>
+                                <a className="navbarLink" href={item.link} target="_blank" rel="noreferrer">
+                                    <img className="navbarImage" src={item.icon.src} alt={item.icon.alt} />
+                                    <p className="navbarText">{item.name}</p>
+                                </a>
+                            </li>
+                        )
                     })}
                 </ul>
                 <Link id="sourcesLink" to="/sources">
