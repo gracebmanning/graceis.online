@@ -62,7 +62,6 @@ export function List({ header, items, type }) {
         tags.add(item.type);
       }
     });
-    console.log(tags);
     return Array.from(tags).sort();
   }, [itemsArray, type]);
 
@@ -112,8 +111,6 @@ export function List({ header, items, type }) {
 
   const filteredItems = useMemo(() => {
     return sortedItems.filter((item) => {
-      console.log(searchQuery);
-      console.log(item.date);
       const matchesSearch =
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||

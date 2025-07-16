@@ -1,7 +1,6 @@
 import "./Badges.css";
 
 function getColor(type) {
-  console.log(type);
   if (type === "featured") {
     return "bgFeatured";
   } else if (type === "ongoing") {
