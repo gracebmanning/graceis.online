@@ -1,13 +1,27 @@
 import "./IndividualProjectPage.css";
 import { BasicLayout } from "../../../layouts/BasicLayout";
 import { MdArrowOutward } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Badge from "../../../components/Badges/Badges";
+import { useEffect } from "react";
 
 export function IndividualProjectPage({ project }) {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  const handleBackClick = () => {
+    navigate(-1);
+  };
+
   const content = (
     <div className="individualProjectPageContainer">
-      <Link to="">← back</Link>
+      <button className="backButton" onClick={handleBackClick}>
+        ← back
+      </button>
       <img src={project.thumbnail.src} alt={project.thumbnail.alt} />
       <h3>{project.title}</h3>
       <div className="individualProjectPageDetails">

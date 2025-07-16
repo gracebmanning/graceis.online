@@ -30,14 +30,20 @@
         margin-bottom: 5px;
     }
 
-    a{
+    a, button{
         color: black;
         transition: 0.1s ease-in;
         padding: 2px 0px;
+        text-decoration: underline;
+        border: none;
+        font: inherit;
+        background: none;
+        
     }
     
-    a:hover{
+    a, button:hover{
         background-color: #ECD5E5;
         transition: 0.1s ease-out;
+        cursor: pointer;
     }
 }

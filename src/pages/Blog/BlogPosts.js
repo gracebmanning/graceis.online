@@ -1,15 +1,27 @@
 import './Blog.css';
 import { posts } from "../../data/posts";
-import { Route, Link } from "react-router-dom";
+import { Route, Link, useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
 import { postRoute, tagRoute } from '../../utility/slugify';
 import { BasicLayout } from "../../layouts/BasicLayout";
 import { List } from '../../components/List/List';
 
 // ROUTES FOR ALL BLOG POSTS
-export const postRoutes = posts.map((post, index) => <Route path={postRoute(post)} element={BlogPost(post, index)} key={post.title} />);
+export const postRoutes = posts.map((post, index) => <Route path={postRoute(post)} element={<BlogPost post={post} index={index}/>} key={post.title} />);
 
 // INDIVIDUAL BLOG POST PAGE
-function BlogPost(post, index){
+export function BlogPost({post, index}){
+    const { pathname } = useLocation();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    const handleBackClick = () => {
+        navigate(-1);
+    };
+    
     let prev;
     let next;
     if(posts.length === 1){
@@ -34,6 +46,7 @@ function BlogPost(post, index){
 
     const content = 
     <div className="blogPostPage">
+        <button className="backButton" onClick={handleBackClick}>← back</button>
         <div>
             <h1>{post.title}</h1>
             <h2>{post.date}</h2>

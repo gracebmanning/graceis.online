@@ -1,6 +1,7 @@
 import "./List.css";
 import { BasicLayout } from "../../layouts/BasicLayout";
 import { useState, useEffect, useMemo } from "react";
+import { useLocation } from "react-router-dom";
 import { BlogTile } from "../../pages/Blog/BlogTile/BlogTile";
 import { ProjectTile } from "../../pages/Projects/ProjectTile/ProjectTile";
 import { monthToNumber } from "../../utility/monthToNumber";
@@ -18,6 +19,23 @@ export function List({ header, items, type }) {
   const [searchInput, setSearchInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);
+  const location = useLocation();
+
+  // Restore scroll position when component mounts (after navigating back)
+  useEffect(() => {
+    const savedScrollPos = sessionStorage.getItem("listScrollPos");
+    if (savedScrollPos) {
+      // Use requestAnimationFrame for smoother scroll restoration
+      requestAnimationFrame(() => {
+        window.scrollTo(0, parseInt(savedScrollPos));
+        sessionStorage.removeItem("listScrollPos"); // Clean up the stored position
+      });
+    }
+  }, [location.pathname]); // Re-run when pathname changes (e.g., navigating back to this page)
+
+  const saveScrollPosition = () => {
+    sessionStorage.setItem("listScrollPos", window.scrollY);
+  };
 
   // Automatically reset search when input is cleared
   useEffect(() => {
@@ -158,13 +176,27 @@ export function List({ header, items, type }) {
       <div className="listItems">
         {filteredItems.map((item, index) => {
           if (type === 1) {
-            return <ProjectTile project={item} type={"project"} key={index} />;
+            return (
+              <ProjectTile
+                project={item}
+                type={"project"}
+                key={index}
+                onClick={saveScrollPosition}
+              />
+            );
           } else if (type === 2) {
             return (
-              <ProjectTile project={item} type={"justForFun"} key={index} />
+              <ProjectTile
+                project={item}
+                type={"justForFun"}
+                key={index}
+                onClick={saveScrollPosition}
+              />
             );
           } else {
-            return <BlogTile post={item} key={index} />;
+            return (
+              <BlogTile post={item} key={index} onClick={saveScrollPosition} />
+            );
           }
         })}
       </div>

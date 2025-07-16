@@ -1,14 +1,20 @@
 import "./ProjectTile.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { artRoute, projectRoute } from "../../../utility/slugify";
 import Badge from "../../../components/Badges/Badges";
 
-export function ProjectTile({ project, type }) {
+export function ProjectTile({ project, type, onClick }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+    navigate(type === "justForFun" ? artRoute(project) : projectRoute(project));
+  };
+
   return (
-    <Link
-      className="projectTile"
-      to={type === "justForFun" ? artRoute(project) : projectRoute(project)}
-    >
+    <div className="projectTile" onClick={handleClick}>
       <img
         className="projectThumbnail"
         src={project.thumbnail.src}
@@ -26,6 +32,6 @@ export function ProjectTile({ project, type }) {
         </div>
         <p>{project.description}</p>
       </div>
-    </Link>
+    </div>
   );
 }
