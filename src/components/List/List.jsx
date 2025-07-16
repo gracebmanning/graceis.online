@@ -1,5 +1,6 @@
 import "./List.css";
 import { BasicLayout } from "../../layouts/BasicLayout";
+import { BlogLayout } from "../../layouts/BlogLayout";
 import { useState, useEffect, useMemo } from "react";
 import { BlogTile } from "../../pages/Blog/BlogTile/BlogTile";
 import { ProjectTile } from "../../pages/Projects/ProjectTile/ProjectTile";
@@ -171,5 +172,9 @@ export function List({ header, items, type }) {
     </div>
   );
 
-  return <BasicLayout title={types[type]} content={content} />;
+  return type === 3 ? (
+    <BlogLayout title={types[type]} content={content} />
+  ) : (
+    <BasicLayout title={types[type]} content={content} />
+  );
 }

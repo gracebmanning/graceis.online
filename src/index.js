@@ -11,11 +11,19 @@ import { Tags, tagRoutes } from './pages/Blog/BlogTags';
 import Projects, { projectRoutes } from './pages/Projects/Projects';
 import Surprise from './pages/Surprise/Surprise';
 import Sources from './pages/Sources/Sources';
+import { getRouter } from './routers/subdomains';
+import { MainRouter, BlogRouter } from './routers/routes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const App = getRouter();
 root.render(
   <BrowserRouter>
-    <Routes>
+    <App/>
+  </BrowserRouter>
+);
+
+/*
+<Routes>
       <Route path="*" element={<PageNotFound/>} />
       <Route path="/" element={<Home/>} />
       <Route path="/about" element={<About/>} />
@@ -31,5 +39,4 @@ root.render(
       <Route path="/surprise" element={<Surprise/>} />
       <Route path="/sources" element={<Sources/>} />
     </Routes>
-  </BrowserRouter>
-);
+*/

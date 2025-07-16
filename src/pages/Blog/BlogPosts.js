@@ -2,7 +2,7 @@ import './Blog.css';
 import { posts } from "../../data/posts";
 import { Route, Link } from "react-router-dom";
 import { postRoute, tagRoute } from '../../utility/slugify';
-import { BasicLayout } from "../../layouts/BasicLayout";
+import { BlogLayout } from '../../layouts/BlogLayout';
 import { List } from '../../components/List/List';
 
 // ROUTES FOR ALL BLOG POSTS
@@ -57,7 +57,7 @@ function BlogPost(post, index){
     </div>
     
     return(
-        <BasicLayout title={post.title} content={content} />
+        <BlogLayout title={post.title} content={content} />
     );
 }
 
