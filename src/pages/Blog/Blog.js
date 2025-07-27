@@ -1,16 +1,9 @@
 import './Blog.css';
-import { BasicLayout } from '../../layouts/BasicLayout';
-import { Link } from 'react-router-dom';
+import { posts } from "../../data/posts";
+import { List } from '../../components/List/List';
 
-// NOT CURRENTLY IN USE
 export default function Blog(){
-    const content = 
-    <div>
-        <h1>Blog Home</h1>
-        <p>Featured Posts</p>
-        <Link to='/blog/posts'>All Posts</Link>
-    </div>
     return(
-        <BasicLayout title="Blog Home" content={content} />
+        <List header={"all blog posts"} items={posts} type={3} />
     );
 }
