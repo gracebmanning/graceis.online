@@ -26,14 +26,6 @@ export default defineType({
       to: {type: 'blogAuthor'},
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
       name: 'tags',
       title: 'Tags',
       type: 'array',
@@ -44,6 +36,7 @@ export default defineType({
       title: 'Published at',
       type: 'datetime',
     }),
+    // for updated date, use _updatedAt attribute
     defineField({
       name: 'body',
       title: 'Body',
@@ -55,7 +48,6 @@ export default defineType({
     select: {
       title: 'title',
       author: 'author.name',
-      media: 'mainImage',
     },
     prepare(selection) {
       const {author} = selection
