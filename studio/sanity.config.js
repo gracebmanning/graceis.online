@@ -6,8 +6,10 @@ import {schemaTypes} from './schemaTypes'
 export default defineConfig({
   name: 'default',
   title: 'Grace Is Online',
-
+  
+  // eslint-disable-next-line no-undef
   projectId: process.env.SANITY_STUDIO_PROJECT_ID,
+  // eslint-disable-next-line no-undef
   dataset: process.env.SANITY_STUDIO_DATASET,
 
   plugins: [structureTool(), visionTool()],
