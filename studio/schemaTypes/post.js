@@ -20,12 +20,6 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'blogAuthor'},
-    }),
-    defineField({
       name: 'tags',
       title: 'Tags',
       type: 'array',
@@ -47,11 +41,9 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
     },
     prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
+      return {...selection}
     },
   },
 })
