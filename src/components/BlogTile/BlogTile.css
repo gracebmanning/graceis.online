@@ -15,18 +15,11 @@
 
     h2{
         margin-top: 0px;
+        margin-bottom: 5px;
     }
 
     h3{
-        margin: 0px;
-    }
-
-    p{
-        margin: 0px;
-    }
-
-    .blogTileText{
-        margin-top: 15px;
+        margin-top: 0px;
         margin-bottom: 5px;
     }
 
@@ -45,5 +38,29 @@
         background-color: #ECD5E5;
         transition: 0.1s ease-out;
         cursor: pointer;
+    }
+}
+
+.blogTileText{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.blogTileTags{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    list-style-type: none;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+
+    li{
+        margin-right: 2px;
+        padding: 2px 5px;
+        background-color: #d3d3d3;
+        border-radius: 10px;
     }
 }

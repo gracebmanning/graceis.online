@@ -1,17 +1,10 @@
 import "./List.css";
-import { BasicLayout } from "../../layouts/BasicLayout";
 import { useState, useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
-import { BlogTile } from "../../pages/Blog/BlogTile/BlogTile";
-import { ProjectTile } from "../../pages/Projects/ProjectTile/ProjectTile";
+import { BlogTile } from "../BlogTile/BlogTile";
+import { ProjectTile } from "../ProjectTile/ProjectTile";
 import { monthToNumber } from "../../utility/monthToNumber";
 import { ListFilter } from "../ListFilter/ListFilter";
-
-const types = {
-  1: "Projects",
-  2: "Just for Fun",
-  3: "Blog",
-};
 
 // TYPES: 1 = PROJECT, 2 = JUST FOR FUN, 3 = BLOG
 export function List({ header, items, type }) {
@@ -54,7 +47,7 @@ export function List({ header, items, type }) {
       // if Blog
       if (type === 3) {
         if (item.tags && Array.isArray(item.tags)) {
-          item.tags.forEach((tag) => tags.add(tag));
+          item.tags.forEach((tag) => tags.add(tag.title));
         }
       }
       // else (type is Project or Just For Fun)
@@ -78,19 +71,26 @@ export function List({ header, items, type }) {
         return featuredComparison;
       }
 
-      // 2. If featured status is the same, then sort by date
-      const dateA = new Date(
-        a.date.split(" ")[1],
-        monthToNumber(a.date.split(" ")[0])
-      );
-      const dateB = new Date(
-        b.date.split(" ")[1],
-        monthToNumber(b.date.split(" ")[0])
-      );
+      let dateA = "";
+      let dateB = "";
+      if (type === 3) {
+        dateA = new Date(a.publishedAt);
+        dateB = new Date(b.publishedAt);
+      } else {
+        // 2. If featured status is the same, then sort by date
+        dateA = new Date(
+          a.date.split(" ")[1],
+          monthToNumber(a.date.split(" ")[0])
+        );
+        dateB = new Date(
+          b.date.split(" ")[1],
+          monthToNumber(b.date.split(" ")[0])
+        );
+      }
 
       return sortOrder === "newest" ? dateB - dateA : dateA - dateB;
     });
-  }, [itemsArray, sortOrder]);
+  }, [itemsArray, sortOrder, type]);
 
   // Function to handle search
   const handleSearch = () => {
@@ -119,8 +119,10 @@ export function List({ header, items, type }) {
       let matchesTag = null;
       // if Blog post
       if (type === 3) {
+        //let itemTags = item.tags.map((tag) => tag.title);
         matchesTag = selectedTag
-          ? item.tags && item.tags.includes(selectedTag)
+          ? item.tags &&
+            item.tags.some((postTagRef) => postTagRef.title === selectedTag)
           : true; // If no tag selected, all items match
       }
       // else (type is Project or Just For Fun)
@@ -132,7 +134,7 @@ export function List({ header, items, type }) {
     });
   }, [sortedItems, searchQuery, selectedTag, type]);
 
-  const content = (
+  return (
     <div style={{ width: "100%" }}>
       <div className="listHeader">
         <p className="listHeaderTitle">{header}</p>
@@ -163,7 +165,7 @@ export function List({ header, items, type }) {
             <option value="oldest">Oldest First</option>
           </select>
         </div>
-        {/* Tags Filter (assuming ProjectFilter component handles rendering tags) */}
+        {/* Tags Filter */}
         <ListFilter
           filters={allTags}
           activeFilter={selectedTag}
@@ -199,6 +201,4 @@ export function List({ header, items, type }) {
       </div>
     </div>
   );
-
-  return <BasicLayout title={types[type]} content={content} />;
 }

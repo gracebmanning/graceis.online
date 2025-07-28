@@ -55,6 +55,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
   background-color: #FDFDF8;
+  font-family: "Inter", sans-serif;
 }
 
 ::-moz-selection { /* Code for Firefox */

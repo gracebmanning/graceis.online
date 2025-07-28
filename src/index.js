@@ -8,10 +8,6 @@ import About from './pages/About/About';
 import JustForFun, {justForFunRoutes} from './pages/JustForFun/JustForFun';
 import Blog from './pages/Blog/Blog';
 import SinglePost from './pages/Blog/SinglePost';
-import Tag from './pages/Blog/Tag';
-import SingleTag from './pages/Blog/SingleTag';
-import { postRoutes } from './pages/Blog/BlogPosts';
-import { tagRoutes } from './pages/Blog/BlogTags';
 import Projects, { projectRoutes } from './pages/Projects/Projects';
 import Surprise from './pages/Surprise/Surprise';
 import Sources from './pages/Sources/Sources';
@@ -26,12 +22,7 @@ root.render(
       <Route path="/just-for-fun" element={<JustForFun/>} />
       {justForFunRoutes}
       <Route path="/blog" element={<Blog/>} />
-      {postRoutes}
-      <Route path="/blog/post/:slug" element={<SinglePost/>} />
-      <Route path="/blog/post" element={<Blog/>} />
-      <Route path="blog/tag/:slug" element={<SingleTag/>} />
-      <Route path="blog/tag" element={<Tag/>} />
-      {tagRoutes}
+      <Route path="/blog/:slug" element={<SinglePost/>} />
       <Route path="/projects" element={<Projects/>} />
       {projectRoutes}
       <Route path="/surprise" element={<Surprise/>} />

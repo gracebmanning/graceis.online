@@ -1,54 +1,19 @@
 import './Blog.css';
-import { posts } from "../../data/posts";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from 'react';
-import { postRoute, tagRoute } from '../../utility/slugify';
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from 'react';
 import { BasicLayout } from "../../layouts/BasicLayout";
+import sanityClient from '../../sanityClient';
+import { postQuery } from '../../queries/blogQuery';
+import { formatISODate } from '../../utility/formatISODate';
+import PortableTextComponent from '../../components/PortableText/PortableText';
 
-// TODO: incorporate PortableText as laid out below. Adapt from TS to JS.
-/*
-From https://medium.com/@mark_centoni/adding-a-code-block-to-sanity-io-content-editor-and-display-in-a-react-frontend-3f0acba16787
-
-const ptComponents = {
-  types: {
-    image: ({ value }: any) => {
-      if (!value?.asset?._ref) {
-        return null
-      }
-
-      return (
-        <Image
-          alt={value.alt || ' '}
-          loading="lazy"
-          height={value.height || 500}
-          width={value.width || 500}
-          src={urlForImage(value).url()}
-          style={{
-            width: '100%',
-            marginBottom: '24px',
-          }}
-        />
-      )
-    },
-    code: ({ value }: any) => {
-      return <CodeBlock value={value} />
-    },
-  },
-}
-
-Pass the components defined above as a prop to the PortableText component, 
-along with the blockContent field AKA 'body'.
-
-<PortableText
-  value={body}
-  components={ptComponents}
-/>
-
-*/
-
-export default function SinglePost({post, index}){
+export default function SinglePost(){
     const { pathname } = useLocation();
     const navigate = useNavigate();
+    const [singlePost, setSinglePost] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const { slug } = useParams();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -57,55 +22,64 @@ export default function SinglePost({post, index}){
     const handleBackClick = () => {
         navigate(-1);
     };
-    
-    let prev;
-    let next;
-    if(posts.length === 1){
-        prev = '';
-        next = '';
-    } else{
-        if(index === 0){
-            let prevPost = posts[index+1];
-            prev = <p>prev: <Link to={postRoute(prevPost)}>{prevPost.title}</Link></p>;
-            next = <p>next: none</p>;
-        } else if(index === posts.length-1){
-            prev = <p>previous: none</p>;
-            let nextPost = posts[index-1];
-            next = <p>next: <Link to={postRoute(nextPost)}>{nextPost.title}</Link></p>;
-        } else{
-            let prevPost = posts[index+1];
-            let nextPost = posts[index-1];
-            prev = <p>prev: <Link to={postRoute(prevPost)}>{prevPost.title}</Link></p>;
-            next = <p>next: <Link to={postRoute(nextPost)}>{nextPost.title}</Link></p>;
+
+    useEffect(() => {
+    if (!slug) return;
+
+    setIsLoading(true);
+    sanityClient
+      .fetch(postQuery, { slug })
+      .then((data) => {
+        if (data) {
+          setSinglePost(data);
+        } else {
+          setError('Post not found.');
         }
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError('Failed to fetch post.');
+        setIsLoading(false);
+      });
+    }, [slug]);
+
+    if (isLoading) {
+      return <BasicLayout title="Loading..." content="Loading..." />;
     }
 
-    const content = 
-    <div className="blogPostPage">
+    if (error) {
+      return <BasicLayout title="Error" content={error} />;
+    }
+    
+    // It's safer to check for singlePost before rendering
+    if (!singlePost) {
+      return <BasicLayout title="Not Found" content="This post could not be found." />;
+    }
+
+    const content = ( 
+      <div className="singleBlogPost">
         <button className="backButton" onClick={handleBackClick}>← back</button>
         <div>
-            <h1>{post.title}</h1>
-            <h2>{post.date}</h2>
-            <div className="blogPostTagList">
-                <p>tags:</p>
-                <ul>
-                    {post.tags.sort().map((tag) => {
-                        return(
-                            <li key={tag}>
-                                <Link to={tagRoute(tag)}>{tag}</Link>
-                            </li>
-                    )})}
-                </ul>
+            <h1>{singlePost.title}</h1>
+            <div className="singleBlogPostDates">
+              <h2>{`published ${formatISODate(singlePost.publishedAt)}`}</h2>
+              <span>  |  </span>
+              <h2>{`last updated ${formatISODate(singlePost._updatedAt)}`}</h2>
             </div>
-            {post.content}
-        </div>
-        <div className="blogFooterLinks">
-            <span className="footerLink">←{prev}</span>
-            <span className="footerLink">{next}→</span>
+            <ul className="singleBlogPostTags">
+                {singlePost.tags?.sort().map((tag) => (
+                  <li key={tag}>{tag.title}</li>
+                ))}
+            </ul>
+            <div className="postBody">
+              <PortableTextComponent content={singlePost.body} />
+          </div>
         </div>
     </div>
-    
+    )
+
     return(
-        <BasicLayout title={post.title} content={content} />
+        <BasicLayout title={singlePost.title} content={content} />
     );
 }

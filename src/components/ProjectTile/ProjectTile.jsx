@@ -1,7 +1,7 @@
 import "./ProjectTile.css";
 import { useNavigate } from "react-router-dom";
-import { artRoute, projectRoute } from "../../../utility/slugify";
-import Badge from "../../../components/Badges/Badges";
+import { artRoute, projectRoute } from "../../utility/slugify";
+import Badge from "../Badges/Badges";
 
 export function ProjectTile({ project, type, onClick }) {
   const navigate = useNavigate();
@@ -10,6 +10,7 @@ export function ProjectTile({ project, type, onClick }) {
     if (onClick) {
       onClick();
     }
+    console.log(type);
     navigate(type === "justForFun" ? artRoute(project) : projectRoute(project));
   };
 
