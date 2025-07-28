@@ -12,7 +12,9 @@ export default function CaptionedImage({ source, alt, size, caption }) {
       <Zoom>
         <img src={source} alt={alt} style={{ width: sizes[size] }} />
       </Zoom>
-      <p style={{ marginTop: "2px", fontStyle: "italic" }}>{caption}</p>
+      {caption === "" ? null : (
+        <p style={{ marginTop: "2px", fontStyle: "italic" }}>{caption}</p>
+      )}
     </div>
   );
 }

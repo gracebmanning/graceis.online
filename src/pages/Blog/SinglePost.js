@@ -45,16 +45,16 @@ export default function SinglePost(){
     }, [slug]);
 
     if (isLoading) {
-      return <BasicLayout title="Loading..." content="Loading..." />;
+      return <BasicLayout title="Loading..." content="Loading..." bg={false} />;
     }
 
     if (error) {
-      return <BasicLayout title="Error" content={error} />;
+      return <BasicLayout title="Error" content={error} bg={false} />;
     }
     
     // It's safer to check for singlePost before rendering
     if (!singlePost) {
-      return <BasicLayout title="Not Found" content="This post could not be found." />;
+      return <BasicLayout title="Not Found" content="This post could not be found." bg={false} />;
     }
 
     const content = ( 
@@ -80,6 +80,6 @@ export default function SinglePost(){
     )
 
     return(
-        <BasicLayout title={singlePost.title} content={content} />
+        <BasicLayout title={singlePost.title} content={content} bg={false} />
     );
 }

@@ -1,7 +1,8 @@
-import { PortableText } from '@portabletext/react';
-import imageUrlBuilder from '@sanity/image-url';
-import sanityClient from '../../sanityClient';
-import CodeBlock from '../CodeBlock/CodeBlock';
+import { PortableText } from "@portabletext/react";
+import imageUrlBuilder from "@sanity/image-url";
+import sanityClient from "../../sanityClient";
+import CodeBlock from "../CodeBlock/CodeBlock";
+import CaptionedImage from "../CaptionedImage/CaptionedImage";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -14,24 +15,28 @@ const ptComponents = {
       if (!value?.asset?._ref) {
         return null;
       }
+      console.log(value.size);
       return (
-        <img
-          alt={value.alt || ' '}
-          loading="lazy"
-          src={urlFor(value).width(800).auto('format').url()}
-          className="portable-text-image"
+        <CaptionedImage
+          source={urlFor(value).url()}
+          alt={value.alt || " "}
+          caption={value.caption || ""}
+          size={value.size || "medium"}
         />
       );
     },
     code: ({ value }) => {
-      return <CodeBlock value={value} />
+      const { code, language } = value;
+      return <CodeBlock code={code} language={language} />;
     },
   },
 
   // You can also override the default HTML tags for marks, styles, etc.
   marks: {
     link: ({ children, value }) => {
-      const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined;
+      const rel = !value.href.startsWith("/")
+        ? "noreferrer noopener"
+        : undefined;
       return (
         // eslint-disable-next-line react/jsx-no-target-blank
         <a href={value.href} rel={rel} target="_blank">
