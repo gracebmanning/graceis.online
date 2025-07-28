@@ -69,7 +69,7 @@ export default function SinglePost(){
             </div>
             <ul className="singleBlogPostTags">
                 {singlePost.tags?.sort().map((tag) => (
-                  <li key={tag}>{tag.title}</li>
+                  <li key={tag.title}>{tag.title}</li>
                 ))}
             </ul>
             <div className="postBody">

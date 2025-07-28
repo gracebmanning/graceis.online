@@ -44,6 +44,7 @@
 .blogTileText{
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 60%;
 }
 
 .blogTileTags{
@@ -62,5 +63,20 @@
         padding: 2px 5px;
         background-color: #d3d3d3;
         border-radius: 10px;
+    }
+}
+
+@media (max-width: 1200px){
+    .blogTileText{
+        width: 75%;
+    }
+}
+
+@media (max-width: 768px){
+    .blogTile{
+        padding-left: 10px;
+    }
+    .blogTileText{
+        width: 95%;
     }
 }

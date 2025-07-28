@@ -15,7 +15,6 @@ const ptComponents = {
       if (!value?.asset?._ref) {
         return null;
       }
-      console.log(value.size);
       return (
         <CaptionedImage
           source={urlFor(value).url()}
