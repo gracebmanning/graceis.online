@@ -90,7 +90,7 @@ export const justForFun = [
             <p>
                 Thank you to Okamirufu Visualizer for the <a href="https://youtu.be/a7KtirwLoyo?si=gfeFmiFZW3cyBF2h" rel="noreferrer" target="_blank">What is Feedback?</a> video / tutorial. Fun practice!
             </p>
-            <div style={{display: "flex", flexDirection: "row", justifyContent: "first baseline", gap: "20px"}}>
+            <div style={{display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "first baseline", gap: "20px"}}>
                 <CaptionedVideo source={getCloudFrontVideo('Motiontrail.mp4')} size='small' caption='Motion Trail' />
                 <CaptionedVideo source={getCloudFrontVideo('Decayanddissolve.mp4')} size='small' caption='Decay and Dissolve' />
                 <CaptionedVideo source={getCloudFrontVideo('Mirrortriangles.mp4')} size='small' caption='Mirror Triangles' />
@@ -137,7 +137,7 @@ export const justForFun = [
                 Thank you to bileam tschepe (elekktronaut) for
                 the <a href="https://youtu.be/WS4iZxoQT5s?si=juRd41Ya21RqeB3v" target="_blank" rel="noreferrer">Simple VHS Animations tutorial</a>!
             </p>
-            <div style={{display: "flex", flexDirection: "row", justifyContent: "first baseline", gap: "20px"}}>
+            <div style={{display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "first baseline", gap: "20px"}}>
                 <CaptionedVideo source={getCloudFrontVideo('vhs-animation1.mp4')} size='small' caption='Motion Trail' />
                 <CaptionedVideo source={getCloudFrontVideo('vhs-animation2.mp4')} size='small' caption='Decay and Dissolve' />
                 <CaptionedVideo source={getCloudFrontVideo('vhs-animation3.mp4')} size='small' caption='Mirror Triangles' />
