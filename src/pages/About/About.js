@@ -1,5 +1,5 @@
 import './About.css';
-import { earthStar, grace } from '../../assets/assets';
+import { earthStar, grace, UCIAnteater } from '../../assets/assets';
 import { BasicLayout } from '../../layouts/BasicLayout';
 
 const AboutContent = 
@@ -21,13 +21,27 @@ const AboutContent =
                     </div>
                 </div> 
             </div>
-            <div className="textBasic" id="aboutParagraph">
-                <p>What does that all mean? I enjoy doing lots of things and can't pick one, so I wear many hats: web developer, software engineer, visual designer, creator, ...the list goes on.</p>
-                <p>I am passionate about human-centered design and creating technology that impacts people in a meaningful way.</p>
-                <p>I have a B.S. in Computer Science from UC Irvine (go anteaters!!), which helped me discover the parts of software engineering that I absolutely love.</p>
-                <p style={{fontWeight: 'bold'}}>let's get in touch! email me at contact [@] graceis.online</p>
+            <div id="aboutParagraph">
+                <div className="graphPaperStrip strip1">
+                    <p className="textHandwritten" style={{fontSize: '30px'}}>What does that mean?</p>
+                </div>
+                <div className="graphPaperStrip strip2">
+                    <p className='textBasic' style={{fontSize: '20px'}}>I enjoy doing lots of things and can't pick one, so I wear many hats: software engineer, web developer, visual designer, ...the list goes on.</p>
+                </div>
+                <div className="graphPaperStrip strip3">
+                    <p className='textBasic' style={{fontWeight: 'bold', fontSize: '20px'}}>I'm currently expanding my work to include interactive & audio-reactive content (both live & pre-recorded) using <a href="https://derivative.ca/" target="_blank" rel="noreferrer">TouchDesigner</a>. My goal is to work on large-scale projects and installations utilizing this technology.</p>
+                </div>
+                <div className="graphPaperStrip strip2">
+                    <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                        <img src={UCIAnteater.src} alt={UCIAnteater.alt} style={{width: "100px", marginRight: "5px", transform: "rotate(-8deg)"}} /> 
+                        <p className='textBasic' style={{fontSize: '20px'}}>I have a B.S. in Computer Science from UC Irvine (go anteaters!!), which helped me discover the parts of software engineering that I absolutely love.</p>
+                    </div>
+                </div>
+                <div className="graphPaperStrip strip3" id="contactMe">
+                    <p className='textBasic' style={{fontSize: '20px'}}>let's get in touch! email me at contact [@] graceis.online</p>
+                    <img src={earthStar.src} alt={earthStar.alt} style={{width: "50px", marginLeft: "5px"}} />
+                </div>
             </div>
-            <img src={earthStar.src} alt={earthStar.alt} style={{width: "90px"}} />
         </div>
 
 

@@ -10,6 +10,7 @@ import daisiesBottomTransparentImg from './backgrounds/daisiesBottom_50opacity.j
 import daisiesBottomFlippedImg from './backgrounds/daisiesBottomFlipped.jpg';
 import daisiesBottomFlippedTransparentImg from './backgrounds/daisiesBottomFlipped_50opacity.jpg';
 import whiteRabbitImg from './backgrounds/white-rabbit.png';
+import graphPaperImg from './backgrounds/graph-paper.png';
 
 // THUMBNAILS
 import gracemanningComImg from './thumbnails/grace-manning.png';
@@ -50,6 +51,7 @@ import chickEgg2Img from './other/chick-egg2.gif';
 import graceImg from './other/grace3.jpg';
 import earthStarImg from './other/earth-star.png';
 import wiggleLineImg from './other/wiggleLine.svg';
+import UCIAnteaterImg from './other/uci-anteater.png';
 
 // BACKGROUNDS
 export const daisies = {
@@ -114,6 +116,13 @@ export const whiteRabbit = {
     source: 'external',
     link: 'https://commons.wikimedia.org/wiki/File:De_Alice%27s_Abenteuer_im_Wunderland_Carroll_pic_02.jpg'
 };
+
+export const graphPaper = {
+    src: graphPaperImg,
+    alt: 'graph paper with blue lines on a white background',
+    source: 'external',
+    link: 'https://daisypaper.com/printable-1-2-inch-graph-paper/'
+}
 
 // THUMBNAILS
 export const gracemanningCom = {
@@ -319,6 +328,13 @@ export const wiggleLine = {
     link: 'drawn by me'
 };
 
+export const UCIAnteater = {
+    src: UCIAnteaterImg,
+    alt: 'BC Anteater - a blue and gold cartoon anteater with white UCI letters on its side',
+    source: 'external',
+    link: 'https://brand.uci.edu/identity/graphics.php'
+}
+
 export const ImgSourceExport = [
     //BACKGROUNDS
     daisies,
@@ -330,6 +346,7 @@ export const ImgSourceExport = [
     daisiesBottomFlipped,
     daisiesBottomFlippedTransparent,
     whiteRabbit,
+    graphPaper,
     //ICONS
     arrow,
     backarrow,
@@ -347,4 +364,5 @@ export const ImgSourceExport = [
     grace,
     earthStar,
     wiggleLine,
+    UCIAnteater
 ];

@@ -1,6 +1,7 @@
 .aboutText{
     width: 80%;
     text-align: left;
+    padding-left: 5px;
 }
 
 .aboutLine{
@@ -32,9 +33,21 @@
 #aboutParagraph{
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
     font-size: 18px;
+    a{
+        color: black;
+        background-color: #ECD5E5;
+        transition: 0.1s ease-in;
+        padding: 2px 0px;
+    }
+    
+    a:hover{
+        color: #ECD5E5;
+        background-color: black;
+        transition: 0.1s ease-out;
+    }
 }
 
 .textBasic{
@@ -62,6 +75,42 @@
     margin: 0px;
 }
 
+#contactMe{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.graphPaperStrip {
+  background-image: url('../../assets/backgrounds/graph-paper.png');
+  background-size: 300px 300px; 
+  color: #2c3e50;
+  padding: 1em 1.5em;
+  margin: 1.5em 1em;
+  width: fit-content;
+  max-width: 80%;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+}
+
+.strip1 {
+  clip-path: url('../../assets/backgrounds/clip-paths.svg#cutout1');
+  transform: rotate(-1.5deg);
+}
+
+.strip2 {
+  clip-path: url('../../assets/backgrounds/clip-paths.svg#cutout2');
+  background-position: 15px 0; 
+  transform: rotate(1deg);
+  margin-left: 2em;
+}
+
+.strip3 {
+  clip-path: url('../../assets/backgrounds/clip-paths.svg#cutout3');
+  transform: rotate(-0.5deg);
+}
+
+
 @media (max-width: 1024px){
     #aboutHeader{
         img{
@@ -70,6 +119,10 @@
         #aboutHeaderText{
             height: 250px;
         }
+    }
+
+    .graphPaperStrip {
+        max-width: 90%;
     }
 }
 
@@ -96,6 +149,10 @@
 
     .textHandwritten{
         font-size: 20px;
+    }
+
+    .graphPaperStrip {
+        max-width: 95%;
     }
 
 }
