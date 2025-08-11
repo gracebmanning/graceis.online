@@ -50,4 +50,8 @@
     .listFilter{
         padding-left: 5px;
     }
+
+    .listFilterItems{
+        width: 100%;
+    }
 }

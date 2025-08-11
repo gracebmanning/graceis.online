@@ -42,7 +42,6 @@
     flex-direction: row;
     justify-content: first baseline;
     align-items: center;
-    border-bottom: 1px solid black;
 
     list-style-type: none;
     margin-top: 0px;
@@ -54,5 +53,25 @@
         padding: 2px 5px;
         background-color: #d3d3d3;
         border-radius: 10px;
+    }
+}
+
+.singleBlogPostContents{
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+}
+
+.singleBlogPostBodyContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .singleBlogPost{
+        width: 90%;
+        padding-left: 10px;
     }
 }

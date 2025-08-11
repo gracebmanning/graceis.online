@@ -6,6 +6,8 @@ import sanityClient from '../../sanityClient';
 import { postQuery } from '../../queries/blogQuery';
 import { formatISODate } from '../../utility/formatISODate';
 import PortableTextComponent from '../../components/PortableText/PortableText';
+import TableOfContents from '../../components/TableOfContents/TableOfContents';
+import { slugify } from '../../utility/slugify';
 
 export default function SinglePost(){
     const { pathname } = useLocation();
@@ -13,6 +15,7 @@ export default function SinglePost(){
     const [singlePost, setSinglePost] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [headings, setHeadings] = useState([]);
     const { slug } = useParams();
 
     useEffect(() => {
@@ -23,6 +26,13 @@ export default function SinglePost(){
         navigate(-1);
     };
 
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
+
     useEffect(() => {
     if (!slug) return;
 
@@ -32,6 +42,15 @@ export default function SinglePost(){
       .then((data) => {
         if (data) {
           setSinglePost(data);
+          const extractedHeadings = [];
+          data.body.forEach(block => {
+            if (block._type === 'block' && block.style && block.style.startsWith('h')) {
+                const level = parseInt(block.style.substring(1)); // e.g., 'h1' -> 1
+                const text = block.children.map(span => span.text).join('');
+                const id = slugify(text);
+                extractedHeadings.push({ level, text, id });
+          }});
+          setHeadings(extractedHeadings);
         } else {
           setError('Post not found.');
         }
@@ -72,10 +91,12 @@ export default function SinglePost(){
                   <li key={tag.title}>{tag.title}</li>
                 ))}
             </ul>
-            <div className="postBody">
-              <PortableTextComponent content={singlePost.body} />
-          </div>
+            <div className="singleBlogPostContents">
+              <TableOfContents headings={headings} />
+            </div>
+            <PortableTextComponent content={singlePost.body} />
         </div>
+        <button className="backToTop" onClick={scrollToTop}>↑ back to top</button>
     </div>
     )
 

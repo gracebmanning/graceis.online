@@ -1,0 +1,22 @@
+.captionedImage{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.smallImg{
+    width: 360px;
+}
+
+.mediumImg{
+    width: 540px;
+}
+
+.largeImg{
+    width: 720px;
+}
+
+@media (max-width: 768px){
+    .smallImg, .mediumImg, .largeImg{
+        width: 100%;
+    }
+}
