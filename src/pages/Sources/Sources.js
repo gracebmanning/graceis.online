@@ -5,7 +5,7 @@ import { ImgSourceExport } from '../../assets/assets';
 
 const content = 
     <div className='sourcesContentBox'>
-        all of my images sources, in one place.
+        all of my image sources, in one place.
         <ul className='sourcesList'>
             {ImgSourceExport.map((elem, index)=>
                 <li className='sourcesListItem' key={index}>
