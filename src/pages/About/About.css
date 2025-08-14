@@ -4,13 +4,6 @@
     padding-left: 5px;
 }
 
-.aboutLine{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 #aboutHeader{
     height: fit-content;
     display: flex;
@@ -29,6 +22,15 @@
         justify-content: space-between;
     }
 }
+
+.aboutLine{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 5px 20px 5px;
+}
+
 
 #aboutParagraph{
     flex-direction: column;
@@ -85,9 +87,9 @@
 .graphPaperStrip {
   background-image: url('../../assets/backgrounds/graph-paper.png');
   background-size: 300px 300px; 
-  color: #2c3e50;
-  padding: 1em 1.5em;
-  margin: 1.5em 1em;
+  color: #222f3c;
+  padding: 0.75em 1.25em;
+  margin: 1.25em 0.75em;
   width: fit-content;
   max-width: 80%;
   box-shadow: 2px 4px 8px rgba(0,0,0,0.2);

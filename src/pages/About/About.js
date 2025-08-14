@@ -26,19 +26,19 @@ const AboutContent =
                     <p className="textHandwritten" style={{fontSize: '30px'}}>What does that mean?</p>
                 </div>
                 <div className="graphPaperStrip strip2">
-                    <p className='textBasic' style={{fontSize: '20px'}}>I enjoy doing lots of things and can't pick one, so I wear many hats: software engineer, web developer, visual designer, ...the list goes on.</p>
+                    <p className='textHandwritten' style={{fontSize: '22px'}}>I enjoy doing lots of things and can't pick one, so I wear many hats: software engineer, web developer, visual designer, ...the list goes on.</p>
                 </div>
                 <div className="graphPaperStrip strip3">
-                    <p className='textBasic' style={{fontWeight: 'bold', fontSize: '20px'}}>I'm currently expanding my work to include interactive & audio-reactive content (both live & pre-recorded) using <a href="https://derivative.ca/" target="_blank" rel="noreferrer">TouchDesigner</a>. My goal is to work on large-scale projects and installations utilizing this technology.</p>
+                    <p className='textHandwritten' style={{fontWeight: 'bold', fontSize: '22px'}}>I'm currently expanding my work to include interactive & audio-reactive content (both live & pre-recorded) using <a href="https://derivative.ca/" target="_blank" rel="noreferrer">touchdesigner</a>. My goal is to work on large-scale projects and installations utilizing this technology.</p>
                 </div>
                 <div className="graphPaperStrip strip2">
                     <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
                         <img src={UCIAnteater.src} alt={UCIAnteater.alt} style={{width: "100px", marginRight: "5px", transform: "rotate(-8deg)"}} /> 
-                        <p className='textBasic' style={{fontSize: '20px'}}>I have a B.S. in Computer Science from UC Irvine (go anteaters!!), which helped me discover the parts of software engineering that I absolutely love.</p>
+                        <p className='textHandwritten' style={{fontSize: '22px'}}>I have a b.s. in computer science from uc Irvine<br/>(go anteaters!!)</p>
                     </div>
                 </div>
                 <div className="graphPaperStrip strip3" id="contactMe">
-                    <p className='textBasic' style={{fontSize: '20px'}}>let's get in touch! email me at contact [@] graceis.online</p>
+                    <p className='textHandwritten' style={{fontSize: '22px'}}>let's get in touch! email me at contact [@] graceis.online</p>
                     <img src={earthStar.src} alt={earthStar.alt} style={{width: "50px", marginLeft: "5px"}} />
                 </div>
             </div>
