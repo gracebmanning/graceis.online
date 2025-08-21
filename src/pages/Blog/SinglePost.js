@@ -7,7 +7,6 @@ import { postQuery } from '../../queries/blogQuery';
 import { formatISODate } from '../../utility/formatISODate';
 import PortableTextComponent from '../../components/PortableText/PortableText';
 import TableOfContents from '../../components/TableOfContents/TableOfContents';
-import { slugify } from '../../utility/slugify';
 
 export default function SinglePost(){
     const { pathname } = useLocation();
@@ -42,15 +41,6 @@ export default function SinglePost(){
       .then((data) => {
         if (data) {
           setSinglePost(data);
-          const extractedHeadings = [];
-          data.body.forEach(block => {
-            if (block._type === 'block' && block.style && block.style.startsWith('h')) {
-                const level = parseInt(block.style.substring(1)); // e.g., 'h1' -> 1
-                const text = block.children.map(span => span.text).join('');
-                const id = slugify(text);
-                extractedHeadings.push({ level, text, id });
-          }});
-          setHeadings(extractedHeadings);
         } else {
           setError('Post not found.');
         }
@@ -71,7 +61,6 @@ export default function SinglePost(){
       return <BasicLayout title="Error" content={error} bg={false} />;
     }
     
-    // It's safer to check for singlePost before rendering
     if (!singlePost) {
       return <BasicLayout title="Not Found" content="This post could not be found." bg={false} />;
     }
@@ -94,7 +83,7 @@ export default function SinglePost(){
             <div className="singleBlogPostContents">
               <TableOfContents headings={headings} />
             </div>
-            <PortableTextComponent content={singlePost.body} />
+            <PortableTextComponent content={singlePost.body} onHeadingsExtracted={setHeadings} />
         </div>
         <button className="backToTop" onClick={scrollToTop}>↑ back to top</button>
     </div>
