@@ -18,10 +18,6 @@ export default defineType({
     defineArrayMember({
       title: 'Block',
       type: 'block',
-      // Styles let you set what your user can mark up blocks with. These
-      // correspond with HTML tags, but you can set any title or value
-      // you want and decide how you want to deal with it where you want to
-      // use your content.
       styles: [
         {title: 'Normal', value: 'normal'},
         {title: 'H1', value: 'h1'},
@@ -56,9 +52,9 @@ export default defineType({
         ],
       },
     }),
-    // You can add additional types here. Note that you can't use
-    // primitive types such as 'string' and 'number' in the same array
-    // as a block type.
+    defineArrayMember({
+      type: 'code'
+    }),
     defineArrayMember({
       type: 'image',
       options: {hotspot: true},
@@ -90,7 +86,34 @@ export default defineType({
       ]
     }),
     defineArrayMember({
-      type: 'code'
+      name: 'video',
+      title: 'Video',
+      type: 'object',
+      fields: [
+        {
+          name: 'source',
+          title: 'Video URL',
+          type: 'url',
+        },
+        {
+          name: 'caption',
+          title: 'Caption',
+          type: 'string',
+        },
+        {
+          name: 'size',
+          title: 'Size',
+          type: 'string',
+          options: {
+            list: [
+              { title: 'small', value: 'small' },
+              { title: 'medium', value: 'medium' },
+              { title: 'large', value: 'large' },
+            ],
+            layout: 'dropdown',
+          },
+        },
+      ],
     })
   ],
 })

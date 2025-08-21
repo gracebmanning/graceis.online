@@ -4,6 +4,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import sanityClient from "../../sanityClient";
 import CodeBlock from "../CodeBlock/CodeBlock";
 import CaptionedImage from "../CaptionedImage/CaptionedImage";
+import CaptionedVideo from "../CaptionedVideo/CaptionedVideo";
 import { slugify } from "../../utility/slugify";
 import { useEffect, useRef, useState } from "react";
 
@@ -79,6 +80,18 @@ const PortableTextComponent = ({ content, onHeadingsExtracted }) => {
           <CaptionedImage
             source={urlFor(value).url()}
             alt={value.alt || " "}
+            caption={value.caption || ""}
+            size={value.size || "medium"}
+          />
+        );
+      },
+      video: ({ value }) => {
+        if (!value?.source) {
+          return null;
+        }
+        return (
+          <CaptionedVideo
+            source={value.source}
             caption={value.caption || ""}
             size={value.size || "medium"}
           />
