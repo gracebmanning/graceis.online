@@ -22,7 +22,7 @@ export default function SinglePost(){
     }, [pathname]);
 
     const handleBackClick = () => {
-        navigate(-1);
+        navigate('/blog');
     };
 
     const scrollToTop = () => {
