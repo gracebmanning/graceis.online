@@ -1,0 +1,23 @@
+.heading-with-link {
+  position: relative;
+  scroll-margin-top: 80px;
+}
+
+.heading-with-link:hover .copy-link-button {
+  opacity: 1;
+}
+
+.copy-link-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #999;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.copy-link-button:hover {
+    color: #333;
+}
