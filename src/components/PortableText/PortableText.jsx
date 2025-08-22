@@ -7,6 +7,7 @@ import CaptionedImage from "../CaptionedImage/CaptionedImage";
 import CaptionedVideo from "../CaptionedVideo/CaptionedVideo";
 import { slugify } from "../../utility/slugify";
 import { useEffect, useRef, useState } from "react";
+import { getCloudFrontVideo } from "../../utility/cloudfront";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -85,16 +86,44 @@ const PortableTextComponent = ({ content, onHeadingsExtracted }) => {
           />
         );
       },
-      video: ({ value }) => {
-        if (!value?.source) {
+      videoRow: ({ value }) => {
+        const { videos } = value;
+        if (!videos || videos.length === 0) {
           return null;
         }
+        const containerStyles = {
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "first baseline",
+          gap: "20px",
+          flexWrap: videos.length > 2 ? "wrap" : "nowrap",
+        };
+
         return (
-          <CaptionedVideo
-            source={value.source}
-            caption={value.caption || ""}
-            size={value.size || "medium"}
-          />
+          <div style={containerStyles}>
+            {videos.map((video, index) => {
+              let finalSource = "";
+              if (video.videoSource === "url" && video.videoURL) {
+                finalSource = video.videoURL;
+              } else if (
+                video.videoSource === "cloudfront" &&
+                video.videoFileName
+              ) {
+                finalSource = getCloudFrontVideo(video.videoFileName);
+              }
+              if (!finalSource) {
+                return null;
+              }
+              return (
+                <CaptionedVideo
+                  key={index}
+                  source={finalSource}
+                  caption={video.caption || ""}
+                  size={video.size || "small"}
+                />
+              );
+            })}
+          </div>
         );
       },
       code: ({ value }) => {

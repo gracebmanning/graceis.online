@@ -86,34 +86,69 @@ export default defineType({
       ]
     }),
     defineArrayMember({
-      name: 'video',
-      title: 'Video',
+      name: 'videoRow',
+      title: 'Video Row',
       type: 'object',
       fields: [
         {
-          name: 'source',
-          title: 'Video URL',
-          type: 'url',
-        },
-        {
-          name: 'caption',
-          title: 'Caption',
-          type: 'string',
-        },
-        {
-          name: 'size',
-          title: 'Size',
-          type: 'string',
-          options: {
-            list: [
-              { title: 'small', value: 'small' },
-              { title: 'medium', value: 'medium' },
-              { title: 'large', value: 'large' },
-            ],
-            layout: 'dropdown',
-          },
-        },
-      ],
-    })
+          name: 'videos',
+          title: 'Videos',
+          type: 'array',
+          validation: (Rule) => Rule.min(1).max(3),
+          of: [
+            defineArrayMember({
+              name: 'video',
+              title: 'Video',
+              type: 'object',
+              fields: [
+                {
+                  name: 'videoSource',
+                  title: 'Video Source',
+                  type: 'string',
+                  options: {
+                    list: [
+                      { title: 'url', value: 'url' },
+                      { title: 'cloudfront', value: 'cloudfront' }
+                    ],
+                    layout: 'radio',
+                    direction: 'horizontal'
+                  }
+                },
+                {
+                  name: 'videoURL',
+                  title: 'Video URL',
+                  type: 'url',
+                  hidden: ({parent}) => parent?.videoSource != "url",
+                },
+                {
+                  name: 'videoFileName',
+                  title: 'Video File Name',
+                  type: 'string',
+                  hidden: ({parent}) => parent?.videoSource != "cloudfront",
+                },
+                {
+                  name: 'caption',
+                  title: 'Caption',
+                  type: 'string',
+                },
+                {
+                  name: 'size',
+                  title: 'Size',
+                  type: 'string',
+                  options: {
+                    list: [
+                      { title: 'small', value: 'small' },
+                      { title: 'medium', value: 'medium' },
+                      { title: 'large', value: 'large' },
+                    ],
+                    layout: 'dropdown',
+                  },
+                },
+              ],
+            }),
+          ]
+        }
+      ]
+    }),
   ],
 })
