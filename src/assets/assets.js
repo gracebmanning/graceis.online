@@ -12,19 +12,6 @@ import daisiesBottomFlippedTransparentImg from './backgrounds/daisiesBottomFlipp
 import whiteRabbitImg from './backgrounds/white-rabbit.png';
 import graphPaperImg from './backgrounds/graph-paper.png';
 
-// THUMBNAILS
-import gracemanningComImg from './thumbnails/grace-manning.png';
-import emmygardnerOnlineImg from './thumbnails/emmygardner-online.png';
-import classifiedsLolImg from './thumbnails/classifieds-lol.png';
-import gracesPortalImg from './thumbnails/graces-portal.png';
-import itneedsmorecolorImg from './thumbnails/itneedsmorecolor.png';
-import blackSheepImg from './thumbnails/blacksheep.jpg';
-import talkTalkImg from './thumbnails/talktalk.jpg';
-import pulsingNoiseImg from './thumbnails/trippyNoise.jpg';
-import vhsAnimationsImg from './thumbnails/vhsAnimations.jpg';
-import feedbackVisualsImg from './thumbnails/feedbackVisuals.jpg';
-import curseIsLiftedImg from './thumbnails/curseIsLifted.jpg';
-
 // NAVIGATION
 import arrowImg from './icons/arrow.svg';
 import backarrowImg from './icons/backarrow.svg';
@@ -35,14 +22,6 @@ import fishImg from './icons/fish.png';
 import ladybugImg from './icons/ladybug.png';
 import lunamothImg from './icons/lunamoth.png';
 import strawberryImg from './icons/strawberry.png';
-
-// POSTS - BLOG
-
-// POSTS - JUST FOR FUN
-import pulsingNoise1Img from './posts/justForFun/pulsingNoise1.png';
-import pulsingNoise2Img from './posts/justForFun/pulsingNoise2.png';
-
-// POSTS - PROJECTS
 
 // OTHER
 import bunnyImg from './other/bunny.gif';
@@ -124,84 +103,6 @@ export const graphPaper = {
     link: 'https://daisypaper.com/printable-1-2-inch-graph-paper/'
 }
 
-// THUMBNAILS
-export const gracemanningCom = {
-    src: gracemanningComImg,
-    alt: '',
-    source: 'external',
-    link: 'https://grace-manning.com/'
-};
-
-export const emmygardnerOnline = {
-    src: emmygardnerOnlineImg,
-    alt: '',
-    source: 'external',
-    link: 'https://www.emmygardner.online/'
-};
-
-export const classifiedsLol = {
-    src: classifiedsLolImg,
-    alt: '',
-    source: 'external',
-    link: 'https://classifieds.lol/'
-};
-
-export const gracesPortal = {
-    src: gracesPortalImg,
-    alt: '',
-    source: 'external',
-    link: 'https://graces-portal.net/'
-};
-
-export const itneedsmorecolor = {
-    src: itneedsmorecolorImg,
-    alt: '',
-    source: 'external',
-    link: 'https://itneedsmorecolor.com/'
-};
-
-export const blackSheep = {
-    src: blackSheepImg,
-    alt: '',
-    source: 'external',
-    link: 'https://youtu.be/YpCVh5VX8mc?si=z2jw1SIGACTs7kBS'
-};
-
-export const talkTalk = {
-    src: talkTalkImg,
-    alt: '',
-    source: 'external',
-    link: 'https://youtu.be/QL--AfXtkCo?si=R8jK70u1ZaVr2m6x'
-};
-
-export const pulsingNoise = {
-    src: pulsingNoiseImg,
-    alt: '',
-    source: 'internal',
-    link: ''
-};
-
-export const vhsAnimations = {
-    src: vhsAnimationsImg,
-    alt: '',
-    source: 'internal',
-    link: ''
-};
-
-export const feedbackVisuals = {
-    src: feedbackVisualsImg,
-    alt: '',
-    source: 'internal',
-    link: ''
-};
-
-export const curseIsLifted = {
-    src: curseIsLiftedImg,
-    alt: '',
-    source: 'internal',
-    link: ''
-};
-
 // ICONS
 export const arrow = {
     src: arrowImg,
@@ -265,25 +166,6 @@ export const strawberry = {
     source: 'external',
     link: 'https://www.gardeningknowhow.com/edible/fruits/strawberry/growing-jewel-strawberries.htm'
 };
-
-// POSTS - BLOG
-
-// POSTS - JUST FOR FUN
-export const pulsingNoiseNetwork1 = {
-    src: pulsingNoise1Img,
-    alt: '',
-    source: 'internal',
-    link: 'my TouchDesigner network'
-}
-
-export const pulsingNoiseNetwork2 = {
-    src: pulsingNoise2Img,
-    alt: '',
-    source: 'internal',
-    link: 'my TouchDesigner network'
-}
-
-// POSTS - PROJECTS
 
 // OTHER
 export const bunny = {

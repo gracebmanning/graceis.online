@@ -43,8 +43,6 @@ export function BlogTile({post, onClick}){
       navigate(`/blog/${post.slug.current}`);
     };
 
-    
-
     return(
         <div className="blogTile">
             <ul className="blogTileTags">
