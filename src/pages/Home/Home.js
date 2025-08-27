@@ -13,7 +13,7 @@ export default function Home(){
                     <h2 id='tagline'>creative technologist & software engineer</h2>
                 </div>
                 <HomeNav/>
-                <h2 id='contactText'>contact [@] graceis.online</h2>
+                <h2 id='contactText'>hello [@] graceis.online</h2>
             </div>
             <img className='backgroundImg bottomRight' id='homeDaisiesBottom' src={daisiesBottomFlipped.src} alt={daisiesBottomFlipped.alt} />
             <img className='bottomRight' id='whiteRabbit' src={whiteRabbit.src} alt={whiteRabbit.alt} />
