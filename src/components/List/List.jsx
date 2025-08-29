@@ -1,5 +1,5 @@
 import "./List.css";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { BlogTile } from "../BlogTile/BlogTile";
 import { ProjectTile } from "../ProjectTile/ProjectTile";
@@ -12,6 +12,8 @@ export function List({ header, items, type }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);
   const location = useLocation();
+  const listHeaderRef = useRef(null);
+  const [listHeaderHeight, setListHeaderHeight] = useState(null);
 
   // Restore scroll position when component mounts (after navigating back)
   useEffect(() => {
@@ -109,9 +111,25 @@ export function List({ header, items, type }) {
     });
   }, [sortedItems, searchQuery, selectedTag]);
 
+  // Determine margin-top of listItems based on height of listHeader
+  useEffect(() => {
+    // Check if the ref has a value and exists in the DOM
+    if (listHeaderRef.current) {
+      const rect = listHeaderRef.current.getBoundingClientRect().height;
+      setListHeaderHeight(rect);
+      console.log("Element dimensions:", rect);
+    }
+  }, []);
+  const desktopStyle = {
+    marginTop: "90px",
+  };
+  const mobileStyle = {
+    marginTop: listHeaderHeight,
+  };
+
   return (
     <div style={{ width: "100%" }}>
-      <div className="listHeader">
+      <div className="listHeader" ref={listHeaderRef}>
         <p className="listHeaderTitle">{header}</p>
         <div className="listSearchAndSort">
           <div>
@@ -147,7 +165,10 @@ export function List({ header, items, type }) {
           onFilterChange={handleTagClick}
         />
       </div>
-      <div className="listItems">
+      <div
+        className="listItems"
+        style={window.innerWidth <= 768 ? mobileStyle : desktopStyle}
+      >
         {filteredItems.map((item, index) => {
           if (type === 1 || type === 2) {
             return (
