@@ -7,7 +7,7 @@ export default function Home(){
         <div style={{width: '100vw', height: '100vh', overflow: 'hidden'}}>
             <img className='backgroundImg topLeft' id='homeDaisies' src={daisies.src} alt={daisies.alt} />
             
-            <div className='container homeContainer'>
+            <div className='homeContainer'>
                 <div className='headerText'>
                     <h1 id='title'>grace manning</h1>
                     <h2 id='tagline'>creative technologist & software engineer</h2>
