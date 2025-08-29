@@ -98,6 +98,7 @@ body {
   background-position: right;
 
   margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: calc(215px + 20px);
   min-height: 95vh;
   width: 100vw;
@@ -226,6 +227,10 @@ body {
 @media (max-width: 768px){
   .sideContainer{
     margin-left: 0px;
-    margin-top: 50px;
+    margin-top: 55px;
+  }
+
+  .backButton, .backToTop{
+    margin-left: 5px;
   }
 }

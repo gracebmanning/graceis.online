@@ -12,11 +12,6 @@
     justify-content: center;
 }
 
-.projectsList{
-    margin-top: 60px;
-    width: 100%;
-}
-
 .singleProject{
     width: 100%;
     display: flex;
@@ -42,8 +37,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 0px 0px 2px 5px;
-    
+    margin: 0px 0px 2px 0px;
 
     .singleProjectDate{
         font-family: Inter;
@@ -86,7 +80,7 @@
 }
 
 .singleProjectBody{
-    width: 90%;
+    width: 95%;
     font-family: "Inter";
     font-size: 16px;
     font-weight: 400;
@@ -104,16 +98,25 @@
 }
 
 @media (max-width: 768px){
-    .projectsHeader{
-        top: 50px;
-    }
-    .projectsList{
-        margin-top: 70px;
-    }
-
     .singleProject{
         img{
             width: 100%;
         }
+
+        h1{
+            margin-left: 5px;
+        }
+    }
+
+    .singleProjectDetails{
+        margin-left: 5px;
+    }
+
+    .singleProjectBadges{
+        margin-left: 5px;
+    }
+
+    .singleProjectBody{
+        padding: 5px;
     }
 }

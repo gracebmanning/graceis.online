@@ -96,7 +96,7 @@ const PortableTextComponent = ({ content, onHeadingsExtracted }) => {
           flexDirection: "row",
           justifyContent: "first baseline",
           gap: "20px",
-          flexWrap: videos.length > 2 ? "wrap" : "nowrap",
+          flexWrap: videos.length >= 2 ? "wrap" : "nowrap",
         };
 
         return (

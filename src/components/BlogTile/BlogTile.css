@@ -74,7 +74,12 @@
 
 @media (max-width: 768px){
     .blogTile{
+        margin-right: 0px;
         padding-left: 10px;
+        width: 97%;
+        h2{
+            width: 99%;
+        }
     }
     .blogTileText{
         width: 95%;

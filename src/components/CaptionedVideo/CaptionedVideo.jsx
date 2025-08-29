@@ -1,3 +1,4 @@
+import "./CaptionedVideo.css";
 import ReactPlayer from "react-player";
 
 export default function CaptionedVideo({ source, size, caption }) {
@@ -5,12 +6,14 @@ export default function CaptionedVideo({ source, size, caption }) {
     small: "360px",
     medium: "540px",
     large: "720px",
+    mobile: "100%",
   };
 
   const youtubeSizes = {
     small: ["360px", "202.5px"],
     medium: ["540px", "303.75px"],
     large: ["720px", "405px"],
+    mobile: ["100%", "100%"],
   };
 
   let videoPlayer = null;
@@ -19,9 +22,13 @@ export default function CaptionedVideo({ source, size, caption }) {
     return (videoPlayer = (
       <ReactPlayer
         url={source}
-        className="temp"
-        width={youtubeSizes[size][0]}
-        height={youtubeSizes[size][1]}
+        className={`${size}Video`}
+        width={
+          window.innerWidth <= 768 ? sizes["mobile"][0] : youtubeSizes[size][0]
+        }
+        height={
+          window.innerWidth <= 768 ? sizes["mobile"][1] : youtubeSizes[size][1]
+        }
         controls={true}
         loop={true}
       />
@@ -30,8 +37,8 @@ export default function CaptionedVideo({ source, size, caption }) {
     videoPlayer = (
       <ReactPlayer
         url={source}
-        className="temp"
-        width={sizes[size]}
+        className={`${size}Video`}
+        width={window.innerWidth <= 768 ? sizes["mobile"] : sizes[size]}
         height="auto"
         controls={true}
         loop={true}
@@ -40,9 +47,9 @@ export default function CaptionedVideo({ source, size, caption }) {
   }
 
   return (
-    <div style={{ marginTop: "10px", marginBottom: "10px" }}>
+    <div className="captionedVideo">
       {videoPlayer}
-      <p style={{ marginTop: "10px", fontStyle: "italic" }}>{caption}</p>
+      <p className="caption">{caption}</p>
     </div>
   );
 }
