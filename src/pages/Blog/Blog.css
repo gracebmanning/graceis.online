@@ -62,16 +62,16 @@
 }
 
 .singleBlogPostBodyContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-right: 5px;
+    width: 95%;
 }
 
 @media (max-width: 768px) {
     .singleBlogPost{
-        width: 90%;
+        width: 95%;
         padding-left: 10px;
+    }
+
+    .singleBlogPostBodyContainer{
+        width: 100%;
     }
 }

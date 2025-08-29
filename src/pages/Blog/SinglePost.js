@@ -83,7 +83,9 @@ export default function SinglePost(){
             <div className="singleBlogPostContents">
               <TableOfContents headings={headings} />
             </div>
-            <PortableTextComponent content={singlePost.body} onHeadingsExtracted={setHeadings} />
+            <div className="singleBlogPostBodyContainer">
+              <PortableTextComponent content={singlePost.body} onHeadingsExtracted={setHeadings} />
+            </div>
         </div>
         <button className="backToTop" onClick={scrollToTop}>↑ back to top</button>
     </div>
