@@ -3,27 +3,26 @@ import { earthStar, grace, UCIAnteater } from '../../assets/assets';
 import { BasicLayout } from '../../layouts/BasicLayout';
 
 const AboutContent = 
-        <div className="aboutText">
-            <div id="aboutHeader">
-                <img src={grace.src} alt={grace.alt} />
-                <div id="aboutHeaderText">
-                    <p className="textHandwritten">hi, i'm grace! i am a:</p>
-                    <div className='aboutLine'>
-                        <p className='textCursive'>creative technologist,</p>
-                        <p className='textBasic'>⋆ ˚｡⋆୨୧˚౨ৎ</p>
-                    </div>
-                    <div className='aboutLine'>
-                        <p className='textWhimsy'>software engineer,</p>
-                    </div>
-                    <div className='aboutLine'>
-                        <p className='textBasic'>. ݁₊ ⊹ . ݁˖ . ݁</p>
-                        <p className='textHandwritten'>& maker of things</p>
-                    </div>
-                </div> 
+        <div className="aboutContainer">
+            <div className="aboutHeader">
+                <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+                    <p className="textHandwritten" style={{fontSize: "24px"}}>hi, i'm grace!</p>
+                    <img src={grace.src} alt={grace.alt} />
+                </div>
+                <div className="aboutHeaderText">
+                    <p className="textHandwritten" style={{fontSize: "24px"}}>i am a:</p>
+                    <p style={{lineHeight: "2.5", margin: "0px"}}>
+                        <span className='textCursive'>creative technologist,</span>
+                        <span className='textWhimsy'> software engineer,</span>
+                        <span className='textHandwritten'> & maker of things</span>
+                    </p>
+                </div>
+                
             </div>
-            <div id="aboutParagraph">
+            <p><span className='textBasic'>⋆ ˚｡⋆୨୧˚౨ৎ  . ݁₊ ⊹ . ݁˖ . ݁  ⋆ ˚｡⋆୨୧˚౨ৎ  . ݁₊ ⊹ . ݁˖ . ݁   ݁. ˖ ݁. ⊹ ₊ ݁.⋆୨୧˚౨ৎ⋆｡˚ ⋆   ݁. ˖ ݁. ⊹ ₊ ݁⋆୨୧˚౨ৎ⋆｡˚ ⋆</span></p>
+            <div className="aboutParagraph">
                 <div className="graphPaperStrip strip1">
-                    <p className="textHandwritten" style={{fontSize: '30px'}}>What does that mean?</p>
+                    <p className="textHandwritten" style={{fontSize: '24px'}}>What does that mean?</p>
                 </div>
                 <div className="graphPaperStrip strip2">
                     <p className='textHandwritten' style={{fontSize: '22px'}}>I enjoy doing lots of things and can't pick one, so I wear many hats: software engineer, web developer, visual designer, ...the list goes on.</p>
