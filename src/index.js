@@ -11,6 +11,7 @@ import { CommercialProjects, PersonalProjects } from './pages/Projects/Projects'
 import SingleProject from './pages/Projects/SingleProject';
 import Surprise from './pages/Surprise/Surprise';
 import Sources from './pages/Sources/Sources';
+import Support from './pages/Support/Support';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,8 +26,9 @@ root.render(
       <Route path="/blog/:slug" element={<SinglePost/>} />
       <Route path="/projects" element={<CommercialProjects/>} />
       <Route path="/projects/:slug" element={<SingleProject/>} />
-      <Route path="/surprise" element={<Surprise/>} />
       <Route path="/sources" element={<Sources/>} />
+      <Route path="/surprise" element={<Surprise/>} />
+      <Route path="/support" element={<Support/>} />
     </Routes>
   </BrowserRouter>
 );

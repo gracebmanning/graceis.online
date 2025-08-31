@@ -107,7 +107,10 @@ export const Navbar = () => {
                 )
             })}
         </ul>
-        <Link id="sourcesLink" to="/sources">
+        <Link className="bottomLink" id="supportLink" to="/support">
+            support my work
+        </Link>
+        <Link className="bottomLink" id="sourcesLink" to="/sources">
             image sources
         </Link>
     </nav>

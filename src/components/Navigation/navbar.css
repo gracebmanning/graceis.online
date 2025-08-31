@@ -1,157 +1,164 @@
 /* SIDEBAR NAV */
-.navbar{
-    position: fixed;
-    background-color: rgba(219, 233, 163, 0.4);
-    min-height: 100vh;
-    text-align: left;
-    width: 215px;
+.navbar {
+  position: fixed;
+  background-color: rgba(219, 233, 163, 0.4);
+  min-height: 100vh;
+  text-align: left;
+  width: 215px;
 }
 
-.navbarHeaderText{
-    text-align: left;
-    font-family: "Lacquer", system-ui;
-    text-decoration: none;
-    color: black;
+.navbarHeaderText {
+  text-align: left;
+  font-family: "Lacquer", system-ui;
+  text-decoration: none;
+  color: black;
 
-    h1{
-        font-size: 30px;
-        margin: 20px 0px 10px 10px;
-    }
-    h2{
-        font-size: 18px;
-        margin: 0px 0px 0px 10px;
-    }
-}
-
-.navbarDivider{
-    padding-right: 20px;
-}
-
-.navbarItems{
-    height: 100%;
-    padding: 0px;
-    margin: 20px 0px 0px 20px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.navbarButton{
-    padding: 0px;
-    transform: scale(1.0);
-    transition: 0.2s ease-in;
-}
-
-.navbarButton:hover{
-    transform: scale(1.01);
-    transition: 0.2s ease-out;
-}
-
-.navbarLink{
-    text-decoration: none;
-    color: black;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.navbarLinkActive{
-    font-weight: bold;
-}
-
-.navbarImage{
-    height: 40px;
-    padding: 0px 5px 0px 0px;
-    margin: 0px;
-}
-
-.navbarText{
-    font-family: "Mountains of Christmas", serif;
+  h1 {
     font-size: 30px;
-    padding: 0px;
-    margin: 0px;
+    margin: 20px 0px 10px 10px;
+  }
+  h2 {
+    font-size: 18px;
+    margin: 0px 0px 0px 10px;
+  }
 }
 
-#fishNavbar{
-    img{
-        height: 25px;
-    }
+.navbarDivider {
+  padding-right: 20px;
 }
 
-#sourcesLink{
-    width: 100%;
-    margin-left: 20px;
-    font-family: "Mountains of Christmas", serif;
-    font-size: 20px;
-    color: black;
-    position: absolute;
-    bottom: 5%;
+.navbarItems {
+  height: 100%;
+  padding: 0px;
+  margin: 20px 0px 0px 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-@media (max-width: 1024px){
-    
+.navbarButton {
+  padding: 0px;
+  transform: scale(1);
+  transition: 0.2s ease-in;
+}
+
+.navbarButton:hover {
+  transform: scale(1.01);
+  transition: 0.2s ease-out;
+}
+
+.navbarLink {
+  text-decoration: none;
+  color: black;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbarLinkActive {
+  font-weight: bold;
+}
+
+.navbarImage {
+  height: 40px;
+  padding: 0px 5px 0px 0px;
+  margin: 0px;
+}
+
+.navbarText {
+  font-family: "Mountains of Christmas", serif;
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#fishNavbar {
+  img {
+    height: 25px;
+  }
+}
+
+.bottomLink {
+  width: 100%;
+  margin-left: 20px;
+  font-family: "Mountains of Christmas", serif;
+  font-size: 20px;
+  color: black;
+  position: absolute;
+  bottom: 5%;
+}
+
+#supportLink {
+  bottom: 10%;
+}
+
+#sourcesLink {
+  bottom: 5%;
+}
+
+@media (max-width: 1024px) {
 }
 
 /* NAV MOBILE STYLING (<= 768PX) */
-.navbarMobile{
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(219, 233, 163, 1);
-    width: 100%;
-    text-align: left;
-    height: 50px;
+.navbarMobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(219, 233, 163, 1);
+  width: 100%;
+  text-align: left;
+  height: 50px;
 }
 
-.navbarMobile.expanded{
-    background-color: rgba(219, 233, 163, 1);
-    height: 100vh;
-    z-index: 3;
-    position: absolute;
+.navbarMobile.expanded {
+  background-color: rgba(219, 233, 163, 1);
+  height: 100vh;
+  z-index: 3;
+  position: absolute;
 }
 
-.navbarMobileHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 30px 0px 10px;
+.navbarMobileHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 30px 0px 10px;
 }
 
-.navIcon{
-    font-size: 28px;
+.navIcon {
+  font-size: 28px;
 }
 
-.navbarMobileContent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.navbarMobileContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.navbarItems.expanded{
-    margin-top: 100px;
-    align-items: center;
+.navbarItems.expanded {
+  margin-top: 100px;
+  align-items: center;
 }
 
-.open{
-    display: flex;
-    z-index: 2;
+.open {
+  display: flex;
+  z-index: 2;
 }
 
-.closed{
-    display: none;
-    z-index: 1;
+.closed {
+  display: none;
+  z-index: 1;
 }
 
-@media (max-width: 768px){
-    .navbarHeaderText{
-        h1{
-            margin: 5px 0px 5px 10px;
-        }
+@media (max-width: 768px) {
+  .navbarHeaderText {
+    h1 {
+      margin: 5px 0px 5px 10px;
     }
+  }
 }
