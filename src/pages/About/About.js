@@ -29,7 +29,7 @@ const AboutContent =
                     <p>I enjoy doing lots of things and can't pick one, so I wear many hats: software engineer, web developer, visual designer, ...the list goes on.</p>
                 </div>
                 <div className="graphPaperText">
-                    <p>I'm currently expanding my work to include interactive & audio-reactive content (both live & pre-recorded) using <a href="https://derivative.ca/" target="_blank" rel="noreferrer">Touchdesigner</a>. My goal is to work on large-scale projects and installations utilizing this technology.</p>
+                    <p>I'm currently expanding my work to include interactive & audio-reactive content (both live & pre-recorded) using <a href="https://derivative.ca/" target="_blank" rel="noreferrer">TouchDesigner</a>. My goal is to work on large-scale projects and installations utilizing this technology.</p>
                 </div>
                 <div className="graphPaperText" style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
                     <img src={UCIAnteater.src} alt={UCIAnteater.alt} style={{width: "100px", marginRight: "5px", transform: "rotate(-8deg)"}} />
