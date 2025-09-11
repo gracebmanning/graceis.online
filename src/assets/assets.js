@@ -11,6 +11,7 @@ import daisiesBottomFlippedImg from './backgrounds/daisiesBottomFlipped.jpg';
 import daisiesBottomFlippedTransparentImg from './backgrounds/daisiesBottomFlipped_50opacity.jpg';
 import whiteRabbitImg from './backgrounds/white-rabbit.png';
 import graphPaperImg from './backgrounds/graph-paper.png';
+import graphPaperImg2 from './backgrounds/graphpaper.jpg';
 
 // NAVIGATION
 import arrowImg from './icons/arrow.svg';
@@ -27,7 +28,7 @@ import strawberryImg from './icons/strawberry.png';
 import bunnyImg from './other/bunny.gif';
 import chickEgg1Img from './other/chick-egg1.gif';
 import chickEgg2Img from './other/chick-egg2.gif';
-import graceImg from './other/grace3.jpg';
+import graceImg from './other/grace3-tape.png';
 import earthStarImg from './other/earth-star.png';
 import wiggleLineImg from './other/wiggleLine.svg';
 import UCIAnteaterImg from './other/uci-anteater.png';
@@ -101,6 +102,13 @@ export const graphPaper = {
     alt: 'graph paper with blue lines on a white background',
     source: 'external',
     link: 'https://daisypaper.com/printable-1-2-inch-graph-paper/'
+}
+
+export const graphPaper2 = {
+    src: graphPaperImg2,
+    alt: 'graph paper with gray lines on a white background',
+    source: 'external',
+    link: 'https://media.istockphoto.com/id/872542856/photo/lets-start-planning.jpg?s=612x612&w=0&k=20&c=kutS9v5F0lYGpnEZPHhKCM9lCxiS4tCigwkhtECgnqg='
 }
 
 // ICONS
@@ -228,7 +236,7 @@ export const ImgSourceExport = [
     daisiesBottomFlipped,
     daisiesBottomFlippedTransparent,
     whiteRabbit,
-    graphPaper,
+    graphPaper2,
     //ICONS
     arrow,
     backarrow,
