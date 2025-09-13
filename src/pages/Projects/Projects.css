@@ -1,122 +1,121 @@
-.projectsHeader{
-    position: fixed;
-    top: 0;
-    height: 80px;
-    width: 100%;
-    font-family: "Inter", sans-serif;
-    background-color: white;
-    border-bottom: 1px solid black;
+.projectsHeader {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  background-color: white;
+  border-bottom: 1px solid black;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.singleProject{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+.singleProject {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
-    img{
-        width: 60%;
-    }
-
-    h1{
-        font-family: Lacquer;
-        font-size: 30px;
-        margin: 10px 0px 10px 0px;
-    }
+  h1 {
+    font-family: Lacquer;
+    font-size: 30px;
+    margin: 10px 0px 10px 0px;
+  }
 }
 
-
-.singleProjectDetails{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0px 0px 2px 0px;
-
-    .singleProjectDate{
-        font-family: Inter;
-        font-size: 18px;
-        font-weight: 500;
-        margin: 0px;
-    }
-
-    a{
-        font-family: "Inter";
-        font-size: 18px;
-        font-weight: 500;
-        text-decoration: none;
-        color: black;
-        border: 1px solid black;
-        border-radius: 12px;
-        padding: 2px 5px;
-        margin-left: 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    a:hover{
-        color: #ECD5E5;
-        background-color: black;
-    }
+.singleProjectThumbnail {
+  width: 60%;
 }
 
-.singleProjectBadges{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0px 0px 10px 0px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #ECD5E5;
-}
+.singleProjectDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 0px 2px 0px;
 
-.singleProjectBody{
-    width: 95%;
+  .singleProjectDate {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px;
+  }
+
+  a {
     font-family: "Inter";
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
     text-decoration: none;
-    padding-bottom: 20px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 2px 5px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
-    a{
-        color: black;
-    }
-
-    a:hover{
-        color: #ECD5E5;
-        background-color: black;
-    }
+  a:hover {
+    color: #ecd5e5;
+    background-color: black;
+  }
 }
 
-@media (max-width: 768px){
-    .singleProject{
-        img{
-            width: 100%;
-        }
+.singleProjectBadges {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 0px 10px 0px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ecd5e5;
+}
 
-        h1{
-            margin-left: 5px;
-        }
-    }
+.singleProjectBody {
+  width: 95%;
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  padding-bottom: 20px;
 
-    .singleProjectDetails{
-        margin-left: 5px;
-    }
+  a {
+    color: black;
+  }
 
-    .singleProjectBadges{
-        margin-left: 5px;
-    }
+  a:hover {
+    color: #ecd5e5;
+    background-color: black;
+  }
+}
 
-    .singleProjectBody{
-        padding: 5px;
+@media (max-width: 768px) {
+  .singleProject {
+    h1 {
+      margin-left: 5px;
     }
+  }
+
+  .singleProjectThumbnail {
+    width: 100%;
+  }
+
+  .singleProjectDetails {
+    margin-left: 5px;
+  }
+
+  .singleProjectBadges {
+    margin-left: 5px;
+  }
+
+  .singleProjectBody {
+    padding: 5px;
+  }
 }

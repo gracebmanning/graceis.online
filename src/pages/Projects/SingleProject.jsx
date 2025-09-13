@@ -82,6 +82,7 @@ export default function SingleProject() {
         ← back
       </button>
       <img
+        className="singleProjectThumbnail"
         src={singleProject.thumbnail.asset.url}
         alt={singleProject.thumbnail.alt}
       />
