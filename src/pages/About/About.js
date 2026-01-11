@@ -27,7 +27,7 @@ const AboutContent = (
                         rel="noreferrer"
                     >
                         <FiFileText className="icon" />
-                        <p>resume</p>
+                        <p>resumé</p>
                         <MdArrowOutward style={{ marginLeft: "5px" }} />
                     </a>
                     <a
