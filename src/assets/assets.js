@@ -29,9 +29,13 @@ import bunnyImg from './other/bunny.gif';
 import chickEgg1Img from './other/chick-egg1.gif';
 import chickEgg2Img from './other/chick-egg2.gif';
 import graceImg from './other/grace3-tape.png';
-import earthStarImg from './other/earth-star.png';
 import wiggleLineImg from './other/wiggleLine.svg';
 import UCIAnteaterImg from './other/uci-anteater.png';
+import silksImg from './other/silks.png';
+import pufferSnoopyImg from './other/puffer-snoopy.jpg';
+import gardeningImg from './other/gardening.jpg';
+import tdWorkingImg from './other/td-working.jpg';
+import hikingImg from './other/hiking.jpg';
 
 // BACKGROUNDS
 export const daisies = {
@@ -204,13 +208,6 @@ export const grace = {
     link: 'this is just a photo of me'
 };
 
-export const earthStar = {
-    src: earthStarImg,
-    alt: 'a pixelated drawing of the earth with a star on it, and a mouse pointer clicking on the star',
-    source: 'internal',
-    link: 'drawn by me'
-};
-
 export const wiggleLine = {
     src: wiggleLineImg,
     alt: 'green wiggly line',
@@ -223,6 +220,41 @@ export const UCIAnteater = {
     alt: 'BC Anteater - a blue and gold cartoon anteater with white UCI letters on its side',
     source: 'external',
     link: 'https://brand.uci.edu/identity/graphics.php'
+}
+
+export const silks = {
+    src: silksImg,
+    alt: 'Grace doing a split in the air, with both feet being held up by aerial silks, inside an aerial gym studio.',
+    source: 'internal',
+    link: 'taken by me'
+}
+
+export const pufferSnoopy = {
+    src: pufferSnoopyImg,
+    alt: 'a crochet project of Snoopy standing in the snow facing left, wearing a red puffer jacket, with an icy blue sky behind him.',
+    source: 'internal',
+    link: 'taken by me'
+}
+
+export const gardening = {
+    src: gardeningImg,
+    alt: "a photo of the ground, featuring Grace's shoes, a bag of soil, a flat of Dymondia / silver carpet, and a small hand-held shovel.",
+    source: 'internal',
+    link: 'taken by me'
+}
+
+export const tdWorking = {
+    src: tdWorkingImg,
+    alt: "a selfie of Grace holding up her dinner (a tofu + broccoli + rice bowl) while sitting in front of her computer monitor, which has a TouchDesigner project network open.",
+    source: 'internal',
+    link: 'taken by me'
+}
+
+export const hiking = {
+    src: hikingImg,
+    alt: "Grace stands in a lush green forest while on a hiking trail in Oregon, wearing a tanktop, shorts, and hiking shoes.",
+    source: 'internal',
+    link: 'taken by me'
 }
 
 export const ImgSourceExport = [
@@ -251,8 +283,6 @@ export const ImgSourceExport = [
     bunny,
     chickEgg1,
     chickEgg2,
-    grace,
-    earthStar,
     wiggleLine,
-    UCIAnteater
+    UCIAnteater,
 ];

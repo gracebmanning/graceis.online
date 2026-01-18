@@ -79,7 +79,8 @@
 }
 
 .aboutSection2,
-.aboutSection3 {
+.aboutSection3,
+.aboutSection4 {
     margin-top: 20px;
 
     a {
@@ -93,6 +94,23 @@
         color: #ecd5e5;
         background-color: black;
         transition: 0.1s ease-out;
+    }
+}
+
+#slicesOfLifeImages {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.slicesOfLifeImageContainer {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-size: 16px;
     }
 }
 
@@ -152,6 +170,10 @@
 
     .aboutSection2 {
         width: 100%;
+    }
+
+    #slicesOfLifeImages {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 

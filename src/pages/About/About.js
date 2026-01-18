@@ -1,7 +1,15 @@
 import "./About.css";
 import { FiMail, FiFileText, FiLinkedin } from "react-icons/fi";
 import { MdArrowOutward } from "react-icons/md";
-import { grace, UCIAnteater } from "../../assets/assets";
+import {
+    grace,
+    UCIAnteater,
+    silks,
+    pufferSnoopy,
+    gardening,
+    tdWorking,
+    hiking,
+} from "../../assets/assets";
 import { BasicLayout } from "../../layouts/BasicLayout";
 import resume from "../../documents/resume.pdf";
 
@@ -93,8 +101,12 @@ const AboutContent = (
             <div className="graphPaperText" style={{ marginTop: "10px" }}>
                 <ul>
                     <li>
-                        <span style={{ fontWeight: "bold" }}>Visual/Design:</span> TouchDesigner,
-                        Figma, Inkscape
+                        <span style={{ fontWeight: "bold" }}>Live Visuals:</span> TouchDesigner,
+                        Resolume
+                    </li>
+                    <li>
+                        <span style={{ fontWeight: "bold" }}>Design/Prototyping:</span> Figma,
+                        Inkscape
                     </li>
                     <li>
                         <span style={{ fontWeight: "bold" }}>Web Dev:</span> HTML, CSS, JavaScript,
@@ -117,6 +129,33 @@ const AboutContent = (
                         CloudFront), Squarespace, WordPress, Slate (CRM), Sanity (CMS)
                     </li>
                 </ul>
+            </div>
+        </div>
+        <div className="aboutSection4">
+            <p className="textHandwritten">slices of life</p>
+            <div className="graphPaperText" id="slicesOfLifeImages">
+                <div className="slicesOfLifeImageContainer">
+                    <img src={silks.src} alt={silks.alt} />
+                    <p>Favorite hobby = aerial silks!</p>
+                </div>
+                <div className="slicesOfLifeImageContainer">
+                    <img src={pufferSnoopy.src} alt={pufferSnoopy.alt} />
+                    <p className="slicesOfLifeCaption">
+                        Possibly my favorite crochet project so far.
+                    </p>
+                </div>
+                <div className="slicesOfLifeImageContainer">
+                    <img src={gardening.src} alt={gardening.alt} />
+                    <p>Gardening is the best way to unwind.</p>
+                </div>
+                <div className="slicesOfLifeImageContainer">
+                    <img src={tdWorking.src} alt={tdWorking.alt} />
+                    <p>Eating and working on a TouchDesigner project.</p>
+                </div>
+                <div className="slicesOfLifeImageContainer">
+                    <img src={hiking.src} alt={hiking.alt} />
+                    <p>Hiking in Oregon :-)</p>
+                </div>
             </div>
         </div>
     </div>
