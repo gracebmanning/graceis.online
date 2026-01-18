@@ -1,42 +1,42 @@
-.singleBlogPost{
+.singleBlogPost {
     font-family: "Inter", sans-serif;
     width: 99%;
-    h1{
+    h1 {
         margin: 10px 0px 5px 0px;
     }
 
-    a{
+    a {
         color: black;
         transition: 0.1s ease-in;
         padding: 2px 0px;
     }
-    
-    a:hover{
-        background-color: #ECD5E5;
+
+    a:hover {
+        background-color: #ecd5e5;
         transition: 0.1s ease-out;
     }
 }
 
-.singleBlogPostDates{
+.singleBlogPostDates {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
-    
-    h2{
+
+    h2 {
         margin: 0px;
         font-size: 16px;
         font-weight: 400;
         font-style: italic;
     }
 
-    span{
+    span {
         white-space: pre;
     }
 }
 
-.singleBlogPostTags{
+.singleBlogPostTags {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -48,7 +48,7 @@
     margin-bottom: 10px;
     padding: 0px 0px 10px 0px;
 
-    li{
+    li {
         margin-right: 2px;
         padding: 2px 5px;
         background-color: #d3d3d3;
@@ -56,22 +56,22 @@
     }
 }
 
-.singleBlogPostContents{
+.singleBlogPostContents {
     padding-bottom: 15px;
     border-bottom: 1px solid black;
 }
 
-.singleBlogPostBodyContainer{
+.singleBlogPostBodyContainer {
     width: 95%;
 }
 
 @media (max-width: 768px) {
-    .singleBlogPost{
+    .singleBlogPost {
         width: 95%;
         padding-left: 10px;
     }
 
-    .singleBlogPostBodyContainer{
+    .singleBlogPostBodyContainer {
         width: 100%;
     }
 }
